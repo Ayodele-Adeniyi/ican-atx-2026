@@ -1,0 +1,1558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ATX 2026 Reading Guide</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0D6A4B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="ATX 2026">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: statute-book reading column + sticky contents rail; examiner's red pen marks the traps, naira green marks the 2026 law. */
+:root{
+  --paper:#F5F7F3; --card:#FFFFFF; --ink:#16211D; --muted:#56645E; --line:#D7DDD6; --line-2:#E8ECE6;
+  --green:#0D6A4B; --green-soft:#E2F0E8; --red:#B3232C; --red-soft:#FBEAEA;
+  --amber:#8F5B00; --amber-soft:#FCF1DB; --slate:#4E5287; --slate-soft:#ECEDF7;
+  --blue:#1D5A95; --blue-soft:#E5EEF8; --heat-a:#0D6A4B; --heat-b:#5FA285; --heat-c:#B9D9C9; --heat-ink-a:#FFFFFF; --heat-ink-c:#123227;
+  --f-display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  --step--1:0.84rem; --step-0:1.02rem; --step-1:1.2rem; --step-2:1.5rem; --step-3:2rem; --step-4:2.9rem;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1513; --card:#161F1C; --ink:#E5EBE7; --muted:#9BA9A3; --line:#2B3632; --line-2:#212B28;
+    --green:#53C79B; --green-soft:#143027; --red:#FF8088; --red-soft:#3A1C20; --amber:#F2B957; --amber-soft:#352810;
+    --slate:#AEB2E6; --slate-soft:#23253C; --blue:#86B6EC; --blue-soft:#17263A;
+    --heat-a:#3FB386; --heat-b:#2A7458; --heat-c:#1E3E33; --heat-ink-a:#06140F; --heat-ink-c:#CDE7DB;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1513; --card:#161F1C; --ink:#E5EBE7; --muted:#9BA9A3; --line:#2B3632; --line-2:#212B28;
+  --green:#53C79B; --green-soft:#143027; --red:#FF8088; --red-soft:#3A1C20; --amber:#F2B957; --amber-soft:#352810;
+  --slate:#AEB2E6; --slate-soft:#23253C; --blue:#86B6EC; --blue-soft:#17263A;
+  --heat-a:#3FB386; --heat-b:#2A7458; --heat-c:#1E3E33; --heat-ink-a:#06140F; --heat-ink-c:#CDE7DB;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--step-0);line-height:1.62;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--green);text-underline-offset:2px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:var(--step-3);font-weight:760;font-stretch:88%;letter-spacing:-0.01em}
+h3{font-size:var(--step-2);font-weight:700;font-stretch:92%;margin-top:8px}
+h4{font-size:var(--step-1);font-weight:680;font-stretch:96%}
+p{margin:0}
+ul,ol{margin:0;padding-left:1.25em}
+li+li{margin-top:4px}
+strong{font-weight:600}
+.num,td.n,.calc td.n{font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-display);font-size:var(--step--1);font-weight:650;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+.small{font-size:var(--step--1)}
+
+/* page frame */
+.layout{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:250px minmax(0,1fr);gap:48px;align-items:start}
+@media (max-width:1020px){.layout{grid-template-columns:minmax(0,1fr);gap:0}}
+.rail{position:sticky;top:max(16px,env(safe-area-inset-top,0px));max-height:calc(100vh - 32px);overflow:auto;padding-block:28px 24px;font-family:var(--f-display);font-size:.88rem}
+@media (max-width:1020px){.rail{display:none}}
+.rail .brand{font-weight:780;font-stretch:80%;font-size:1.05rem;letter-spacing:.01em;margin-bottom:14px;display:block;color:var(--ink);text-decoration:none}
+.rail ol{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.rail li+li{margin-top:0}
+.rail a{display:block;color:var(--muted);text-decoration:none;padding:3px 8px;border-radius:4px;line-height:1.3}
+.rail a:hover{color:var(--ink);background:var(--line-2)}
+.rail a.on{color:var(--ink);background:var(--green-soft);font-weight:650}
+.rail .part{margin-top:12px;padding:2px 8px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:700}
+.rail .part .w{color:var(--muted);font-weight:500;letter-spacing:.04em}
+main{min-width:0;padding-block:28px 0}
+.mobile-toc{display:none;margin-bottom:20px;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+@media (max-width:1020px){.mobile-toc{display:block}}
+.mobile-toc summary{cursor:pointer;padding:10px 14px;font-family:var(--f-display);font-weight:680}
+.mobile-toc ol{columns:2;column-gap:20px;padding:4px 16px 14px 34px;font-family:var(--f-display);font-size:.9rem}
+@media (max-width:520px){.mobile-toc ol{columns:1}}
+.read{max-width:780px}
+section.topic{padding-block:44px 8px;border-top:1px solid var(--line);display:grid;gap:18px}
+section.topic>.read{display:grid;gap:16px}
+.part-banner{margin-top:56px;padding:20px 0 6px;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;border-top:3px solid var(--ink)}
+.part-banner .letter{font-family:var(--f-display);font-weight:800;font-stretch:70%;font-size:3.4rem;line-height:.9;color:var(--green)}
+.part-banner h2{font-size:var(--step-3)}
+.part-banner .weight{font-family:var(--f-mono);font-size:.82rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.sec-head{display:grid;gap:6px}
+.sec-head .ref{font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+
+/* hero */
+.hero{padding-block:8px 28px;display:grid;gap:18px}
+.hero h1{font-size:clamp(2.1rem,5.4vw,var(--step-4));font-weight:800;font-stretch:78%;letter-spacing:-0.015em;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--red);text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;text-decoration-color:color-mix(in srgb,var(--red) 55%,transparent)}
+.hero .lede{max-width:66ch;font-size:1.1rem;color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:900px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{border-top:2px solid var(--ink);padding-top:8px;display:grid;gap:2px}
+.stat b{font-family:var(--f-display);font-weight:780;font-stretch:80%;font-size:2rem;line-height:1}
+.stat span{font-size:.86rem;color:var(--muted);line-height:1.35}
+
+/* legend + callouts */
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--f-display);font-size:.84rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.shape{display:inline-block;width:11px;height:11px;flex:none}
+.shape.sq{background:var(--blue)}
+.shape.tri{background:var(--red);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.shape.dot{background:var(--amber);border-radius:50%}
+.shape.dia{background:var(--green);transform:rotate(45deg) scale(.82)}
+.shape.old{background:var(--slate);clip-path:polygon(0 0,100% 0,100% 100%,0 100%,0 40%,100% 40%,100% 60%,0 60%)}
+.box{border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:grid;gap:8px;background:var(--card)}
+.box .tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-size:.74rem;font-weight:720;letter-spacing:.11em;text-transform:uppercase}
+.box.rule{background:var(--blue-soft);border-color:color-mix(in srgb,var(--blue) 30%,transparent)} .box.rule .tag{color:var(--blue)}
+.box.trap{background:var(--red-soft);border-color:color-mix(in srgb,var(--red) 35%,transparent)} .box.trap .tag{color:var(--red)}
+.box.radar{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,transparent)} .box.radar .tag{color:var(--amber)}
+.box.new{background:var(--green-soft);border-color:color-mix(in srgb,var(--green) 35%,transparent)} .box.new .tag{color:var(--green)}
+.box.old{background:var(--slate-soft);border-color:color-mix(in srgb,var(--slate) 35%,transparent)} .box.old .tag{color:var(--slate)}
+.box ul,.box ol{display:grid;gap:3px}
+.box li+li{margin-top:0}
+.src{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:820px){.grid2,.grid3{grid-template-columns:minmax(0,1fr)}}
+.hl{background:color-mix(in srgb,var(--amber) 22%,transparent);padding:0 3px;border-radius:2px}
+.new-mark{color:var(--green);font-weight:650}
+.old-mark{color:var(--slate);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--slate) 60%,transparent)}
+
+/* tables */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{padding:8px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line-2)}
+thead th{font-family:var(--f-display);font-weight:680;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--paper);position:sticky;top:0}
+tbody tr:last-child td{border-bottom:none}
+td.n,th.n{text-align:right;white-space:nowrap}
+.ledger th:nth-child(2){color:var(--slate)} .ledger th:nth-child(3){color:var(--green)}
+.ledger td:first-child{font-family:var(--f-display);font-weight:640;font-size:.88rem;white-space:nowrap}
+.ledger td:nth-child(2){color:var(--muted)}
+@media (max-width:620px){.ledger td:first-child{white-space:normal}}
+
+/* computation card */
+.calc{border:1px solid var(--line);border-radius:6px;background:var(--card);overflow:hidden}
+.calc .ch{padding:10px 14px;border-bottom:1px dashed var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-family:var(--f-display)}
+.calc .ch b{font-weight:720}
+.calc .ch span{font-size:.8rem;color:var(--muted)}
+.calc .cb{overflow-x:auto}
+.calc table{font-family:var(--f-mono);font-size:.82rem}
+.calc td{border-bottom:none;padding:3px 14px}
+.calc tr.sub td{border-top:1px solid var(--line);font-weight:600}
+.calc tr.tot td{border-top:2px solid var(--ink);border-bottom:3px double var(--ink);font-weight:600}
+.calc tr.h td{color:var(--muted);padding-top:9px;font-size:.76rem;text-transform:uppercase;letter-spacing:.06em}
+.calc td.in{padding-left:30px}
+.calc .note{padding:10px 14px;border-top:1px dashed var(--line);font-size:.85rem;color:var(--muted)}
+
+/* flows & diagrams */
+.flow{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.flow .st{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);padding:10px 12px;position:relative;display:grid;gap:3px;align-content:start}
+.flow .st+.st{margin-left:-1px}
+.flow .st .d{font-family:var(--f-mono);font-size:.74rem;color:var(--amber);font-weight:600}
+.flow .st b{font-family:var(--f-display);font-weight:700;font-size:.95rem;line-height:1.2}
+.flow .st span{font-size:.82rem;color:var(--muted);line-height:1.35}
+.flow .st:first-child{border-radius:6px 0 0 6px}.flow .st:last-child{border-radius:0 6px 6px 0}
+@media (max-width:760px){.flow{flex-direction:column}.flow .st+.st{margin-left:0;margin-top:-1px}.flow .st:first-child{border-radius:6px 6px 0 0}.flow .st:last-child{border-radius:0 0 6px 6px}}
+.switch{display:grid;grid-template-columns:minmax(0,1fr) 54px minmax(0,1fr);gap:0;align-items:stretch}
+@media (max-width:760px){.switch{grid-template-columns:minmax(0,1fr)}}
+.switch .col{display:grid;gap:6px;align-content:start}
+.switch .arrow{display:flex;align-items:center;justify-content:center}
+.switch .arrow svg{width:40px;height:40px}
+@media (max-width:760px){.switch .arrow{height:44px}.switch .arrow svg{transform:rotate(90deg)}}
+.pill{border:1px solid var(--line);border-radius:5px;padding:7px 10px;background:var(--card);display:grid;gap:1px}
+.pill b{font-family:var(--f-display);font-weight:680;font-size:.92rem}
+.pill span{font-size:.8rem;color:var(--muted);line-height:1.35}
+.pill.gone b{color:var(--slate)}
+.pill.act{border-color:color-mix(in srgb,var(--green) 45%,transparent);background:var(--green-soft)}
+.pill.act b{color:var(--green)}
+.ladder{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end}
+@media (max-width:720px){.ladder{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.rung{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:10px 12px;display:grid;gap:6px}
+.rung .bar{height:8px;border-radius:2px;background:var(--green)}
+.rung b{font-family:var(--f-display);font-weight:700}
+.rung span{font-size:.82rem;color:var(--muted);line-height:1.4}
+.bars{display:grid;gap:6px}
+.bars .row{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 44px;gap:10px;align-items:center;font-size:.88rem}
+.bars .row .b{height:14px;background:var(--green);border-radius:2px}
+.bars .row .v{font-family:var(--f-mono);font-size:.8rem;text-align:right}
+@media (max-width:520px){.bars .row{grid-template-columns:minmax(0,120px) minmax(0,1fr) 40px}}
+
+/* heat map */
+.heat td,.heat th{padding:5px 4px;text-align:center;border-bottom:1px solid var(--line-2)}
+.heat th:first-child,.heat td:first-child{text-align:left;position:sticky;left:0;background:var(--card);z-index:1;min-width:150px;padding-left:10px;font-family:var(--f-display);font-size:.82rem;font-weight:620}
+.heat thead th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:0;text-transform:none}
+.heat thead th:first-child{background:var(--paper);z-index:2}
+.chip{display:inline-block;font-family:var(--f-mono);font-size:.7rem;font-weight:600;padding:2px 5px;border-radius:3px;margin:1px;white-space:nowrap}
+.chip.A{background:var(--heat-a);color:var(--heat-ink-a)}
+.chip.B{background:var(--heat-b);color:var(--heat-ink-a)}
+.chip.C{background:var(--heat-c);color:var(--heat-ink-c)}
+.heat td.cnt{font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+.keyrow{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.84rem;color:var(--muted);align-items:center}
+
+/* details */
+details.more{border:1px solid var(--line);border-radius:6px;background:var(--card)}
+details.more>summary{cursor:pointer;padding:10px 14px;font-family:var(--f-display);font-weight:650;list-style:none;display:flex;justify-content:space-between;gap:10px}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::after{content:"+";font-family:var(--f-mono);color:var(--muted)}
+details.more[open]>summary::after{content:"–"}
+details.more>.in{padding:2px 16px 14px;display:grid;gap:10px}
+
+/* pitfall register */
+.reg-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.reg-tools input[type=search],.reg-tools select{font:inherit;font-size:.92rem;padding:7px 10px;border:1px solid var(--line);border-radius:5px;background:var(--card);color:var(--ink);min-width:0}
+.reg-tools input[type=search]{flex:1 1 220px}
+.reg-tools .count{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.reg td:first-child{white-space:nowrap;font-family:var(--f-mono);font-size:.78rem}
+.reg td.ck{width:44px;text-align:center}
+.reg tr.done td{opacity:.55}
+.reg tr.done td.what{text-decoration:line-through}
+.reg .topic-tag{font-family:var(--f-display);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
+.foot{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted);display:grid;gap:8px;max-width:780px}
+.kbd{font-family:var(--f-mono);font-size:.82em;background:var(--line-2);padding:0 4px;border-radius:3px}
+
+/* print contents page */
+.ptoc{display:none}
+@media print{
+  .ptoc{display:block;break-after:page}
+  .ptoc h2{font-size:18pt;margin-bottom:10px}
+  .ptoc ol{list-style:none;padding:0;margin:0;columns:2;column-gap:28px}
+  .ptoc li{break-inside:avoid;margin:0;padding:3px 0;border-bottom:1px dotted var(--line)}
+  .ptoc li.pt{font-family:var(--f-display);font-weight:720;font-size:8.6pt;letter-spacing:.1em;text-transform:uppercase;color:var(--green);border:0;padding-top:10px}
+  .ptoc a{color:var(--ink)!important;text-decoration:none!important}
+  .ptoc .note{margin-top:14px;font-size:9pt;color:var(--muted)}
+  .backtoc{display:inline!important;margin-left:auto;font-family:var(--f-display);font-size:8.5pt}
+  a{color:var(--green)!important;text-decoration:underline}
+  h1 a,h2 a,h3 a{text-decoration:none}
+  .reg td a{display:inline!important}
+}
+/* print: A4, light palette, everything open, no navigation */
+@page{size:A4;margin:14mm 12mm 14mm}
+@media print{
+  :root:not(#p-x){--paper:#FFFFFF;--card:#FFFFFF;--ink:#16211D;--muted:#4F5C56;--line:#C9D0C8;--line-2:#E3E7E1;
+    --green:#0D6A4B;--green-soft:#E6F2EB;--red:#B3232C;--red-soft:#FBECEC;--amber:#8F5B00;--amber-soft:#FCF3E1;
+    --slate:#4E5287;--slate-soft:#EEEFF8;--blue:#1D5A95;--blue-soft:#E8F0F9;--heat-a:#0D6A4B;--heat-b:#5FA285;--heat-c:#B9D9C9;--heat-ink-a:#FFFFFF;--heat-ink-c:#123227;color-scheme:light}
+  html{font-size:10pt;scroll-behavior:auto}
+  body{padding:0!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .rail,.mobile-toc,.reg-tools,.reg td.ck,.reg th.ck,.drill,.toplinks,#regc{display:none!important}
+  .layout{display:block;max-width:none}
+  main{padding:0}
+  .read{max-width:none}
+  .print-only{display:block!important}
+  .reg tr[hidden]{display:table-row!important}
+  .tw,.calc .cb{overflow:visible!important}
+  table{font-size:8.6pt}
+  .heat td,.heat th{padding:3px 2px}
+  .heat th:first-child,.heat td:first-child{min-width:0;position:static}
+  .chip{font-size:6.8pt;padding:1px 3px}
+  thead th{position:static}
+  .hero h1{font-size:24pt}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2,.grid3,.tb-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .box,.calc,.tcard,.flow .st,.rung,.qcard .qh,.pill,tr,li{break-inside:avoid}
+  .qcard{break-inside:auto}
+  h2,h3,h4,.sec-head,.qh,summary{break-after:avoid}
+  .part-banner{break-before:page;margin-top:0}
+  section.topic{padding-block:18px 4px}
+  details>summary{list-style:none}
+  details.more>summary::after,.qcard details.sol>summary::before{content:""}
+  a{color:inherit;text-decoration:none}
+  .flow{flex-direction:row}
+}
+</style>
+
+<div class="layout">
+<nav class="rail" aria-label="Contents">
+  <a class="brand" href="#top">ATX 2026 · Reading Guide</a>
+  <ol id="railList">
+    <li><a href="practice.html">Workbook: practice &amp; drills →</a></li>
+    <li><a href="#map">Exam heat map</a></li>
+    <li><a href="#switch">The 2026 law switch</a></li>
+    <li><a href="#paper">How the paper is built</a></li>
+    <li class="part">A · Administration <span class="w">5%</span></li>
+    <li><a href="#policy">Tax policy & canons</a></li>
+    <li><a href="#admin">Tax organs & multiple taxation</a></li>
+    <li><a href="#appeals">Objections & appeals</a></li>
+    <li class="part">B · Companies <span class="w">35%</span></li>
+    <li><a href="#basis">Basis periods</a></li>
+    <li><a href="#adjusted">Adjusted profit</a></li>
+    <li><a href="#ca">Capital allowances</a></li>
+    <li><a href="#losses">Loss relief</a></li>
+    <li><a href="#total">Total profit, levy & min ETR</a></li>
+    <li><a href="#gains">Chargeable gains</a></li>
+    <li><a href="#invest">Investment income</a></li>
+    <li><a href="#incentives">Incentives: EDI & pioneer</a></li>
+    <li><a href="#leases">Leases</a></li>
+    <li class="part">C · International <span class="w">20%</span></li>
+    <li><a href="#nonres">Non-residents</a></li>
+    <li><a href="#digital">Digital economy</a></li>
+    <li><a href="#treaties">Treaties & DTR</a></li>
+    <li><a href="#tp">Transfer pricing</a></li>
+    <li><a href="#beps">BEPS, CbCR, havens</a></li>
+    <li><a href="#regional">Regional blocs & policy</a></li>
+    <li class="part">D · Current issues <span class="w">10%</span></li>
+    <li><a href="#current">Current issues, SDGs, ESG</a></li>
+    <li class="part">E · Management <span class="w">10%</span></li>
+    <li><a href="#ma">Mergers & acquisitions</a></li>
+    <li><a href="#planning">Planning & avoidance</a></li>
+    <li><a href="#practice">Practice, audit, ethics</a></li>
+    <li class="part">F · Extractive <span class="w">20%</span></li>
+    <li><a href="#oil">Oil & gas</a></li>
+    <li><a href="#mining">Mining</a></li>
+    <li class="part">Toolkit</li>
+    <li><a href="#numbers">Numbers sheet</a></li>
+    <li><a href="#penalties">Penalties</a></li>
+    <li><a href="#pitfalls">Pitfall register</a></li>
+  </ol>
+</nav>
+
+<main id="top">
+<details class="mobile-toc"><summary>Contents</summary>
+  <ol>
+    <li><a href="practice.html">Workbook →</a></li><li><a href="practice.html">Workbook →</a></li><li><a href="#map">Exam heat map</a></li><li><a href="#switch">2026 law switch</a></li><li><a href="#paper">The paper</a></li>
+    <li><a href="#policy">A · Policy</a></li><li><a href="#admin">A · Organs</a></li><li><a href="#appeals">A · Appeals</a></li>
+    <li><a href="#basis">B · Basis periods</a></li><li><a href="#adjusted">B · Adjusted profit</a></li><li><a href="#ca">B · Capital allowances</a></li>
+    <li><a href="#losses">B · Losses</a></li><li><a href="#total">B · Total profit</a></li><li><a href="#gains">B · Gains</a></li>
+    <li><a href="#invest">B · Investment income</a></li><li><a href="#incentives">B · Incentives</a></li><li><a href="#leases">B · Leases</a></li>
+    <li><a href="#nonres">C · Non-residents</a></li><li><a href="#digital">C · Digital</a></li><li><a href="#treaties">C · Treaties & DTR</a></li>
+    <li><a href="#tp">C · Transfer pricing</a></li><li><a href="#beps">C · BEPS</a></li><li><a href="#regional">C · Regional</a></li>
+    <li><a href="#current">D · Current issues</a></li><li><a href="#ma">E · M&A</a></li><li><a href="#planning">E · Planning</a></li>
+    <li><a href="#practice">E · Practice & audit</a></li><li><a href="#oil">F · Oil & gas</a></li><li><a href="#mining">F · Mining</a></li>
+    <li><a href="#numbers">Numbers</a></li><li><a href="#penalties">Penalties</a></li><li><a href="#pitfalls">Pitfalls</a></li>
+  </ol>
+</details>
+
+<nav class="ptoc" id="ptoc" aria-hidden="true"><h2>Contents</h2><ol><li><a href="#map">Exam heat map</a></li><li><a href="#switch">The 2026 law switch</a></li><li><a href="#paper">How the paper is built</a></li><li class="pt">A · Administration 5%</li><li><a href="#policy">Tax policy & canons</a></li><li><a href="#admin">Tax organs & multiple taxation</a></li><li><a href="#appeals">Objections & appeals</a></li><li class="pt">B · Companies 35%</li><li><a href="#basis">Basis periods</a></li><li><a href="#adjusted">Adjusted profit</a></li><li><a href="#ca">Capital allowances</a></li><li><a href="#losses">Loss relief</a></li><li><a href="#total">Total profit, levy & min ETR</a></li><li><a href="#gains">Chargeable gains</a></li><li><a href="#invest">Investment income</a></li><li><a href="#incentives">Incentives: EDI & pioneer</a></li><li><a href="#leases">Leases</a></li><li class="pt">C · International 20%</li><li><a href="#nonres">Non-residents</a></li><li><a href="#digital">Digital economy</a></li><li><a href="#treaties">Treaties & DTR</a></li><li><a href="#tp">Transfer pricing</a></li><li><a href="#beps">BEPS, CbCR, havens</a></li><li><a href="#regional">Regional blocs & policy</a></li><li class="pt">D · Current issues 10%</li><li><a href="#current">Current issues, SDGs, ESG</a></li><li class="pt">E · Management 10%</li><li><a href="#ma">Mergers & acquisitions</a></li><li><a href="#planning">Planning & avoidance</a></li><li><a href="#practice">Practice, audit, ethics</a></li><li class="pt">F · Extractive 20%</li><li><a href="#oil">Oil & gas</a></li><li><a href="#mining">Mining</a></li><li class="pt">Toolkit</li><li><a href="#numbers">Numbers sheet</a></li><li><a href="#penalties">Penalties</a></li><li><a href="#pitfalls">Pitfall register</a></li></ol><p class="note">Click any entry to jump to it. Each part opens with a link back to this page. The interactive version, with the drill, flashcards and pitfall tick-list, is online: <a href="https://claude.ai/artifact/9Z1oA9PHEZtzKQSmZzXL2H">https://claude.ai/artifact/9Z1oA9PHEZtzKQSmZzXL2H</a></p></nav>
+<header class="hero">
+  <p class="eyebrow">ICAN Professional Level · C4 Advanced Taxation · 2026 Study Text</p>
+  <h1>Advanced Taxation, read through the examiner's <em>red pen</em></h1>
+  <p class="lede">A reading guide to the 2026 Study Text, built on the Nigeria Tax Act 2025 regime and checked against every Advanced Taxation question, model answer and examiner's report from November 2020 to May 2026. Each topic gives you the rule, the answer format ICAN rewards, what changed on 1 January 2026, and the exact places candidates have lost marks.</p>
+  <div class="stats">
+    <div class="stat"><b>12</b><span>diets of past questions mapped, Nov 2020 – May 2026</span></div>
+    <div class="stat"><b>12 / 12</b><span>diets where Question 1 was a company tax computation</span></div>
+    <div class="stat"><b>8</b><span>diets in a row with a 20-mark hydrocarbon tax question</span></div>
+    <div class="stat"><b>11 / 12</b><span>diets with a capital gains computation</span></div>
+  </div>
+  <div class="legend" aria-label="Callout legend">
+    <span><i class="shape sq"></i>Rule from the Study Text</span>
+    <span><i class="shape tri"></i>Examiner's pitfall</span>
+    <span><i class="shape dot"></i>Exam radar</span>
+    <span><i class="shape dia"></i>2026 law (NTA / NTAA)</span>
+    <span><i class="shape old"></i>Pre-2026 law (CITA, CGTA, PPTA, IDA)</span>
+  </div>
+  <p class="box new" style="display:block"><strong>Companion workbook:</strong> eight new-law practice questions with full answers, an add-back drill, flashcards and a theory answer bank. <a href="practice.html">Open the workbook →</a></p>
+</header>
+
+<!-- ============ HEAT MAP ============ -->
+<section class="topic" id="map">
+  <div class="sec-head read">
+    <p class="eyebrow">Where the marks have been</p>
+    <h2>Exam heat map, 2020 – 2026</h2>
+    <p>Every question of the last twelve diets placed against the topic it tested. Read across a row to see how reliably a topic returns; read down a column to see the shape of a paper. Dark chips are the compulsory question, mid chips are Section B (20 marks), light chips are Section C (15 marks).</p>
+  </div>
+  <div class="keyrow"><span><span class="chip A">Q1</span> compulsory (30–40 marks)</span><span><span class="chip B">Q3</span> Section B / optional 20</span><span><span class="chip C">Q6</span> Section C, 15 marks</span></div>
+  <div class="tw"><table class="heat" id="heat"><thead></thead><tbody></tbody></table></div>
+  <div class="grid2">
+    <div class="box radar"><span class="tag"><i class="shape dot"></i>What the map says</span>
+      <ul>
+        <li>Question 1 is always a company income tax computation, usually across several years of assessment, and four of the last eight were pioneer or post-pioneer companies.</li>
+        <li>Since November 2022 a hydrocarbon tax computation has appeared every single diet as a 20-mark Section B question.</li>
+        <li>A capital gains computation with a Finance Act commentary sits in Section C almost every time.</li>
+        <li>International tax always takes at least one question: DTR, a non-resident computation, a treaty, or transfer pricing.</li>
+      </ul>
+    </div>
+    <div class="box trap"><span class="tag"><i class="shape tri"></i>The single most repeated pitfall</span>
+      <p>"Inability to identify correctly the allowable and disallowable expenses." It appears in the examiner's report on Question 1 in seven of the last eight diets, and on the hydrocarbon tax question (cost-price-ratio costs) in seven diets. Master <a href="#adjusted">Adjusted profit</a> and <a href="#oil">Oil & gas allowables</a> before anything else.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SWITCH ============ -->
+<section class="topic" id="switch">
+  <div class="sec-head read">
+    <p class="eyebrow">Read this first</p>
+    <h2>The 2026 law switch</h2>
+    <p>The 2026 Study Text (sixth edition) was rewritten for the Tax Reform Acts and the updated syllabus applies from the November 2026 diet. Every past paper in this guide was set under the old statutes. You can still practise from them, but you must translate each answer into the new law.</p>
+  </div>
+  <div class="switch">
+    <div class="col">
+      <p class="eyebrow">Up to 31 December 2025</p>
+      <div class="pill gone"><b>Companies Income Tax Act (CITA)</b><span>+ Finance Acts 2019, 2020, 2021, 2023</span></div>
+      <div class="pill gone"><b>Capital Gains Tax Act (10%)</b><span>separate tax on gains</span></div>
+      <div class="pill gone"><b>Petroleum Profits Tax Act</b><span>HT & CIT sat in the PIA 2021</span></div>
+      <div class="pill gone"><b>TETFund, NITDA, NASENI, Police Trust Fund levies</b><span>four separate charges on profit</span></div>
+      <div class="pill gone"><b>Industrial Development (Income Tax Relief) Act</b><span>pioneer status tax holidays</span></div>
+      <div class="pill gone"><b>FIRS (Establishment) Act 2007</b><span>FIRS; TAT under its Fifth Schedule</span></div>
+    </div>
+    <div class="arrow" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M4 20h28M24 11l9 9-9 9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green)"/></svg></div>
+    <div class="col">
+      <p class="eyebrow">From 1 January 2026</p>
+      <div class="pill act"><b>Nigeria Tax Act 2025 (NTA)</b><span>what is taxed: CIT, chargeable gains, HT & PPT, development levy, incentives, VAT, stamp duty</span></div>
+      <div class="pill act"><b>Nigeria Tax Administration Act 2025 (NTAA)</b><span>how: returns, assessments, objections, WHT (s.51), refunds, penalties</span></div>
+      <div class="pill act"><b>Nigeria Revenue Service (Establishment) Act 2025</b><span>the NRS replaces the FIRS</span></div>
+      <div class="pill act"><b>Joint Revenue Board of Nigeria (Establishment) Act 2025</b><span>JRB, Tax Appeal Tribunal (s.23), Office of the Tax Ombud</span></div>
+      <div class="pill"><b>Still standing</b><span>PIA 2021 (licences, royalty, host communities, conversion); Minerals & Mining Act 2007; TP Regulations 2018; CbCR Regulations 2018</span></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Which law do I apply?</span>
+      <p>Anchor on the <strong>basis period or transaction date</strong>. Periods and events up to 31 December 2025 follow CITA and the Finance Acts; those from 1 January 2026 follow the NTA. The Study Text's own examples do exactly this: a vehicle bought in 2024 keeps its CITA initial allowance, while one bought in March 2026 goes straight-line under the NTA (Modakeke). The May 2026 model answer still charged tertiary education tax for the 2026 year of assessment because its basis period ended in June 2025.</p>
+    </div>
+    <div class="box radar"><span class="tag"><i class="shape dot"></i>Expect mixed-period questions</span>
+      <p>A Question 1 that spans 2024 to 2027 will need two rulebooks: initial and annual allowances then straight-line classes; tertiary education tax then development levy; a separate 10% CGT then gains inside total profit. Label each year with the law you are applying. It earns marks and protects you if the marker reads the transition differently.</p>
+    </div>
+  </div>
+  <div class="tw"><table class="ledger">
+    <thead><tr><th>Issue</th><th>CITA / Finance Acts (to 2025)</th><th>NTA 2025 (from 2026)</th></tr></thead>
+    <tbody>
+      <tr><td>Deductibility test</td><td>Wholly, exclusively, necessarily and reasonably (WENR)</td><td>Wholly and exclusively (s.20)</td></tr>
+      <tr><td>CIT rates</td><td>0% ≤ ₦25m turnover; 20% ₦25m–₦100m; 30% ≥ ₦100m</td><td>0% small company (turnover ≤ ₦100m <em>and</em> fixed assets ≤ ₦250m); 30% all others; 25% when the President so orders</td></tr>
+      <tr><td>Profit levies</td><td>Tertiary education tax 2% → 2.5% → 3%; NITDA 1%; NASENI 0.25%; Police Trust Fund 0.005%</td><td>One development levy: 4% of assessable profit (not for small or non-resident companies)</td></tr>
+      <tr><td>Floor on tax</td><td>Minimum tax on gross turnover</td><td>Minimum effective tax rate 15% (turnover ≥ ₦50bn or MNE group ≥ €750m)</td></tr>
+      <tr><td>Capital allowances</td><td>Initial + annual; 66⅔% cap except manufacturing/agro; investment allowance to 31 Aug 2023; balancing adjustments</td><td>Straight-line by class (10% / 20% / 25%); no initial allowance, no cap, no balancing adjustments; 1% notional record</td></tr>
+      <tr><td>Capital gains</td><td>Separate CGT at 10%</td><td>Chargeable gains added to total profit, taxed at 30%</td></tr>
+      <tr><td>Change of accounting date</td><td>Three-year "higher of old date vs new date"</td><td>Basis period runs to the new date; notify 30 days before the usual filing date (s.23)</td></tr>
+      <tr><td>Incentive model</td><td>Pioneer tax holiday 3 + 2 years (IDA)</td><td>Economic development tax credit: 5% of QCE a year for 5 years (Tenth Schedule sectors)</td></tr>
+      <tr><td>Double taxation relief</td><td>Commonwealth half-rate relief (s.44) or treaty credit (ss.45–46)</td><td>Credit for any foreign tax: lower of Nigerian tax on that income and foreign tax paid (ss.120–122)</td></tr>
+      <tr><td>Tax authority</td><td>FIRS</td><td>NRS (Nigeria Revenue Service)</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ============ PAPER ============ -->
+<section class="topic" id="paper">
+  <div class="sec-head read">
+    <p class="eyebrow">Format & technique</p>
+    <h2>How the paper is built</h2>
+  </div>
+  <div class="grid3">
+    <div class="box"><span class="tag" style="color:var(--green)">Section A · 30 marks</span><p>One compulsory question. A company income tax computation over several years (adjusted profit ~7–13 marks, tax liabilities ~11–24 marks) plus 3–6 marks of theory: back duty, pioneer rules, dividend exemptions, interest restriction.</p></div>
+    <div class="box"><span class="tag" style="color:var(--green)">Section B · 2 of 3 × 20</span><p>Reliably one petroleum computation. Usually one international question (DTR, non-resident, treaty, TP) and one discussion question.</p></div>
+    <div class="box"><span class="tag" style="color:var(--green)">Section C · 2 of 3 × 15</span><p>Capital gains with Finance Act commentary, mining, and discussion topics (ethics, practice, audit, policy, BEPS, ESG).</p></div>
+  </div>
+  <p class="read small muted">3 hours 15 minutes including 15 minutes' reading time; answer five of seven. Before November 2021 Question 1 carried 40 marks. Syllabus weights: A Tax administration 5% · B Companies & investment income 35% · C International 20% · D Current issues 10% · E Tax management & planning 10% · F Extractive industries, the balance (20%).</p>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>The answer frame ICAN marks</span>
+      <ol>
+        <li>Letterhead or memo heading, date, addressee, <strong>RE:</strong> line. Marking guides award ½ mark each for heading and introduction.</li>
+        <li>One-paragraph introduction tied to the brief.</li>
+        <li>A summary table of results (tax per year of assessment).</li>
+        <li>Narrative answers to the theory parts, one point per mark.</li>
+        <li>Appendices: computations with year of assessment and basis period in every heading; workings numbered.</li>
+        <li>Close with an offer of further clarification and a signature.</li>
+      </ol>
+    </div>
+    <div class="box radar"><span class="tag"><i class="shape dot"></i>Marks hide in the workings</span>
+      <ul>
+        <li>Model answers give ½ mark per correctly treated line item. A wrong add-back costs only ½ mark; an omitted one costs the same, so list everything you adjusted.</li>
+        <li>Write the basis period beside each year of assessment. The 2021 and 2024 reports both cite wrong basis periods as the commonest error.</li>
+        <li>For theory, "1 mark per point, maximum n points." Give n + 1 crisp points, not three long paragraphs.</li>
+        <li>Show fiscal price × barrels × exchange rate for every petroleum revenue line.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART A ============ -->
+<div class="part-banner"><span class="letter">A</span><h2>Tax administration</h2><span class="weight">5% · Study Text ch. 1–3</span><a class="backtoc" href="#ptoc" style="display:none">↑ Contents</a></div>
+
+<section class="topic" id="policy">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 1</p><h3>National Tax Policy 2017 and the canons of taxation</h3></div>
+  <div class="read">
+    <p><strong>Canons</strong> are the qualities of a good tax: <em>equality</em> (ability to pay, with horizontal and vertical equity), <em>certainty</em> (Adam Smith: time, manner and amount known in advance), <em>economy</em> (low collection cost), <em>convenience</em>, <em>productivity</em> (Bastable: a sizeable yield that does not hamper production), <em>elasticity</em> (yield responds to need), <em>simplicity</em> and <em>diversity</em>.</p>
+    <p>The NTP defines tax as any compulsory payment to government imposed by law without direct benefit or return of value, whatever it is called. Its five <strong>objectives</strong>: guide the operation and review of the system; provide the basis for future legislation and administration; be a reference point for stakeholders; set benchmarks for accountability; clarify roles and responsibilities.</p>
+  </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Seven fundamental features (NTP guiding principles)</span>
+      <ol><li>Equity and fairness</li><li>Simplicity, certainty and clarity</li><li>Convenience</li><li>Low compliance cost</li><li>Low cost of administration</li><li>Flexibility</li><li>Sustainability</li></ol>
+      <p class="small muted">Hook: <strong>E</strong>very <strong>S</strong>imple <strong>C</strong>onvenience <strong>L</strong>owers <strong>L</strong>ong-run <strong>F</strong>iscal <strong>S</strong>train. Asked for five in Nov 2023.</p>
+    </div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Tax system, wealth creation & employment</span>
+      <ul><li>No retroactive tax laws</li><li>Equal opportunity for local and foreign investors</li><li>Long-term, tenured investment policy</li><li>Incentives broad, sector-based, tenured, transparent and reviewed</li><li>Revenue forgone quantified and reported annually</li><li>No policy that creates monopoly or entry barriers</li></ul>
+    </div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Stakeholder</th><th>NTP responsibilities (examined May 2024)</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Government</strong> (all tiers, arms, MDAs)</td><td>Implement and regularly review tax policies and laws; publish revenue collected <span class="hl">quarterly</span>; fund tax authorities and give them operational autonomy; allow a <span class="hl">3–6 month</span> transition before a new tax takes effect.</td></tr>
+      <tr><td><strong>Taxpayer</strong></td><td>Treat tax as a civic duty. Entitled to information, courteous assistance, to object and get a response in reasonable time, a fair appeal, and to represent themselves or use an agent (an agent paid for the work must be an accredited tax practitioner).</td></tr>
+      <tr><td><strong>Revenue agencies</strong></td><td>Treat the taxpayer as a customer; implement laws and treaties; cooperate and exchange information; audit on time; educate taxpayers; prevent, detect and punish corrupt officials.</td></tr>
+      <tr><td><strong>Professional bodies & practitioners</strong></td><td>Follow their codes of conduct; never aid evasion or corruption; promote compliance.</td></tr>
+      <tr><td><strong>Media & advocacy groups</strong></td><td>Tax education; protect taxpayer rights; demand accountability for spending; balanced reporting; make candidates for office explain their tax plans.</td></tr>
+    </tbody>
+  </table></div>
+  <details class="more"><summary>Mandates of the three tiers, implementation measures, and fiscal–monetary–trade interaction</summary><div class="in">
+    <p><strong>Mandates:</strong> a nationwide TIN drawing on BVN, NIMC, NCC, CAC, FRSC and NIS data; voluntary compliance through simple self-assessment, amnesty frameworks and education; technology-led collection; automated record keeping; information sharing; enforcement of civil and criminal sanctions; adequate funding including for refunds; ease of payment; autonomy; amicable dispute resolution before litigation.</p>
+    <p><strong>Implementation measures:</strong> budget speeches carry fiscal policy statements; one revenue agency per tier; a tax court; taxation committees in the legislatures; an establishment Act for the JRB; lower small-business rates and a VAT threshold; a tax policy implementation committee; an office of tax simplification (target: top 50 for ease of paying taxes); a tax policy website; reports to the National Economic Council; a national tax day; INEC to require parties to publish tax agendas.</p>
+    <p><strong>Interaction of policies:</strong> fiscal policy (Ministry of Finance: spending, taxation, borrowing through the budget), monetary policy (CBN: money supply, interest rates, credit) and trade policy (tariffs, exchange rate, openness) share the long-run goal of growth with price stability. Fiscal dominance arises when deficits force the central bank to monetise debt.</p>
+  </div></details>
+</section>
+
+<section class="topic" id="admin">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 2</p><h3>Tax organs, taxing rights and multiple taxation</h3></div>
+  <div class="tw"><table>
+    <thead><tr><th>Authority</th><th>Taxes it administers under the NTAA 2025</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Nigeria Revenue Service</strong> (federal)</td><td>CIT for resident and non-resident companies including chargeable gains; WHT on companies and non-resident individuals; petroleum profits tax; hydrocarbon tax; VAT; development levy; stamp duties on bodies corporate; PIT of the armed forces and police (non-civilian) and of non-residents of any State employed in Nigeria; mineral royalty.</td></tr>
+      <tr><td><strong>State IRS & FCT-IRS</strong></td><td>Income tax, chargeable gains and stamp duties of resident individuals; other State taxes. Under the States' harmonised list: income tax, stamp duties, property tax, road tax, haulage levy.</td></tr>
+      <tr><td><strong>Local Government Revenue Committee</strong></td><td>Rates, fines and levies: harmonised levy (shops, slaughter slabs, motor parks), TV and radio fees, user charges (registrations, street naming, signage, sewage, burial permits), daily market ticketing.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>NRS and JRB in one glance</span>
+      <ul>
+        <li><strong>NRS:</strong> Executive Chairman appointed by the President with Senate confirmation; six Executive Directors, one per geopolitical zone (4 + 4 years); a Board with ex-officio members (Finance, Planning, AGF, Petroleum, CBN, RMAFC, Customs, CAC) and a Technical Committee.</li>
+        <li><strong>JRB:</strong> chaired by the NRS Executive Chairman with every State IRS and the FCT-IRS chairman. Keeps the national TIN database, settles residency disputes between tax authorities, advises on treaties and new taxes, publishes revenue and tax expenditure data, guides accreditation of tax agents. The TAT and the Tax Ombud sit under the JRB Act.</li>
+      </ul>
+    </div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Fiscal federalism (pitfall May 2021)</span>
+      <p>Fiscal federalism is the system of revenue generation and redistribution among the component units of a federation, and the financial functions and responsibilities each tier carries. Its base is s.2(1)–(2) of the Constitution: one indivisible sovereign state, a federation of States and a Federal Capital Territory. Other federations: the USA, Canada, Australia, India, Germany, Brazil, Switzerland, Malaysia.</p>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="box"><span class="tag" style="color:var(--muted)">Causes of multiple taxation</span><ul><li>Autonomous taxing powers of all three tiers</li><li>Unfair revenue sharing; fiscal imbalance pushes States and LGs to raise levies</li><li>Levies with no legal backing</li><li>Same base taxed twice (VAT vs State consumption tax; CIT plus several profit levies)</li><li>Weak harmonisation and enforcement of the approved list</li><li>Private consultants and touts paid on commission</li></ul></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Impact on compliance & yield</span><ul><li>Investment uncertainty</li><li>Erosion of the tax base as businesses relocate</li><li>Disincentive to file and pay correctly</li><li>Lower yield and higher cost of collection</li><li>Higher compliance cost, more disputes</li></ul></div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Solutions</span><ul><li>Harmonised taxes and levies per tier (NTAA; States Harmonised Taxes & Levies Bill 2025)</li><li>One revenue agency per tier (NTP)</li><li>JRB coordination and dispute settlement</li><li>Ban on consultants and touts collecting tax</li><li>Single-window, technology-based payment</li><li>Tax Ombud complaints route</li><li>2023 Executive Orders (Nov 2024 question)</li></ul></div>
+  </div>
+</section>
+
+<section class="topic" id="appeals">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 3 · NTAA ss.34–55, JRB Act 2025</p><h3>Objections, appeals, the Tax Ombud and refunds</h3></div>
+  <div class="flow" aria-label="Dispute timeline">
+    <div class="st"><span class="d">Day 0</span><b>Notice of assessment served</b><span>registered post, courier or electronic; states objection rights</span></div>
+    <div class="st"><span class="d">≤ 30 days</span><b>Written objection</b><span>to the tax authority; extendable for good cause</span></div>
+    <div class="st"><span class="d">≤ 90 days</span><b>Authority responds</b><span>or the objection is deemed upheld</span></div>
+    <div class="st"><span class="d">≤ 30 days</span><b>Appeal to TAT</b><span>late appeal only for sufficient cause</span></div>
+    <div class="st"><span class="d">≤ 30 days</span><b>Federal High Court</b><span>on points of law only, notice via TAT Secretary</span></div>
+    <div class="st"><span class="d">then</span><b>Court of Appeal → Supreme Court</b><span>either party</span></div>
+  </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>A valid objection (s.41 NTAA) states</span>
+      <ol><li>The specific issues or errors, with monetary values</li><li>The amendment required</li><li>The justification</li><li>Assessable and total profit (or income) the taxpayer admits</li><li>The tax admitted, or that none is payable</li></ol>
+      <p class="small">Delivered in person, by courier or electronically within 30 days of service.</p>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Notice of appeal to the TAT contains</span>
+      <ol><li>Tax file number</li><li>Year of assessment</li><li>Date of the decision appealed</li><li>Assessable profit disputed</li><li>Total profit disputed</li><li>Tax disputed</li><li>Grounds of appeal, which cannot differ from the grounds of objection</li></ol>
+    </div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Tax Appeal Tribunal</th><th>Rule</th></tr></thead>
+    <tbody>
+      <tr><td>Source</td><td>s.23(1) JRB (Establishment) Act 2025, replacing s.59 and the Fifth Schedule of the FIRS Act; pending cases continue.</td></tr>
+      <tr><td>Reach</td><td>Disputes under the NTA, NTAA and any federal or State tax law. Six zones; offices in Abuja, Bauchi, Benin, Enugu, Ibadan, Kaduna, Gombe and Jos.</td></tr>
+      <tr><td>Panel</td><td>Five commissioners per zone; the chairman is a legal practitioner of 10+ years with tax experience; quorum three; virtual hearings allowed.</td></tr>
+      <tr><td>Commissioners</td><td>10+ years in law, accounting, finance, economics or taxation, or a retired tax administrator, or an organised private sector member; appointed by the Minister of Finance; 3 years renewable once; retire at 70; must disclose interests and cannot appear as counsel.</td></tr>
+      <tr><td>Settlement window</td><td>On first appearance the chairman may allow up to 30 days to settle.</td></tr>
+      <tr><td>Hearing</td><td>Seven clear days' notice; held in public; onus on the appellant; Evidence Act applies; each party bears its own costs.</td></tr>
+      <tr><td>Security for tax</td><td>Where the appellant filed no returns, the appeal is frivolous, or security is expedient, the TAT may order a deposit of the <span class="hl">lesser of last year's tax and half the disputed tax</span>. Failure confirms the assessment with no further appeal at the TAT.</td></tr>
+      <tr><td>Outcome</td><td>Confirm, reduce, increase or annul. Judgment enforced as a Federal High Court judgment once registered with its Chief Registrar.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid3">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Office of the Tax Ombud</span><p>Independent arbiter for complaints on taxes, levies, fees, customs and excise. Mediates, investigates, enters premises of tax authorities, makes recommendations, can sue on a taxpayer's behalf, watches for arbitrary fiscal policy and reports to the National Assembly. Charges no fee. Head appointed by the President for 4 years, renewable once.</p></div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Alternative dispute resolution</span><p>Allowed at any stage where it serves revenue or public policy, litigation cost outweighs benefit, the taxpayer accepts the authority's position, or a whistleblower settlement exposes schemes. Not for deliberate evasion or fraud, or where a court ruling would improve compliance. Ends in a signed written agreement (issues, undertakings, future-year treatment, withdrawal of appeals, payment), enforceable as a debt.</p></div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Assessments & refunds</span><ul><li>Self-assessment is a deemed assessment, even nil (s.34)</li><li>Best-of-judgment where no return (s.35)</li><li>Additional assessment within <strong>6 years</strong>; no limit for deliberate misstatement (s.36)</li><li>Tax paid in the currency of the transaction</li><li>Refund within <strong>90 days</strong> of decision; claim within 6 years (s.55)</li></ul></div>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Pitfalls on this topic</span>
+    <ul><li>Nov 2025 Q7(d) asked for objection and appeal procedure: candidates gave the old FIRS Act sequence. Use the NTAA timeline above, and mention the 90-day deemed acceptance.</li><li>Appeal from the TAT to the Federal High Court is on <strong>points of law</strong> only. Model answers stress it.</li><li>A "report to your client on presenting a case before the TAT" wants three stages: pre-hearing (file notice, pay fee, serve, response), hearing (opening, evidence, cross-examination, closing), post-hearing (judgment, service, appeal).</li></ul>
+  </div>
+</section>
+
+<!-- ============ PART B ============ -->
+<div class="part-banner"><span class="letter">B</span><h2>Taxation of companies & investment income</h2><span class="weight">35% · Study Text ch. 4–12</span><a class="backtoc" href="#ptoc" style="display:none">↑ Contents</a></div>
+
+<section class="topic" id="basis">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 4 · NTA ss.22–24</p><h3>Basis periods: commencement, cessation, change of date</h3>
+  <p>A company is Nigerian if incorporated under CAMA 2020 and is taxed on its worldwide profits. A foreign company is taxed on profits attributable to its Nigerian operations. Since the Finance Act 2019, and retained in s.22 NTA, <strong>every year is on preceding year basis</strong>: there are no overlaps and no double-counting at commencement.</p></div>
+  <div class="grid2">
+    <div class="calc"><div class="ch"><b>Commencement</b><span>Obiageli Ltd: starts 1 Mar 2020, year end 31 Oct</span></div><div class="cb"><table>
+      <tr class="h"><td>YOA</td><td>Basis period</td></tr>
+      <tr><td>2021 (1st)</td><td>1 Mar 2020 – 31 Oct 2020</td></tr>
+      <tr><td>2022 (2nd)</td><td>1 Nov 2020 – 31 Oct 2021</td></tr>
+      <tr><td>2023 (3rd)</td><td>1 Nov 2021 – 31 Oct 2022</td></tr>
+    </table></div><div class="note">First period: commencement to the end of the first accounting period. A first set of accounts longer or shorter than that is apportioned (Okorie: 15 months split 3/15 and 12/15, leaving a year with no assessment).</div></div>
+    <div class="calc"><div class="ch"><b>Cessation</b><span>Apex Ltd: Dec year end, ceases 31 Mar 2024</span></div><div class="cb"><table>
+      <tr class="h"><td>YOA</td><td>Basis period</td><td>Tax due</td></tr>
+      <tr><td>2024</td><td>1/1/23 – 31/12/23</td><td>30 Jun 2024</td></tr>
+      <tr><td>2024</td><td>1/1/24 – 31/3/24</td><td>30 Sep 2024</td></tr>
+    </table></div><div class="note">Profits from the start of the period to cessation; tax due within <strong>six months of cessation</strong>. Cease 31 Aug 2024 and the final period falls in 2025 YOA, due 28 Feb 2025.</div></div>
+  </div>
+  <div class="grid2">
+    <div class="box old"><span class="tag"><i class="shape old"></i>Change of accounting date to 2025 (CITA)</span>
+      <ol><li>Find the first tax year affected by the change</li><li>Take it and the next two years</li><li>Compute assessable profit for the three years on the old date</li><li>Compute again on the new date</li><li>Total each set</li><li>Assess the higher total; later years follow the new date</li></ol>
+      <p class="small">Bako Ltd: old date ₦1,685,000 vs new ₦1,740,000, so the new date is used.</p>
+    </div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Change of accounting date from 2026 (s.23 NTA)</span>
+      <p>The basis period for the year of change runs from the day after the previous basis period to the new accounting date, whatever its length. Later years follow the new date. Notify the NRS at least <strong>30 days before the usual filing due date</strong>.</p>
+      <p class="small">Chukwuma Ltd moves from December to June 2026: 2027 YOA = 1/1/26 – 30/6/26 (six months); 2028 YOA = 1/7/26 – 30/6/27.</p>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Post-cessation receipts and payments</span><p>Treated as received or paid on the last day before cessation (Enugu Ltd: bad debt recovered +₦20,000, rent paid −₦40,000). New in s.24 NTA: disclose them to the NRS <strong>within one month</strong>; resulting additional assessments or repayments carry normal objection rights.</p></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Chargeability</span><p>A company is charged in its own name; through its principal officer, attorney, agent or representative; or, in receivership or liquidation, in the name of its receiver or liquidator. From 2026 a Nigerian parent is also taxed on the undistributed profits of a controlled foreign company (CFC rule) and must top up a low-taxed foreign subsidiary to the minimum effective rate.</p></div>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Pitfalls</span>
+    <ul><li><strong>May 2024 Q1:</strong> wrong basis periods for a company that commenced in 2018. A first year of assessment that fell before the Finance Act 2019 still uses the old rule; later years use preceding year basis. The Study Text shows the resulting gap year (Olubiyi: no 2020 assessment).</li><li><strong>May 2021 Q2:</strong> commencement rules not applied to the 2nd and 3rd years after a pioneer period. The day after the pioneer period is a <em>new trade</em>.</li></ul>
+  </div>
+</section>
+
+<section class="topic" id="adjusted">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 5 · NTA ss.20–21, 163–164, 192</p><h3>Adjusted profit: what you add back and what you take out</h3>
+  <p>Start from net profit per accounts. Add expenses that are not deductible and taxable income left out; deduct income that is not taxable and deductible expenses not charged. Under the NTA an expense must be incurred <strong>wholly and exclusively</strong> in producing the income; the CITA test also demanded "necessarily and reasonably".</p></div>
+  <div class="grid2">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Allowable (s.20 NTA)</span>
+      <ul><li>Interest on debt used to earn the income, within the connected-person cap</li><li>Rent and premiums on premises used for the business</li><li>Salaries, wages and staff benefits</li><li>Repairs and renewals of premises, plant, implements and utensils</li><li><span class="new-mark">Costs of establishing, preserving or defending title to an asset</span></li><li>Contributions to approved pension schemes</li><li>Proven loss or damage of stock</li><li>Bad and doubtful debts (not with related parties; doubtful debts per GAAP; evidence of recovery efforts)</li><li>Research and development, capped at <span class="hl">5% of turnover</span></li><li>Pre-commencement costs within 6 years, deemed incurred on day one</li><li>REIC dividends and mandatory distributions</li><li>Compensating payments that qualify as interest in a regulated securities lending transaction</li><li><span class="new-mark">Assistive devices and disability-related products</span></li><li>Donations to qualifying bodies within 10% of profit before tax</li></ul>
+    </div>
+    <div class="box trap"><span class="tag"><i class="shape tri"></i>Disallowable (s.21 NTA)</span>
+      <ul><li>Capital repaid or withdrawn; any capital expenditure</li><li>Domestic or private expenses; assets not used in the business</li><li>Amounts recoverable under insurance or indemnity</li><li>Taxes on income or profit, in Nigeria or abroad</li><li>Payments to unapproved pension or provident funds</li><li>Depreciation, <span class="new-mark">impairment</span>, and <span class="new-mark">unrealised exchange differences</span></li><li>Sums reserved out of profits (general reserves, general provisions)</li><li>Payments to connected persons not at arm's length</li><li>Expenses of earning exempt income; costs deductible against a chargeable gain</li><li>Fines and penalties under any law</li><li>Tax or penalty borne for another person (WHT you absorbed for a landlord)</li><li>Dividend-type compensating payments in securities lending</li><li><span class="new-mark">Any expense on which VAT was due but not charged, or imports on which duty or levy was not paid</span></li></ul>
+    </div>
+  </div>
+  <div class="calc"><div class="ch"><b>Add-back drill</b><span>items from the May 2026 Q1 model answer (ROMO Agro-allied)</span></div><div class="cb"><table>
+    <tr class="h"><td>Item in the accounts</td><td>Treatment</td><td>Why</td></tr>
+    <tr><td>Improvement to industrial building (in repairs)</td><td>Add back</td><td>Capital; claim capital allowances instead</td></tr>
+    <tr><td>Repairs of plant and equipment</td><td>Allow</td><td>Revenue repair</td></tr>
+    <tr><td>Legal fees: acquiring a short lease; renewing a long lease</td><td>Add back</td><td>Capital in nature</td></tr>
+    <tr><td>Legal cost of a tax appeal</td><td>Add back</td><td>Relates to tax, not to earning income</td></tr>
+    <tr><td>Professional retainership</td><td>Allow</td><td>Recurrent business cost</td></tr>
+    <tr><td>Preliminary expenses written off; feasibility study</td><td>Add back</td><td>Capital / pre-trading capital</td></tr>
+    <tr><td>Stamp duties on increase in share capital</td><td>Add back</td><td>Capital</td></tr>
+    <tr><td>General provision for doubtful debts</td><td>Add back</td><td>Reserve (CITA); specific provision allowed</td></tr>
+    <tr><td>Bad debt recovered (previously allowed)</td><td>Taxable</td><td>Already in profit; leave it in</td></tr>
+    <tr><td>Donation to a country club</td><td>Add back</td><td>Not a qualifying body</td></tr>
+    <tr><td>Books donated to the National Library; MAN subscription</td><td>Allow</td><td>Qualifying body / trade subscription</td></tr>
+    <tr><td>Transfer to general reserves; income tax provision; depreciation</td><td>Add back</td><td>Appropriation / tax / replaced by allowances</td></tr>
+    <tr><td>Dividend received (net); surplus on building revaluation</td><td>Deduct</td><td>Franked investment income; unrealised capital</td></tr>
+  </table></div><div class="note">Other model answers add back: loss on disposal of a vehicle (capital; gain or loss goes to the gains computation), legal fees on share issues, unbranded hampers or gifts (not wholly for the business), and excess interest to a foreign parent.</div></div>
+  <div class="tw"><table class="ledger">
+    <thead><tr><th>Item</th><th>CITA (to 2025)</th><th>NTA (from 2026)</th></tr></thead>
+    <tbody>
+      <tr><td>Donations</td><td>Fifth Schedule bodies; out of profit, so none in a loss year; not capital; cap 10% of total profit before donations. Tertiary and research institutions: higher of 15% of total profit or 25% of tax. FA 2020: pandemic and disaster donations up to 10% of assessable profit.</td><td>Public funds, statutory bodies, religious, charitable, educational and scientific institutions in Nigeria, diplomatic bodies, pandemic and emergency funds. Revenue <em>or</em> capital. Cap <strong>10% of profit before tax</strong>. In-kind value = lower of market value and cost. Evidence to the NRS.</td></tr>
+      <tr><td>Research & development</td><td>Actual spend allowed; a reserve up to 10% of total profits; 20% investment tax credit for commercialisation.</td><td>Deductible up to <strong>5% of turnover</strong>. Proceeds from selling the R&D outcome are taxable.</td></tr>
+      <tr><td>Bad & doubtful debts</td><td>Specific allowed; general disallowed.</td><td>Doubtful debts estimated under GAAP allowed; related-party bad debts disallowed; evidence of recovery attempts required.</td></tr>
+      <tr><td>Foreign-currency expenses</td><td>Not addressed.</td><td>Deductible only at the CBN official rate; any excess from a higher rate is disallowed.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="calc"><div class="ch"><b>Interest restriction: 30% of EBITDA</b><span>Jones Nigeria Ltd, 2025 YOA</span></div><div class="cb"><table>
+      <tr><td>EBITDA</td><td class="n">2,550,000</td></tr>
+      <tr><td>Cap: 30% × EBITDA</td><td class="n">765,000</td></tr>
+      <tr><td>Interest to other creditors</td><td class="n">500,000</td></tr>
+      <tr><td>Interest to Canadian connected company</td><td class="n">750,000</td></tr>
+      <tr><td>Less: interest for tax-exempt profits</td><td class="n">(200,000)</td></tr>
+      <tr class="sub"><td>Interest qualifying</td><td class="n">1,050,000</td></tr>
+      <tr><td>Deductible: lower of cap and qualifying</td><td class="n">765,000</td></tr>
+      <tr class="tot"><td>Excess carried forward (max 5 YOAs, to 2030)</td><td class="n">285,000</td></tr>
+    </table></div><div class="note">Applies to interest on debt from a <strong>foreign connected person</strong>; Nigerian subsidiaries of foreign banks and insurers are excluded. Same rule in FA 2019 (thin capitalisation, May 2024 Q1 and May 2023 Q6) and the NTA.</div></div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Three more rules that move numbers</span>
+      <ul><li><strong>Mixed-use expenses:</strong> allow only the taxable share: deductible expenses × taxable income ÷ total income.</li><li><strong>Waivers:</strong> if an allowed liability is later waived or refunded, the amount is income on that day (s.192). A waived capital liability is a chargeable gain.</li><li><strong>Connected persons:</strong> anyone under common control, ownership or management; anyone given a guarantee for matching debt; and related parties under the TP Regulations.</li></ul>
+    </div>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Examiner's verdict, seven diets running</span><p>Question 1 reports for Nov 2022, May 2023, Nov 2023, Nov 2024, May 2025, Nov 2025 and May 2026 all name the same failure: allowable and disallowable expenses. Before the exam, write your own two-column list from memory until it matches the boxes above. May 2022 adds the dividend exemption rules and the donation conditions; May 2021 adds non-resident head-office expenses.</p></div>
+</section>
+
+<section class="topic" id="ca">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 7 · NTA First Schedule</p><h3>Capital allowances</h3>
+  <p>Capital allowances replace depreciation so every taxpayer writes off assets at the same statutory rate. The company must own the asset at the end of the basis period and use it in the business.</p></div>
+  <div class="grid2">
+    <div class="tw"><table>
+      <thead><tr><th>CITA rates (exam rate sheet)</th><th class="n">Initial</th><th class="n">Annual</th></tr></thead>
+      <tbody>
+        <tr><td>Buildings (industrial & non-industrial)</td><td class="n">15%</td><td class="n">10%</td></tr>
+        <tr><td>Mining expenditure</td><td class="n">95%</td><td class="n">—</td></tr>
+        <tr><td>Plant (excl. furniture); manufacturing plant</td><td class="n">50%</td><td class="n">25%</td></tr>
+        <tr><td>Construction plant</td><td class="n">50%</td><td class="n">—</td></tr>
+        <tr><td>Agricultural plant; plantation equipment</td><td class="n">95%</td><td class="n">—</td></tr>
+        <tr><td>Motor vehicles</td><td class="n">50%</td><td class="n">25%</td></tr>
+        <tr><td>Public transportation vehicles</td><td class="n">95%</td><td class="n">—</td></tr>
+        <tr><td>Furniture & fittings</td><td class="n">25%</td><td class="n">20%</td></tr>
+        <tr><td>Housing estate</td><td class="n">50%</td><td class="n">25%</td></tr>
+        <tr><td>Ranching & plantation</td><td class="n">30%</td><td class="n">50%</td></tr>
+        <tr><td>Research & development</td><td class="n">95%</td><td class="n">—</td></tr>
+      </tbody>
+    </table></div>
+    <div class="box old"><span class="tag"><i class="shape old"></i>CITA mechanics you still need</span>
+      <ul><li>Annual allowance = (cost − initial) ÷ tax life, the same each year; keep <strong>₦10 per asset</strong> in the books.</li><li>Investment allowance 10% (plant), abolished from 1 Sept 2023.</li><li>Restrict to <strong>66⅔% of assessable profit</strong> except manufacturing and agro-allied companies; unused allowances carry forward without limit.</li><li>Replacement plant: 95% one-off, 5% retained. Gas utilisation after its tax holiday: 90% annual, 10% retained.</li><li>Balancing allowance when proceeds &lt; TWDV; balancing charge when proceeds &gt; TWDV, capped at allowances given.</li><li>Second-hand building: no initial allowance; cost = lower of original construction cost and price paid. Exclude land.</li><li>Hire purchase: strip out interest; each instalment paid is a separate addition.</li><li>Small companies (FA 2021): allowances deemed used each year.</li><li>Unused allowances at cessation go back up to 5 years.</li></ul>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Class 1 · 10% a year</span><p>Buildings · agricultural (plantation clearing, planting, ranching) · masts · intangible assets (R&D, patents, licences, formulas) · heavy transport (aircraft, pipelines and cables, vessels, ships' engines, trains and track)</p></div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Class 2 · 20% a year</span><p>Plant · agricultural equipment · furniture & fittings · mining · other equipment</p></div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Class 3 · 25% a year</span><p>Motor vehicles · software · other capital expenditure</p></div>
+  </div>
+  <div class="grid2">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>How the NTA computes</span>
+      <ul><li>Straight-line over the tax life; no initial allowance for assets bought from 1 Jan 2026.</li><li>Pro-rate when the basis period is under 12 months (Akon Ltd: ₦50m vehicle, 25%, six months → ₦6.25m).</li><li>Record a notional <strong>1% of cost</strong> until disposal; it does not change the allowance.</li><li>No 66⅔% restriction, no balancing allowance or charge, no investment allowance. Unused allowances still carry forward.</li><li>QCE includes acquisition, refurbishment and improvement, and every cost of bringing the asset to first use.</li></ul>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>NTA conditions (asked as theory in the 2026 text)</span>
+      <ol><li>Owner at the end of the basis period</li><li>Asset used in the business</li><li>Priority-sector companies: certificate of acceptance from the Industrial Inspectorate Department</li><li>VAT, import duty or levy on the asset actually paid</li><li>Asset used partly for exempt income: pro-rate only if non-taxable income is 10% or more of total income</li><li>Allowances on priority (EDI) activities only against priority profits</li><li>No allowance on items already deducted as expenses</li><li>No allowance on the excess cost of foreign currency bought above the official rate</li></ol>
+    </div>
+  </div>
+  <div class="box rule"><span class="tag"><i class="shape sq"></i>Transition rules for assets that already had allowances</span>
+    <ul><li>Remaining life under the NTA = NTA life − years already claimed.</li><li>If years already claimed equal or exceed the NTA life, claim the residue in one go in 2026, keeping the 1% notional record.</li><li>A fully relieved asset gets nothing on its ₦10 CITA retention.</li><li>Hire purchase and finance leases: QCE = instalments paid excluding interest; the hirer or lessee is the owner; the lessor claims nothing. Operating lease: the lessor claims.</li></ul>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Pitfall: May 2026 Q1</span><p>Assets bought during a pioneer period carried no allowances then. In the post-pioneer computation they are treated as acquired on the first day of the new trade, so each takes its initial allowance in the first post-pioneer year, and the model answer kept ₦10 per asset when lives expired (₦30 for three vehicles).</p></div>
+</section>
+
+<section class="topic" id="losses">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 6 · NTA s.27</p><h3>Loss relief</h3></div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Companies</span>
+      <ul><li>Carry forward only, against profits of the <strong>same trade</strong>, first available year onward, until used. No time limit.</li><li>Never relieve more than the loss.</li><li>Compute the loss on the same basis period as assessable profit.</li><li>No current-year relief (that is for individuals, claimed within 12 months) and no terminal loss relief.</li><li>Order in the computation: assessable profit + chargeable gains − losses b/f − capital allowances = total profit.</li></ul>
+    </div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>New ring-fence</span><p>A loss from selling or disposing of <strong>digital or virtual assets</strong> is deductible only against profits from the digital-asset business. Petroleum losses are ring-fenced by class (PML vs PPL) for hydrocarbon tax; see <a href="#oil">Oil & gas</a>.</p></div>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Pitfall: Nov 2020 Q2</span><p>Loss brought forward and donations treated in the wrong order in a petroleum computation. Losses come off <em>adjusted</em> profit to give assessable profit; allowances then come off assessable profit.</p></div>
+</section>
+
+<section class="topic" id="total">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 11 · NTA ss.9, 27, 57, 59; NTAA s.38</p><h3>Total profit, CIT, development levy and the 15% minimum</h3></div>
+  <div class="calc"><div class="ch"><b>Pro-forma: income tax and development levy (NTA)</b><span>year ended 31 Dec 2026 → 2027 YOA</span></div><div class="cb"><table>
+    <tr><td>Profit before tax per accounts</td><td class="n">x</td></tr>
+    <tr class="h"><td colspan="2">Add: disallowed items</td></tr>
+    <tr><td class="in">Depreciation, impairment, unrealised FX loss</td><td class="n">x</td></tr>
+    <tr><td class="in">Fines, penalties, taxes borne for others, private expenses</td><td class="n">x</td></tr>
+    <tr><td class="in">Excess connected-party interest (&gt; 30% EBITDA)</td><td class="n">x</td></tr>
+    <tr><td class="in">Donations outside s.163 or above 10% of PBT</td><td class="n">x</td></tr>
+    <tr><td class="in">Provision for lease liability; expenses with VAT or duty unpaid</td><td class="n">x</td></tr>
+    <tr><td class="in">Disposal costs of chargeable assets (they reduce the gain instead)</td><td class="n">x</td></tr>
+    <tr class="h"><td colspan="2">Deduct: non-taxable items</td></tr>
+    <tr><td class="in">Dividends (franked), CIS dividends, FGN or State bond income</td><td class="n">(x)</td></tr>
+    <tr><td class="in">Unrealised FX gains; payment of lease liability; book profit on disposals</td><td class="n">(x)</td></tr>
+    <tr class="sub"><td>Adjusted / assessable profit</td><td class="n">A</td></tr>
+    <tr><td>Add: chargeable gains</td><td class="n">x</td></tr>
+    <tr><td>Less: unrelieved loss b/f (same trade)</td><td class="n">(x)</td></tr>
+    <tr><td>Less: capital allowances (b/f + year), no restriction</td><td class="n">(x)</td></tr>
+    <tr class="sub"><td>Total profit</td><td class="n">T</td></tr>
+    <tr><td>Income tax @ 30% × T</td><td class="n">x</td></tr>
+    <tr><td>Development levy @ 4% × A</td><td class="n">x</td></tr>
+    <tr><td>Less: economic development tax credit (if a priority company)</td><td class="n">(x)</td></tr>
+    <tr><td>Add: top-up to 15% ETR (if in scope)</td><td class="n">x</td></tr>
+    <tr class="tot"><td>Tax payable before WHT credit notes</td><td class="n">x</td></tr>
+  </table></div><div class="note">Danladi Ltd (Study Text 11.2): add back depreciation, a late-filing penalty, incidental costs of a land disposal and an unrealised FX loss; deduct FGN bond interest and a CIS dividend.</div></div>
+  <div class="grid2">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Development levy (s.59)</span>
+      <p>4% of assessable profit of every company except <strong>small companies</strong> and <strong>non-resident companies</strong>. Not charged on hydrocarbon tax profits and not deductible for hydrocarbon tax. It replaces tertiary education tax (3% of assessable profit), the NITDA levy (1% of PBT), the Police Trust Fund levy (0.005% of net profit) and the NASENI levy (0.25% of PBT).</p>
+      <div class="bars" aria-label="Development levy sharing">
+        <div class="row"><span>TETFund</span><div class="b" style="width:100%"></div><span class="v">50%</span></div>
+        <div class="row"><span>Nigerian Education Loan Fund</span><div class="b" style="width:30%"></div><span class="v">15%</span></div>
+        <div class="row"><span>Defence & Security Infrastructure</span><div class="b" style="width:20%"></div><span class="v">10%</span></div>
+        <div class="row"><span>NITDF</span><div class="b" style="width:16%"></div><span class="v">8%</span></div>
+        <div class="row"><span>NASENI</span><div class="b" style="width:16%"></div><span class="v">8%</span></div>
+        <div class="row"><span>National Cybersecurity Fund</span><div class="b" style="width:10%"></div><span class="v">5%</span></div>
+        <div class="row"><span>NBTI</span><div class="b" style="width:8%"></div><span class="v">4%</span></div>
+      </div>
+    </div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Minimum effective tax rate (s.57)</span>
+      <p>Applies to a constituent entity of an MNE group with turnover of <strong>€750m</strong> or more, and to any company with turnover of <strong>₦50bn</strong> or more. Free-zone enterprises are out of scope for approved activities, unless selling into the customs territory or part of such a group.</p>
+      <p><strong>ETR</strong> = covered taxes ÷ net income. Covered taxes = CIT + development levy − priority-sector tax credit. Net income = audited PBT − franked investment income − unrealised gains or losses.</p>
+      <p class="small">Jagab Ltd: turnover ₦65bn, covered taxes ₦805,000, net income ₦7,415,000, ETR 11%, so top-up = (805,000 ÷ 11%) × 15% − 805,000 ≈ ₦292,727. The economic development credit can never reduce the top-up.</p>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Dividend tax (s.9 NTA; CITA s.19 as amended by FA 2019)</span>
+      <p>If a company pays a dividend when it has <strong>no total profit</strong>, or a dividend larger than its total profit, the dividend is treated as the total profit and taxed at 30%. Excluded since FA 2019 and in s.9: dividends out of retained earnings already taxed; exempt profits; franked investment income; REIC distributions of rent and dividends.</p>
+      <p class="small">Before FA 2019: total profit ₦200m, dividend ₦280m → tax 30% × ₦280m = ₦84m. ABC Ltd (2026 text): ₦4.2m dividend, ₦3.6m total profit, ₦600k traced to taxed retained earnings → no dividend tax.</p>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Other assessment bases</span>
+      <ul><li><strong>Turnover-based (s.38 NTAA):</strong> where profit is nil, too low or unascertainable, a resident pays on a fair percentage of gross income; a non-resident on its EBIT ÷ revenue margin × Nigerian turnover.</li><li><strong>Deemed distribution (s.10 NTA):</strong> a company controlled by five or fewer individuals that does not distribute profits it could have paid may be directed to treat them as distributed, within 3 years of filing audited accounts; LLP profits are always deemed distributed.</li><li>Interim dividends no longer trigger advance CIT (abolished by FA 2019).</li></ul>
+    </div>
+  </div>
+  <div class="box old"><span class="tag"><i class="shape old"></i>Pre-2026 charges you will meet in past papers</span>
+    <ul><li>CIT 30% / 20% / 0% by turnover band (FA 2019).</li><li>Tertiary education tax on assessable profit: 2% to 31 Dec 2021; 2.5% from 1 Jan 2022; 3% from 1 Sept 2023.</li><li>Minimum tax on gross turnover where CIT was lower (0.5% under FA 2019), with exemptions for small companies, the first four years of business and agricultural companies. Recent papers usually say "ignore minimum tax".</li></ul>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Pitfall: Nov 2025 Q3(b)</span><p>Candidates could not state the FA 2019 rule when the dividend exceeds profit or there is no total profit, nor test it against the dividend paid. State the charge, list the four exclusions, then apply them to the figures before concluding.</p></div>
+</section>
+
+<section class="topic" id="gains">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 8 · NTA ss.34–47</p><h3>Chargeable gains</h3>
+  <p>The Capital Gains Tax Act is repealed. A company's chargeable gains are now <strong>added to total profit and taxed at 30%</strong>, on preceding year basis (a disposal in the 2026 accounts falls into the 2027 year of assessment).</p></div>
+  <div class="grid2">
+    <div class="calc"><div class="ch"><b>Computation (NTA)</b><span>Mobolaje Ltd, 2028 YOA</span></div><div class="cb"><table>
+      <tr class="h"><td colspan="2">Plant that had allowances</td></tr>
+      <tr><td>Proceeds (Mar 2027)</td><td class="n">55,000,000</td></tr>
+      <tr><td>Less: TWDV (45m − 20% × 45m)</td><td class="n">(36,000,000)</td></tr>
+      <tr class="sub"><td>Gain</td><td class="n">19,000,000</td></tr>
+      <tr class="h"><td colspan="2">Land without allowances</td></tr>
+      <tr><td>Proceeds</td><td class="n">42,000,000</td></tr>
+      <tr><td>Less: agent's fee</td><td class="n">(1,250,000)</td></tr>
+      <tr><td>Less: cost</td><td class="n">(25,000,000)</td></tr>
+      <tr class="sub"><td>Gain</td><td class="n">15,750,000</td></tr>
+      <tr><td>Compulsorily acquired property</td><td class="n">exempt</td></tr>
+      <tr class="tot"><td>Into total profit</td><td class="n">34,750,000</td></tr>
+    </table></div><div class="note">With no balancing charge in the NTA, a gain on an asset that had allowances is proceeds − <strong>tax written-down value</strong>. That one figure claws back the allowances and taxes the real gain.</div></div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Deductions & special rules</span>
+      <ul><li>Deduct cost (or TWDV), improvement costs, costs of defending title, disposal costs (valuers, surveyors, lawyers, accountants, adverts) and acquisition costs (stamp duty, conveyancing).</li><li><strong>Part disposal:</strong> cost × A ÷ (A + B), A = proceeds of part sold, B = market value of the rest. Maryland: ₦30m × 40 ÷ 75 = ₦16m; gain ₦24m.</li><li><strong>Market value</strong> replaces proceeds for non-arm's-length deals, unvaluable consideration, trustees for creditors and inheritances. Use the higher of proceeds and market value on sale; the lower of price paid and market value on purchase.</li><li><strong>Gifts:</strong> the donee takes the last arm's-length price, else market value.</li><li><strong>Asset taken for a debt:</strong> the creditor's cost cannot exceed market value, and the creditor's gain cannot exceed the gain using the debt as cost (May 2022 pitfall).</li><li><strong>Options:</strong> the disposal date is when the option is exercised. Conditional contract: when the condition is met.</li><li><strong>Instalments over 12 months:</strong> spread the gain by consideration received each year.</li><li><strong>Bundled bargains:</strong> one disposal; apportion the price.</li></ul>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="calc"><div class="ch"><b>Asset lost or destroyed</b><span>ABC Ltd: compensation used within 3 years</span></div><div class="cb"><table>
+      <tr><td>Insurance received</td><td class="n">7,000,000</td><td class="n">7,000,000</td></tr>
+      <tr><td>Residue of old asset</td><td class="n">1,000,000</td><td class="n">1,000,000</td></tr>
+      <tr class="sub"><td></td><td class="n">8,000,000</td><td class="n">8,000,000</td></tr>
+      <tr><td>Cost of replacement</td><td class="n">(5,000,000)</td><td class="n">(12,000,000)</td></tr>
+      <tr class="tot"><td>Result</td><td class="n">gain 3,000,000</td><td class="n">CA addition 4,000,000</td></tr>
+    </table></div><div class="note">Compensation plus scrap above the replacement cost is a gain; below it, the shortfall is a new qualifying addition. Allowances continue on the old residue.</div></div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Not chargeable under the NTA</span>
+      <ul><li>Compulsory acquisition of land (unless bought knowing it was coming, or advertised to the authority)</li><li>Shares in Nigerian companies where proceeds &lt; <strong>₦150m</strong> and gain ≤ <strong>₦10m</strong> in any 12 months; or proceeds reinvested in Nigerian shares in the same YOA (gain taxed only on the part not reinvested); or securities lending</li><li>Compensation for loss of office or injury up to <strong>₦50m</strong> (payer deducts tax on the excess)</li><li>Principal private residence once in a lifetime, up to one acre</li><li>Personal chattels up to the higher of ₦5m and 3 × annual minimum wage</li><li>Up to two private cars per individual per year</li><li>Gift received and given away as a gift</li><li>Charity, co-operative, friendly society and trade union property not used in trade</li><li>Startup investments held 24 months by angels, VCs, PE funds, accelerators, incubators</li><li>Pension funds, retirement benefit investments, awards for valour</li><li>Life assurance rights, unless bought from the original owner</li></ul>
+    </div>
+  </div>
+  <div class="box rule"><span class="tag"><i class="shape sq"></i>Location and indirect transfers</span><p>Immovables and tangible movables are located where they sit; debts where the creditor is resident or has a PE; registered shares where the register is; goodwill where the business is carried on; patents where registered; digital assets where the beneficial owner is resident. Shares in a <strong>foreign</strong> entity are Nigerian assets if more than 50% of their value in the previous 365 days came from Nigerian property or companies. Under s.47, a non-resident's share sale that changes the ownership of a Nigerian company or Nigerian asset is chargeable.</p></div>
+  <div class="box old"><span class="tag"><i class="shape old"></i>CGT Act rules behind the past papers (disposals to 2025)</span>
+    <ul><li>Rate 10% on chargeable gains; separate from CIT.</li><li><strong>Roll-over relief (s.32):</strong> land and buildings used in the trade, fixed plant and machinery, ships, aircraft and goodwill. Model answers require the replacement within <strong>12 months</strong> of the disposal (May 2024: bought 14 months later, no relief). Full reinvestment defers the whole gain and reduces the new asset's cost; partial reinvestment taxes the gain up to the part not reinvested. Motor vehicles never qualify (Nov 2024).</li><li>Returns and payment by <strong>30 June</strong> (disposals Jan–Jun) and <strong>31 December</strong> (Jul–Dec) of the year of disposal (FA 2020). With no return: best-of-judgment assessment, payment within 60 days, 10% penalty plus interest.</li><li>Loss of office exempt up to ₦10m (FA 2020). Shares exempt below ₦100m proceeds, or if reinvested (FA 2021; FA 2023: within the same YOA).</li><li>Capital losses carried forward against gains on the same class of asset only from FA 2023 (Sept 2023). A May 2023 loss could not be used (May 2026 model answer).</li><li>Related-party reorganisation (FA 2019): exempt if related for 365 days before and the assets are kept 365 days after.</li></ul>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Capital gains pitfalls, diet by diet</span>
+    <ul><li>Nov 2021: which assets qualify for roll-over.</li><li>May 2022: disposal of an option; asset acquired in exchange for a debt.</li><li>May 2023: the cost on which allowances are granted for the replacement asset.</li><li>Nov 2023 & May 2024: computing roll-over; the time lag between disposal and reacquisition.</li><li>Nov 2024 & May 2025: Finance Act 2021 and 2023 rules on shares.</li><li>May 2026: assets transferred between connected parties.</li></ul>
+  </div>
+</section>
+
+<section class="topic" id="invest">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 9 · NTA ss.4, 9–10, 19, 162; NTAA s.51</p><h3>Investment income: dividends, interest, royalties, rent, REICs</h3></div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Dividends</span>
+      <ul><li>Income = the gross dividend, arising on the day it becomes payable.</li><li>Dividend received after WHT is <strong>franked investment income</strong>: final tax, excluded from total profit. On redistribution, the WHT suffered offsets WHT due.</li><li>Scrip or bonus shares: not taxable and no WHT.</li><li>To a non-resident: WHT is final, and neither payer nor recipient can reclaim it.</li><li>Exempt: from authorised collective investment schemes; from wholly export-oriented businesses; foreign dividends brought in through approved channels.</li><li>Old CITA exemptions: dividends out of pioneer profits; dividends on foreign-currency equity of 10%+ for 5 years (agriculture, petrochemicals, LNG) or 3 years (others).</li></ul>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Interest, royalty, rent</span>
+      <ul><li>Interest is Nigerian when the payer is a Nigerian resident or a Nigerian PE. The NTA definition is wide: penal interest, discounts, profit share in non-interest finance, the finance-cost element of a finance lease, FX differences on debt and securities, hedging payments.</li><li>Exempt: foreign interest, royalty and rent brought in through approved channels (CBN or authorised dealers).</li><li>Rent received in advance is spread over the period, up to five years.</li><li>Allowable against rent: rates and land use charge, collection and agency costs, adverts for tenants, repairs, bad debts, interest on loans for the property, insurance, water rate. Not: depreciation, capital costs, appropriations.</li></ul>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Real estate investment companies</span><p>An SEC-approved REIC is exempt on dividends and rent received for its shareholders if it distributes at least <strong>75% within 12 months</strong> of year end. Distributions are deductible and outside dividend tax. Not exempt: the shareholders on what they receive; the REIC's own fees and income; anything when the 75%/12-month test fails. Illustration 9.2: 86% distributed within six months, so ₦240m is excluded and the dividend-tax base of ₦260m is below total profit.</p></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Withholding tax mechanics</span><p>s.51 NTAA and the Deduction of Tax at Source (Withholding) Regulations 2024: deduct when payment is made or settled; between related parties, at payment or when the liability is recognised, whichever is earlier. Tax-exempt payers must still deduct. The Study Text uses <strong>10%</strong> on dividends, interest, rent and royalties to non-treaty residents and <strong>7.5%</strong> for treaty residents. Small companies' income is not subject to WHT.</p></div>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Pitfalls</span><ul><li>May 2022 Q1: the CITA conditions for exempting dividends.</li><li>May 2023 Q1(c): the tax consequences of dividends for the company <em>and</em> its shareholders. Cover both sides.</li><li>May 2024 Q3(c): WHT for a recipient in a non-treaty country (10%, final) against a treaty country (7.5%).</li></ul></div>
+</section>
+
+<section class="topic" id="incentives">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 10 · NTA s.162, ss.168–169, Tenth Schedule</p><h3>Incentives: economic development credit, pioneer transition, free zones</h3>
+  <p>The NTA swaps the blanket pioneer tax holiday for an <strong>investment-linked tax credit</strong>. Pioneer companies keep their reliefs for the unexpired period at 1 January 2026, so both regimes will appear in questions for some time.</p></div>
+  <div class="tw"><table class="ledger">
+    <thead><tr><th>Feature</th><th>Pioneer status (IDA)</th><th>Economic development incentive (NTA)</th></tr></thead>
+    <tbody>
+      <tr><td>Benefit</td><td>Profits of the pioneer product exempt; tax-free dividends</td><td>Tax credit: <strong>5% of each eligible QCE per year for 5 years</strong>, on QCE acquired within 5 years of production day</td></tr>
+      <tr><td>Period</td><td>3 years + 2 year extension</td><td>5 years from production day + one 5-year extension if 100% of profits are reinvested in the same products</td></tr>
+      <tr><td>Entry test</td><td>Product on the pioneer list; QCE at least ₦10m</td><td>Sector on the Tenth Schedule; QCE by production day at least the sector minimum (₦500m to ₦200bn); before the sector's sunset</td></tr>
+      <tr><td>Application</td><td>NIPC</td><td>To the Secretary of NIPC with fee 0.1% of QCE (max ₦5m) → NIPC recommends to the Minister (FMITI) with a tax expenditure report → President approves</td></tr>
+      <tr><td>Unused benefit</td><td>Losses certified by FIRS; capital allowances deferred</td><td>Unused credit carried forward for 5 years after the priority period, then lapses</td></tr>
+      <tr><td>Limit</td><td>—</td><td>Cannot reduce the 15% minimum ETR top-up; no other similar incentive</td></tr>
+    </tbody>
+  </table></div>
+  <div class="flow" aria-label="EDI certificate process">
+    <div class="st"><span class="d">Step 1</span><b>Apply to NIPC</b><span>capital commitment, parent residence, QCE before and 3 years after production, location, products and by-products, capital structure, directors, declaration, fee</span></div>
+    <div class="st"><span class="d">Step 2</span><b>Minister → President</b><span>certificate issued within 30 days of approval; promoters incorporate within 3 months</span></div>
+    <div class="st"><span class="d">≤ 1 month after production</span><b>Industrial Inspectorate certifies production day</b><span>notifies NIPC and NRS within 1 month</span></div>
+    <div class="st"><span class="d">≤ 1 month</span><b>NRS certifies pre-production QCE</b><span>disposals deducted; certificate within 14 days of inspection; below minimum → certificate discountenanced</span></div>
+    <div class="st"><span class="d">Annually</span><b>Credit claimed with returns</b><span>separate audited books for priority and non-priority business, or everything counts as non-priority</span></div>
+  </div>
+  <div class="grid2">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Cancellation of an EDI certificate</span>
+      <ul><li>NIPC cancels on the company's request, on cessation or liquidation, or if production does not start within 12 months.</li><li>The Minister may suspend and demand a remedy within 3 months; failing that, the President cancels and may withdraw benefits.</li><li>Effective date: under one year after production day → production day; over one year → last anniversary of production day; failed conditions → production day.</li><li>NRS may withdraw credits within 6 years of cancellation (no limit for fraud).</li><li>M&A: two EDI companies combining keep only the survivor's expiry; a merger ends both and the new company may reapply.</li></ul>
+    </div>
+    <div class="box old"><span class="tag"><i class="shape old"></i>Pioneer rules for the unexpired period (still examinable)</span>
+      <ul><li>No capital allowances during the pioneer period. QCE before or during it is deemed incurred on the <strong>first day of the new trade</strong>.</li><li>The day after the pioneer period starts a <strong>new trade</strong>: apply commencement rules.</li><li>Pioneer losses are certified and deemed incurred on the first day of the new trade. ICAN practice: relieve them only against the <strong>first year</strong> of the new trade; any balance lapses (May 2026, Nov 2023).</li><li>Profit from <strong>non-pioneer products</strong> during the period is taxable (ROMO: imported fertiliser profit of ₦12.7m taxed in 2022 YOA).</li><li>Dividends limited to the credit on the exempt-profits account; loans only with the Minister's consent; directors' pay and shareholder charges restricted to a just and reasonable amount.</li><li>Revocation: production day more than a year after the date applied for; QCE below ₦10m; false information; abuse of the relief; evasion under its cover; activities outside the certificate.</li></ul>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Free trade zones under the NTA</span>
+      <ul><li>Profit exempt if sales are exports or inputs to exports, at most 25% go into the customs territory, or sales go to petroleum and gas operators.</li><li>More than 25% into the customs territory: tax on profit from those sales. From <strong>1 January 2028</strong>, customs-territory sales are fully taxable whatever the percentage.</li><li>Entities in scope of the 15% minimum ETR are not exempt.</li><li>They must still register, file returns and deduct WHT.</li><li>Contract manufacturing for a connected resident: the income is the resident's unless at arm's length; services between them fall under TP rules.</li></ul>
+    </div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Other NTA exemptions worth listing</span>
+      <ul><li>Agricultural businesses (crops, livestock, aquaculture, forestry, dairy, cocoa processing) for their first 5 years</li><li>Companies engaged in sporting activities</li><li>Export profits repatriated through official channels</li><li>FG and State bond income</li><li>Friendly societies, co-operatives, charities, trade unions and governments, except trading income</li><li>Extra 50% deduction for wage awards to workers earning up to ₦100,000 a month and net new hires in 2023–2024, for two years between 2023 and 2025</li></ul>
+    </div>
+  </div>
+  <details class="more"><summary>Sector incentives from earlier papers: gas utilisation, road infrastructure credit, mining, agriculture</summary><div class="in">
+    <p><strong>Gas utilisation, downstream (CITA s.39, examined May 2023):</strong> tax-free period of 3 years, renewable for 2, from production day certified by the Ministry; or instead an additional 35% investment allowance; afterwards 90% annual allowance with 10% retained plus 15% investment allowance; tax-free dividends where investment was in foreign currency or imported plant made up at least 30% of equity; interest on approved gas-project loans deductible (FA 2019 later tied this to the interest rules). FA 2020 limited the incentive to downstream gas utilisation businesses, not mere consumers, and barred companies that claimed it under any other law.</p>
+    <p><strong>Road Infrastructure Tax Credit Scheme (Executive Order 007 of 2019; pitfall May 2023):</strong> a public–private scheme in which Nigerian companies, institutional investors or SPVs fund approved roads and recover the certified project cost, plus a single uplift equal to the CBN monetary policy rate, as a credit against CIT. Run by a committee chaired by the Minister of Finance including the FIRS; eligible roads approved by the President.</p>
+    <p><strong>Mining:</strong> see <a href="#mining">Mining incentives</a>. <strong>Gas utilisation investment allowance:</strong> see <a href="#oil">Oil & gas</a>.</p>
+  </div></details>
+</section>
+
+<section class="topic" id="leases">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 12</p><h3>Taxation of leases</h3>
+  <p>IFRS 16 puts nearly every lease on the lessee's balance sheet as a right-of-use asset and a lease liability (except leases of 12 months or less and low-value assets). Tax law still splits leases into finance leases, treated as financed purchases, and operating leases, treated as true rentals. A lease is a finance lease if it transfers substantially all risks and rewards: ownership passes, a bargain purchase option, a term of about 80% or more of the asset's life, minimum payments close to fair value, or a specialised asset.</p></div>
+  <div class="tw"><table>
+    <thead><tr><th></th><th>Finance lease</th><th>Operating lease</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Lessor · income tax</strong></td><td>Only the interest element is income; capital element is recovery of cost; no capital allowances</td><td>Whole rental taxable; lessor claims capital allowances</td></tr>
+      <tr><td><strong>Lessor · WHT</strong></td><td>10% on the interest element only</td><td>10% on the whole rental</td></tr>
+      <tr><td><strong>Lessor · VAT</strong></td><td>Interest is a return on investment, no VAT</td><td>VAT on rentals</td></tr>
+      <tr><td><strong>Lessee · income tax</strong></td><td>Interest, maintenance and insurance deductible; lessee claims allowances on instalments paid (excluding interest)</td><td>Rentals deductible; depreciation of the ROU asset is not; no capital allowances</td></tr>
+      <tr><td><strong>Lessee · VAT</strong></td><td>Old law: input VAT capitalised. NTA: claim as input VAT</td><td>Old law: expensed. NTA: claim as input VAT</td></tr>
+      <tr><td><strong>Gains</strong></td><td>Lessor's gain on sale at the end, or lessee's after exercising the option, is a chargeable gain in total profit</td><td>Lessor's gain on disposal is a chargeable gain</td></tr>
+    </tbody>
+  </table></div>
+  <p class="read small muted">Also in the syllabus: sale and leaseback (cash released, allowances kept if it is a finance lease, instalments deductible), leveraged leases, sales-type leases, sub-leases, leasing as a business, COVID-19 rent concessions, IBOR reform phase 2, lessor forgiveness of payments, lease term vs life of leasehold improvements, and the 2022 amendment on lease liability in a sale and leaseback.</p>
+</section>
+
+<!-- ============ PART C ============ -->
+<div class="part-banner"><span class="letter">C</span><h2>International taxation</h2><span class="weight">20% · Study Text ch. 13–19</span><a class="backtoc" href="#ptoc" style="display:none">↑ Contents</a></div>
+
+<section class="topic" id="nonres">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 13 · NTA ss.17, 19</p><h3>Non-resident companies, branches and subsidiaries</h3>
+  <p>A company is resident in Nigeria if it is incorporated or registered here. The old place-of-management test is gone, so dual residence now arises only when another country uses management and control; the treaty tie-breaker (place of incorporation, else mutual agreement) resolves it.</p></div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>When a non-resident company is taxable in Nigeria</span>
+      <ol><li>Through a permanent establishment (fixed base)</li><li>Through a dependent agent who habitually concludes contracts</li><li>Supervisory activities lasting more than three months</li><li>A turnkey project (taxed wholly in Nigeria, never split into "offshore" and local)</li><li>Professional, consultancy, management or technical services in Nigeria</li><li>Dividends, interest, rent and royalties (WHT is the final tax)</li><li>A contract awarded to a Nigerian company and subcontracted to it</li><li>Significant economic presence, including digital services (see next section)</li><li>Transactions with connected persons not at arm's length (adjusted)</li></ol>
+    </div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>What a PE includes under the NTA</span>
+      <ul><li>A place through which the business is wholly or partly carried on</li><li>Business run through a Nigerian company or persons it controls</li><li>A stock of goods from which deliveries are made</li><li>Projects: surveys, design, delivery, construction, installation, commissioning, decommissioning and supervision, however split among entities</li><li>Services rendered through employees, agents or subcontractors</li></ul>
+      <p class="small"><strong>Not a PE:</strong> a facility used solely for storage or display, or solely to collect information. A sales outlet is always a fixed base.</p>
+      <p class="small"><strong>New duties:</strong> register, file returns even where WHT was deducted, keep Nigeria-specific records, and appoint a tax representative where required. A non-resident giving technical, consulting or management services to a labelled startup suffers 5% WHT as final tax.</p>
+    </div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Nigerian company abroad</th><th>Overseas branch</th><th>Overseas subsidiary</th></tr></thead>
+    <tbody>
+      <tr><td>Profits taxed in Nigeria?</td><td>Yes, all of them: a branch's profit is the Nigerian company's profit</td><td>No; only dividends and fees it pays to the parent</td></tr>
+      <tr><td>Capital allowances</td><td>Claimed in Nigeria on branch assets</td><td>None</td></tr>
+      <tr><td>Losses</td><td>Set against Nigerian profits of the same source</td><td>No relief: Nigeria has no group relief</td></tr>
+      <tr><td>Foreign tax</td><td>Double taxation relief (treaty or unilateral credit)</td><td>Credit on the dividend only</td></tr>
+      <tr><td>From 2026</td><td>Unchanged</td><td>CFC rule may deem undistributed profits distributed; top-up if taxed below the minimum rate</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Pitfalls</span><ul><li>Nov 2020 Q1: treating an overseas branch as if it were a separate company. It is not; its profit belongs to the Nigerian company.</li><li>May 2021 Q4: disallowed items in a non-resident's computation. Head-office expenses are allowed if incurred for the Nigerian business; amounts charged by head office as royalties, fees, commissions or interest (except for banks) are not, under treaty PE rules.</li><li>Nov 2024 Q3(c): Finance Act 2019 rules for non-residents: SEP, turnkey projects, and the fair percentage of turnover basis.</li></ul></div>
+</section>
+
+<section class="topic" id="digital">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 14 · NTA ss.17(9), 35</p><h3>Taxing the digital economy</h3></div>
+  <div class="grid2">
+    <div class="box old"><span class="tag"><i class="shape old"></i>FA 2019 + CIT (Significant Economic Presence) Order 2020</span>
+      <p><strong>Objective:</strong> bring foreign companies earning from Nigeria without a physical presence into the tax net; the Order defines SEP under s.13(2)(c) and (e) CITA.</p>
+      <p><strong>Digital SEP:</strong> ₦25m or more a year from streaming or downloading content, transmitting Nigerian users' data, selling goods or services through a platform, or intermediation; <em>or</em> a .ng domain or Nigerian-registered website; <em>or</em> purposeful and sustained targeting of Nigerians (Naira pricing or billing).</p>
+      <p><strong>Technical, professional, management, consultancy SEP:</strong> any income or payment from a Nigerian resident, or a fixed base or agent in Nigeria.</p>
+      <p><strong>Excluded:</strong> companies covered by a multilateral digital tax agreement; payments to employees, for teaching, or by a Nigerian company's foreign fixed base.</p>
+    </div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>NTA 2025</span>
+      <p>A non-resident has SEP where it transmits signals, data, images or messages to Nigeria for e-commerce, app stores, high-frequency trading, data storage, online adverts, participative platforms, online payments, user data, search engines, digital content, gaming, cloud computing or online teaching, and profit can be attributed. "Technical services" means advertising, training or supply of personnel.</p>
+      <p>Digital assets (crypto, NFTs, virtual property) are chargeable assets; gains are taxed at 30% and losses are ring-fenced. Expanded PE rules cover remote and digital activity.</p>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box"><span class="tag" style="color:var(--muted)">Challenges (May 2025, 7 marks)</span><ul><li>Cross-border nature: where value is created vs consumed</li><li>Valuing digital assets</li><li>Computing gains and deductions on them</li><li>Disputes over these issues</li><li>Tracking transactions, worsened by CBN crypto restrictions</li><li>Business models with no physical presence</li><li>Leakage of direct and indirect taxes on e-commerce</li><li>Outdated corporate tax rules</li><li>Uncertain liability of foreign companies</li><li>VAT missed when supply is not deemed in Nigeria</li></ul></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Ways of tackling them (9 marks)</span><ul><li>Expand the PE definition to a digital PE</li><li>Dedicated digital-tax legislation rather than stretching old laws</li><li>NRS partnerships with payment and platform providers</li><li>WHT on payments to non-residents regardless of presence</li><li>VAT by the Nigerian recipient on cross-border services (Vodacom v FIRS)</li><li>Assess foreign ride-hailing apps</li><li>Automation of tax processes (NTP)</li><li>Better data handling and protection</li><li>Follow OECD Pillar One (taxing rights) and Pillar Two (15% global minimum)</li></ul></div>
+  </div>
+  <p class="read small muted">Comparators: the EU's 2018 proposal for a 3% digital services tax on groups above €750m global and €50m EU digital revenue, and a virtual PE at €7m revenue, 100,000 users or 3,000 business contracts in a state; India's 6% equalisation levy (2016).</p>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Pitfalls</span><p>Nov 2021: objectives of the FA 2019 and SEP Order provisions. May 2025: stating the FA 2019 provisions on SEP. Learn the ₦25m threshold, the three digital tests, and the "any income" test for technical services word for word.</p></div>
+</section>
+
+<section class="topic" id="treaties">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 15 · CITA ss.44–46 (old); NTA ss.120–122</p><h3>Treaties and double taxation relief</h3>
+  <p>A double taxation agreement binds Nigeria only after signature, Federal Executive Council approval and ratification by both chambers of the National Assembly. It takes effect from 1 January of the year after it enters into force. Relief can be unilateral (domestic law), bilateral (a DTA) or multilateral (the OECD Multilateral Instrument).</p></div>
+  <div class="grid2">
+    <div class="calc"><div class="ch"><b>Commonwealth relief, old s.44</b><span>Ajoseh Nigeria Ltd, branch in Canada (May 2026)</span></div><div class="cb"><table>
+      <tr><td>Total profit (Nigeria + Canada)</td><td class="n">395,705</td></tr>
+      <tr><td>CIT @ 30%</td><td class="n">118,711.50</td></tr>
+      <tr class="h"><td colspan="2">Relief on Canadian profit ₦182,725k</td></tr>
+      <tr><td>Commonwealth rate: 45,540 ÷ 182,725</td><td class="n">24.92%</td></tr>
+      <tr><td>Half the Nigerian rate</td><td class="n">15.00%</td></tr>
+      <tr><td>Relief rate (lower of the two)</td><td class="n">15.00%</td></tr>
+      <tr><td>Less: relief 15% × 182,725</td><td class="n">(27,408.75)</td></tr>
+      <tr class="sub"><td>CIT payable</td><td class="n">91,302.75</td></tr>
+      <tr><td>TET @ 3% × assessable 424,715</td><td class="n">12,741.45</td></tr>
+      <tr class="tot"><td>Total (₦'000)</td><td class="n">104,044.20</td></tr>
+    </table></div><div class="note">Foreign tax paid is added back, converted at the average rate. Claim within 6 years. A non-Nigerian company's relief: half the Commonwealth rate if that rate ≤ Nigerian rate; otherwise Nigerian rate − half the Commonwealth rate (28% → 14%; 50% → 5%).</div></div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>The NTA credit (s.120 unilateral, s.122 treaty)</span>
+      <p>Credit = the <strong>lower</strong> of:</p>
+      <ol><li>Nigerian tax attributable to the foreign income = foreign income ÷ total income × Nigerian tax; and</li><li>foreign tax paid.</li></ol>
+      <p>Same figures under the NTA: Nigerian tax on the Canadian share ≈ 118,711.5 × 182,725 ÷ 395,705 = ₦54.82m against foreign tax ₦45.54m, so the credit is <strong>₦45.54m</strong>, against ₦27.41m under the old half-rate rule.</p>
+      <ul><li>Any country now qualifies, not just the Commonwealth.</li><li>Foreign tax is never deducted as an expense; where income is taxed on receipt, gross it up.</li><li>Only for a person resident in Nigeria that year; claim within 2 years after the YOA.</li><li>No credit for another country's global minimum tax top-up on a PE.</li><li>Treaty benefits only for a resident of the treaty partner who is the <strong>beneficial owner</strong>; treaty shopping denied.</li></ul>
+    </div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Nigeria–UK DTA article</th><th>Rule (asked Nov 2023)</th></tr></thead>
+    <tbody>
+      <tr><td>Art. 6 Immovable property</td><td>Taxable where the property is situated</td></tr>
+      <tr><td>Art. 7 Business profits</td><td>Only in the state of residence unless there is a PE; then only profit attributable to the PE</td></tr>
+      <tr><td>Art. 8 Ships & aircraft</td><td>Only where the operator is resident</td></tr>
+      <tr><td>Art. 10 Dividends</td><td>Source-state tax capped: 12.5% for a company holding 10%+ of voting power, 15% otherwise (the Study Text quotes Nigeria's reduced WHT as 7.5%)</td></tr>
+      <tr><td>Art. 11 Interest</td><td>Source tax capped at 12.5%; interest to the other government exempt</td></tr>
+      <tr><td>Art. 12 Royalties</td><td>Source tax capped at 12.5%</td></tr>
+      <tr><td>Art. 13 Capital gains</td><td>Each state applies its domestic law, except ships and aircraft</td></tr>
+      <tr><td>Art. 14 Independent services</td><td>State of residence unless there is a fixed base</td></tr>
+      <tr><td>Art. 16 / 17</td><td>Directors' fees taxable where the company is resident; artistes and athletes where they perform</td></tr>
+      <tr><td>Art. 22</td><td>The residence state gives credit for the other state's tax</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid3">
+    <div class="box"><span class="tag" style="color:var(--muted)">Nigeria's 16 DTAs</span><p>Belgium, Canada, China, Czech Republic, France, Italy (air & shipping only), Netherlands, Pakistan, Philippines, Romania, Singapore, Slovakia, South Africa, Spain, Sweden, United Kingdom.</p></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Benefits of DTAs</span><ul><li>Encourage foreign investment</li><li>Prevent evasion through information exchange</li><li>Promote trade and growth</li><li>Strengthen diplomatic ties</li><li>Clarify taxing rights</li><li>Reduced WHT rates</li><li>Dispute resolution through MAP</li></ul></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Resolving DTA vs domestic-law conflicts</span><ul><li>Mutual agreement procedure between competent authorities</li><li>Arbitration if MAP fails after two years</li><li>Treaty prevails once domesticated: a state cannot plead its internal law (Vienna Convention art. 27)</li></ul></div>
+  </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Vienna Convention on the Law of Treaties (pitfall May 2026)</span>
+      <ul><li>Codifies how treaties, including tax treaties, are interpreted, giving courts a uniform approach</li><li>Sets operational rules for drafting, defining, amending and interpreting treaties</li><li><em>Pacta sunt servanda</em>: every treaty in force binds the parties and must be performed in good faith (art. 26)</li><li>A state cannot use its internal law to excuse non-performance (art. 27)</li><li>Interpretation in good faith, by ordinary meaning, in context and in light of object and purpose (art. 31); supplementary means (art. 32)</li><li>Supports dispute resolution through negotiation, mediation, arbitration and MAP</li></ul>
+    </div>
+    <div class="box trap"><span class="tag"><i class="shape tri"></i>DTR pitfalls</span><ul><li>May 2022 Q6: computing relief on an overseas branch's foreign tax. Compute the foreign rate on the branch's own adjusted profit, compare, then apply the relief rate to the branch's total profit.</li><li>Nov 2022 Q6: residence in Singapore does not exempt a company with a Nigerian PE. Benefits under that treaty: reduced WHT, PE threshold, MAP, credit.</li><li>Nov 2023 Q4(b): foreign income exempt from Nigerian tax: dividends, interest, rent and royalties brought in through approved channels.</li><li>May 2026 Q3(b): information for s.44 relief: who qualifies, the two rate formulas for Nigerian and non-Nigerian companies, reciprocity, the 6-year claim.</li></ul></div>
+  </div>
+</section>
+
+<section class="topic" id="tp">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 16 · TP Regulations 2018; NTA ss.191–192, 202</p><h3>Transfer pricing</h3></div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Objectives of the Regulations</span><ol><li>Tax Nigeria's fair share of the economic activity done here, including with related persons</li><li>Give the authority tools against over- and under-pricing</li><li>Reduce economic double taxation</li><li>A level field between MNEs and independent firms</li><li>Certainty for taxpayers</li></ol></div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Scope: controlled transactions</span><ul><li>Sale and purchase of goods and services</li><li>Sale, purchase or lease of tangible assets</li><li>Transfer, licence or use of intangibles</li><li>Provision of services</li><li>Lending and borrowing</li><li>Manufacturing arrangements</li><li>Anything else affecting profit or loss</li></ul><p class="small">Commenced 12 March 2018 (2012 Regulations from 2 August 2012). The Study Text cites documentation for connected transactions of ₦300m or more a year.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="box"><span class="tag" style="color:var(--muted)">Methods</span>
+      <p><strong>Traditional transaction:</strong> comparable uncontrolled price; resale price (resale price less an arm's-length gross margin); cost plus.</p>
+      <p><strong>Transactional profit:</strong> transactional net margin (net margin on costs, sales or assets vs comparables); profit split (combined profit shared as independents would).</p>
+      <p><strong>Comparability factors:</strong> characteristics of the goods or services; functional analysis (functions, assets, risks); contract terms; economic circumstances; business strategies.</p>
+    </div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Connected persons (s.202 NTA)</span>
+      <p>Relatives and spouses; trustee and settlor; partners; a person and a company he or relatives control; companies under common control; one company participating in another's management, control or capital; persons acting on another's directions or with practical control. Not connected merely as employee or client. New special cases: digital platforms coordinating pricing, an SEP and its foreign principal, IP licensor and licensee, JV partners contributing 25% or more.</p>
+      <p class="small">s.191: transactions between connected persons not at arm's length are artificial and may be disregarded. s.192: related-party arrangements must be at arm's length <em>and</em> reported.</p>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Documents (pitfall May 2023: the disclosure form)</span>
+      <p><strong>Declaration form</strong> (by 30 June, for the previous year): reporting entity; immediate parent; directors; major shareholders and related parties; ownership structure; subsidiaries and connected persons; external auditors; tax consultant; company secretary; declarant; declaration.</p>
+      <p><strong>Disclosure form</strong> (by 30 September): reporting entity; income from controlled transactions; costs of controlled transactions; summary of transactions with connected persons; TP method and documentation; basic financials of the entity and group; declarant; declaration.</p>
+      <p><strong>Also:</strong> TP policy (group or local, forward-looking) and a TP compliance report. The burden of proving arm's length is on the taxpayer.</p>
+    </div>
+    <div class="tw"><table>
+      <thead><tr><th>TP offence (pitfall Nov 2025)</th><th>Penalty</th></tr></thead>
+      <tbody>
+        <tr><td>No declaration form</td><td>₦10m first month + ₦10,000 a day</td></tr>
+        <tr><td>No disclosure form or documentation</td><td>Higher of ₦10m or 1% of transactions not disclosed, + ₦10,000 a day</td></tr>
+        <tr><td>Incorrect disclosure</td><td>Higher of ₦10m or 1% of transactions incorrectly disclosed</td></tr>
+        <tr><td>Information not supplied on notice</td><td>1% of each transaction concerned + ₦10,000 a day</td></tr>
+        <tr><td>Updated declaration not filed</td><td>₦25,000 a day</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="grid2">
+    <div class="box"><span class="tag" style="color:var(--muted)">Disputes & APAs</span><p>Object to the Head of the TP Unit within <strong>30 days</strong>; the Head decides whether to refer to the Decision Review Panel; then the TAT. Also: advance pricing agreements (unilateral or bilateral, with FAR analysis, method, critical assumptions and duration; no adjustment while followed), MAP, competent-authority talks, arbitration, mediation.</p></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Non-arm's-length practices (Nov 2022)</span><ul><li>Over- or under-invoicing goods and services</li><li>Excessive management, technical or royalty fees</li><li>Interest on intra-group loans at non-market rates</li><li>Shifting expenses or profits between group members</li><li>Transfer of intangibles at undervalue</li></ul></div>
+  </div>
+</section>
+
+<section class="topic" id="beps">
+  <div class="sec-head read"><p class="sec-head ref">Chapters 17, 24</p><h3>BEPS, CbCR, thin capitalisation, treaty shopping, tax havens</h3>
+  <p><strong>Base erosion</strong> shrinks the taxable profit reported in a country; <strong>profit shifting</strong> moves profit to a low-tax country. MNE groups dominate because they have the network of entities, the capital to build structures and the profits to pay for advice.</p></div>
+  <div class="grid2">
+    <div class="box trap"><span class="tag"><i class="shape tri"></i>Techniques, not examples (Nov 2021)</span><ol><li>Trademark and technology licensing: IP parked in a low-tax entity charging royalties to the group</li><li>Thin capitalisation: subsidiaries funded with debt, so interest strips profit</li><li>Hybrid mismatch arrangements: instruments or entities treated differently by two countries, giving double non-taxation or double deduction</li><li>Assets in entities without substance in preferential regimes</li></ol><p class="small">Contributing factors: the digital economy and weak international cooperation.</p></div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>OECD's 15 actions</span>
+      <ol><li>Digital economy</li><li>Hybrid mismatches</li><li>CFC rules</li><li>Interest deductions</li><li>Harmful tax practices (transparency, substance)</li><li>Treaty abuse</li><li>Artificial avoidance of PE status</li><li>TP: intangibles</li><li>TP: risks and capital</li><li>TP: other high-risk transactions</li><li>Measuring and monitoring BEPS</li><li>Mandatory disclosure rules</li><li>TP documentation and country-by-country reporting</li><li>Dispute resolution (MAP)</li><li>Multilateral instrument</li></ol>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Country-by-country reporting</span><ul><li>Ultimate parent resident in Nigeria with consolidated group revenue of <strong>₦160bn</strong> or more files a CbC report within <strong>12 months</strong> of year end.</li><li>Late filing: ₦10m, then ₦1m a month.</li><li>Every resident constituent entity notifies the NRS whether it is the UPE or surrogate, or names the reporting entity, by the last day of the reporting year.</li><li>OECD Action 13 guidance governs gaps.</li></ul></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Thin capitalisation</span><p>Deliberately high gearing so interest deductions shift profit. Harms creditors (more risk) and tax authorities (lost base). Nigeria's rule since FA 2019 and kept by the NTA: interest to foreign connected lenders capped at 30% of EBITDA, excess carried 5 years; banks and insurers excluded (pitfall May 2023).</p></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Treaty shopping</span><p>A resident of a third country routes income through a treaty country to claim benefits not meant for it (May 2024). Countries curb it with beneficial-ownership tests, limitation-on-benefits clauses, the principal purpose test (MLI), substance requirements and domestic anti-avoidance rules. The NTA grants treaty benefits only to a resident beneficial owner.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Tax havens (pitfall Nov 2020: OECD factors)</span>
+      <ul><li>No or only nominal tax on the relevant income</li><li>Laws or practices that block effective exchange of information</li><li>Lack of transparency in legislative, legal or administrative provisions</li><li>No requirement for substantial local activity</li></ul>
+      <p class="small">Types: primary, semi and conduit havens. Uses: personal residency, corporate residency, asset holding through trusts and companies.</p>
+    </div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Measures against havens (May 2025)</span><ul><li>CFC rules taxing undistributed haven profits</li><li>Transfer pricing and thin capitalisation rules</li><li>Exit charges on emigrating individuals, trusts and companies</li><li>Automatic exchange of information (CRS, FATCA)</li><li>Black and grey lists; defensive WHT</li><li>Substance and beneficial-ownership requirements</li></ul></div>
+  </div>
+</section>
+
+<section class="topic" id="regional">
+  <div class="sec-head read"><p class="sec-head ref">Chapters 18–19</p><h3>Regional blocs and international tax policy</h3></div>
+  <div class="ladder" aria-label="Stages of economic integration">
+    <div class="rung"><div class="bar" style="width:25%"></div><b>Free trade area</b><span>Internal barriers removed; each member sets its own external tariff. NAFTA.</span></div>
+    <div class="rung"><div class="bar" style="width:50%"></div><b>Customs union</b><span>+ a common external tariff on non-members. ECOWAS CET.</span></div>
+    <div class="rung"><div class="bar" style="width:75%"></div><b>Common market</b><span>+ free movement of labour and capital.</span></div>
+    <div class="rung"><div class="bar" style="width:100%"></div><b>Economic union</b><span>+ common economic policies. The EU.</span></div>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Pitfall: Nov 2020 Q3</span><p>Candidates could not separate a common market from an economic union. The common market frees labour and capital; the economic union adds harmonised economic policy on top. Also distinguish regional integration (states sharing institutions and rules, which may be political or environmental) from a trade bloc (a free-trade zone formed by tariff and trade agreements).</p></div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>ECOWAS & the common external tariff</span>
+      <p>Treaty signed in Lagos on 25 May 1975. Aims: suppress customs duties, create a CET, harmonise economic and financial policies, form a monetary zone. CET adopted 25 October 2013 with five bands (0% essential social goods, 5% primary necessities and raw materials, 10% intermediate goods, 20% final consumer goods, 35% specific goods for economic development) on the HS 2012 nomenclature.</p>
+      <p><strong>Trade defence measures (pitfall May 2024):</strong> safeguard measures; anti-dumping measures; anti-subsidy and countervailing measures; supplementary protection measures.</p>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>AfCFTA</span>
+      <p>55 countries. Objectives: a single continental market, more intra-African trade, competitiveness, integration, sustainable development. Runs through protocols (goods, services, dispute settlement), instruments (rules of origin, tariff concessions, a non-tariff-barrier reporting tool) and institutions (Assembly, Council of Ministers, Committee of Senior Trade Officials, technical committees).</p>
+      <p><strong>Challenges:</strong> lost tariff revenue, adjustment costs, competition for small firms, implementation, non-tariff barriers, infrastructure, institutional capacity. Against ECOWAS in trade in goods (pitfall May 2021): AfCFTA is a continental free trade area liberalising tariffs under rules of origin; ECOWAS is a customs union with a CET and its own trade liberalisation scheme.</p>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="box"><span class="tag" style="color:var(--muted)">Benefits / costs of blocs</span><p><strong>Benefits:</strong> trade creation, jobs, easier consensus, certainty for investors. <strong>Costs:</strong> trade diversion to less efficient members, employment shifts, loss of sovereignty.</p></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Organisations shaping tax policy (pitfall May 2026, Nov 2024)</span><ul><li>OECD: Model Convention, BEPS, Global Forum, TP guidelines</li><li>UN: Model Convention for developing countries; UN tax convention work</li><li>IMF: policy advice and technical assistance</li><li>World Bank: Global Tax Program, financing reforms</li><li>ATAF: African tax administrations' cooperation</li><li>WTO/GATT: trade rules, non-discrimination, customs valuation</li><li>EU, AU, ECOWAS, WCO</li></ul></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Information exchange & neutrality</span><p>Exchange <strong>on request</strong>, <strong>automatic</strong> (CRS; Nigeria signed the MCAA in August 2017) and <strong>spontaneous</strong>. Nigeria's framework sits under the Data Protection Act (adequacy, consent, AG whitelist). <strong>Neutrality</strong> (Nov 2023): a neutral tax does not change behaviour. Applications: broaden the base and lower rates; prefer credits to deductions when encouraging behaviour; tax undesired activities deliberately.</p></div>
+  </div>
+  <p class="read small muted">Jurisdiction rests on residence (worldwide income) or source (income earned within borders). Its limits are geographical, subject-matter and personal. International tax policy aims at fairness, efficiency, neutrality, competitiveness and revenue.</p>
+</section>
+
+<!-- ============ PART D ============ -->
+<div class="part-banner"><span class="letter">D</span><h2>Current issues & emerging trends</h2><span class="weight">10% · Study Text ch. 20–21, 30</span><a class="backtoc" href="#ptoc" style="display:none">↑ Contents</a></div>
+
+<section class="topic" id="current">
+  <div class="sec-head read"><h3>International initiatives, SDGs and ESG</h3></div>
+  <div class="grid3">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Tax Inspectors Without Borders</span><p>An OECD and UNDP initiative that builds audit capacity in developing countries. Serving or recently retired audit experts work alongside local officials on live audits, including TP and sector cases. The host country leads and sets the scope; experts never replace local staff.</p></div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Cooperative compliance (pitfall Nov 2025)</span><p>A relationship between the revenue authority and, usually, a large taxpayer based on trust, transparency and mutual understanding. The taxpayer runs a sound tax control framework and discloses risks early; the authority gives timely, certain responses. Result: fewer disputes, lower costs, earlier certainty.</p></div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Simultaneous tax examination</span><p>Two or more countries examine the same taxpayer at the same time, each independently, and exchange information. It encourages compliance, exposes evasion and fosters cooperation, but needs careful coordination, protects confidentiality and copes with complex laws. Joint audits go a step further.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="box"><span class="tag" style="color:var(--muted)">Also in this chapter</span><ul><li><strong>CRS:</strong> automatic exchange of financial account data; 95+ jurisdictions</li><li><strong>FATCA</strong> (US, 2010 HIRE Act): foreign financial institutions report US persons' accounts</li><li><strong>MAP:</strong> a taxpayer asks the competent authority (the Minister) to resolve treaty taxation</li><li><strong>Disruptive technologies:</strong> platforms, AI and analytics, blockchain and crypto, cloud computing. Benefits: efficiency, accuracy, risk targeting. Challenges: cost, skills, data security, tracking digital income.</li></ul></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Technology in tax practice (May 2022, May 2023)</span><ul><li>Cloud tax management platforms and e-filing (the NRS e-filing system)</li><li>AI and robotic process automation for data collation and analysis</li><li>Data analytics and visualisation for risk review</li><li>E-invoicing and fiscalisation links</li></ul><p class="small">Impact: speed, accuracy, real-time compliance, new advisory lines. Challenges: cost, cyber risk, skills gaps, unreliable power and internet.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Taxation and the SDGs (May 2026)</span>
+      <p><strong>Roles:</strong> raise revenue for development spending; redistribute income through progressive taxes; change behaviour (tax pollution, reward clean activity); promote growth through targeted incentives; fund public goods such as health, education and infrastructure.</p>
+      <p><strong>Strategies:</strong> green taxes (carbon), incentives for sustainable investment, progressive taxation.</p>
+      <p><strong>Challenges and mitigation in Nigeria:</strong> limited tax capacity → invest in administration and technology; evasion and avoidance → transparency and information exchange; digital economy → SEP and digital rules; the informal sector → simplified regimes and registration drives; weak revenue mobilisation → broaden the base, fewer exemptions. UNDP's Tax for SDGs initiative supplies an assessment tool and runs TIWB with the OECD.</p>
+    </div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>ESG in the extractive industries</span>
+      <p><strong>Penalties for non-compliance:</strong> fines (the Climate Change Act 2021 targets net zero by 2050–2070, adds a carbon tax and requires a sustainability officer); litigation and regulatory audits; loss of licences; reputational damage; supply chain and operational disruption. Disputes can go to ADR.</p>
+      <p><strong>EITI Standard:</strong> disclosure of revenue collection and allocation, contracts and licences, beneficial ownership, production, social spending, state-owned enterprises, commodity trading, open data. The 2023 Standard adds energy transition, corruption risk, gender equity and revenue collection.</p>
+      <p><strong>Sustainable practices:</strong> benefits are competitive advantage, motivated staff, profitability, reputation, resource efficiency; challenges are inconsistent regulation, low awareness and cost.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART E ============ -->
+<div class="part-banner"><span class="letter">E</span><h2>Tax management & planning</h2><span class="weight">10% · Study Text ch. 22–27</span><a class="backtoc" href="#ptoc" style="display:none">↑ Contents</a></div>
+
+<section class="topic" id="ma">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 22 · NTA s.189</p><h3>Mergers, acquisitions and reorganisations</h3></div>
+  <div class="tw"><table>
+    <thead><tr><th>s.189 NTA</th><th>Merger</th><th>Sale of trade causing cessation</th><th>Sale of assets, no cessation (≤ residue + unused CA)</th></tr></thead>
+    <tbody>
+      <tr><td>Commencement / cessation rules</td><td>Neither applies</td><td>Cessation applies to the seller</td><td>Not applicable</td></tr>
+      <tr><td>Chargeable gain</td><td>None</td><td>Normal rules</td><td>None</td></tr>
+      <tr><td>Value for allowances</td><td>Residue, over remaining tax life</td><td>Sale or transfer value</td><td>Remaining tax life, in the buyer's hands</td></tr>
+      <tr><td>Unused capital allowances</td><td>Pass to the survivor</td><td>Lost</td><td>Pass to the buyer; seller cannot claim</td></tr>
+      <tr><td>Unabsorbed losses</td><td>Pass, if incurred by the merged business</td><td>Lost</td><td>—</td></tr>
+      <tr><td>WHT credit notes</td><td>Pass to the merged business</td><td>Lost</td><td>—</td></tr>
+      <tr><td>VAT</td><td>Not a supply</td><td>Not a supply</td><td>Not a supply</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Related-party reorganisation (pitfall May 2025)</span>
+      <p><strong>Concessions:</strong> no commencement or cessation rules; assets deemed transferred at residue the day after transfer; no VAT and no gain on transfers between related parties.</p>
+      <p><strong>Conditions (FA 2019, CITA s.29(9)):</strong> related for at least <strong>one year</strong> before the reorganisation; no disposal of the assets for <strong>one year</strong> after; breach revokes the concessions.</p>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Powers of the tax authority (pitfall Nov 2022)</span>
+      <ul><li>No merger, takeover, transfer or restructuring may go ahead without the authority's consent or direction.</li><li>Clearance of all taxes due, including on gains, must be obtained first.</li><li>The authority may give directions, including security for tax.</li></ul>
+      <p class="small">Basis periods: a merger is neither commencement nor cessation, so preceding year basis continues; a brand-new surviving company starts its first period from commencement. Upstream petroleum: the acquirer's period starts on the transfer date.</p>
+    </div>
+  </div>
+  <p class="read small muted">Also asked: the regulatory landscape (FCCPC, SEC, CAC, sector regulators), filings with CAC and SEC, implications when a new company takes over an existing one (cessation of the old trade, allowances and losses, stamp duties, VAT and WHT on advisers' fees), and examples of successful mergers.</p>
+</section>
+
+<section class="topic" id="planning">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 24 · NTA s.191; NTAA s.46</p><h3>Planning, avoidance and evasion</h3></div>
+  <div class="grid3">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Tax planning</span><p>Lawfully arranging affairs to reduce tax within the letter and spirit of the law: timing asset purchases and disposals, using incentives (EDI, free zones), roll-over or reinvestment exemptions, meeting deadlines to avoid penalties, choosing structure and location.</p></div>
+    <div class="box radar"><span class="tag"><i class="shape dot"></i>Tax avoidance</span><p>Legal but against the intent of the law, exploiting gaps (artificial transactions, thin capitalisation, treaty shopping). Countered by specific anti-avoidance rules (certain, but narrow) and a general rule (fewer laws, wider reach). Mandatory disclosure of arrangements that give a relief, a repayment or avoid a charge.</p></div>
+    <div class="box trap"><span class="tag"><i class="shape tri"></i>Tax evasion</span><p>Illegal: understating income, overstating expenses, fictitious transactions, failure to file, diverting WHT or VAT collected. Leads to back duty assessments with no time limit, penalties, interest and prosecution.</p></div>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Pitfall: Nov 2021 Q3</span><p>Candidates defined the concepts but not their <strong>tax implications</strong>. Planning: lower legitimate tax, no penalty. Avoidance: transactions disregarded under s.191, TP adjustments, interest disallowed, additional assessments. Evasion: penalties, interest, prosecution, unlimited look-back.</p></div>
+  <p class="read small muted">Non-tax factors in choosing a location (May 2023, six marks): political and economic stability; physical, legal and financial infrastructure; limited exchange controls; access to markets and raw materials; skilled labour; banking and communications; language and legal system; investment protection.</p>
+</section>
+
+<section class="topic" id="practice">
+  <div class="sec-head read"><p class="sec-head ref">Chapters 23, 25, 26, 27</p><h3>Practice management, audit and investigation, ethics, tax accounting</h3></div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Running a tax practice (pitfall May 2026: legal requirements)</span>
+      <p><strong>Legal requirement:</strong> under ICAN's code, a chartered accountant in public practice must not engage in any business or activity that impairs, or might impair, integrity, objectivity or the profession's reputation. A practitioner acting for reward must be accredited as a tax practitioner (NTP; JRB guidance on accreditation).</p>
+      <p><strong>Engagement:</strong> client's appointment letter → engagement letter (scope, deliverables, fees) → introduction letter to the tax office.</p>
+      <p><strong>Risks:</strong> lack of expertise, lack of attention to detail, poor documentation, unpredictable income, technology and cyber risk, liability for wrong advice.</p>
+      <p><strong>Benefits:</strong> own schedule, financial upside, choice of clients, your own vision.</p>
+      <p><strong>Mitigation:</strong> work only within competence; quality control and review; documented filing positions; engagement letters; professional indemnity insurance; continuing education; regular updates to strategy as laws change.</p>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>New client files (Nov 2024)</span>
+      <p><strong>From the client:</strong> certificate of incorporation, CAC forms (status report, allotment, registered office), memorandum and articles, TIN and registration evidence, audited accounts, prior tax computations, assessments, receipts, WHT credit notes and tax clearance certificates.</p>
+      <p><strong>Kept by the consultant:</strong> engagement letter, permanent file of client details, correspondence with the tax office, computations and working papers, objections and appeals history, payment and clearance records.</p>
+      <p><strong>Disclosure to third parties</strong> only with client consent, when required by law (court order, tax authority notice), in a professional duty (disciplinary or quality review, defending yourself), or in the public interest (fraud, money laundering).</p>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Tax audit</span>
+      <p><strong>Stages:</strong> selection → preliminary review of the file (ratios: liquidity, efficiency, gearing, profitability) → notification → pre-audit meeting → field audit → interim reports → post-audit review → reconciliation meetings → final report and additional assessments → objections.</p>
+      <p><strong>Objectives:</strong> confirm returns are correct, enforce compliance, detect under-declaration, educate taxpayers, refer frauds for investigation, deter non-filing.</p>
+      <p><strong>NRS document schedule (pitfall Nov 2023):</strong> audited accounts, management accounts, chart of accounts, trial balances, general ledger, fixed asset register, staff and payroll lists, WHT and VAT schedules with receipts, contracts and agreements, bank statements, prior computations and assessments, TP documentation.</p>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Investigation and back duty</span>
+      <p><strong>Pre-investigation meeting</strong> (Nov 2024): explain the purpose, confirm background facts, agree the scope and timetable, request documents, hear the taxpayer's side, seek cooperation.</p>
+      <p><strong>Stages:</strong> surveillance → notification → evidential audit → case preparation → arraignment; terminated if evidence is thin or no crime is shown.</p>
+      <p><strong>Back duty</strong> (Nov 2021, May 2025): an audit of past returns where errors, omissions or deliberate understatement are suspected; covers up to <strong>6 years</strong>, unlimited for fraud; records re-examined and tax recomputed; shortfall assessed with penalty and interest; objection and appeal rights apply.</p>
+      <p><strong>Powers:</strong> notices to file, attend, produce books and give access; distraint (goods held 14 days before sale; land only with a High Court order); search and seizure on reasonable suspicion.</p>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Ethics (pitfall Nov 2023, May 2024)</span>
+      <p><strong>IESBA fundamental principles:</strong> integrity, objectivity, professional competence and due care, confidentiality, professional behaviour.</p>
+      <p><strong>Threats:</strong> self-interest, self-review, advocacy, familiarity, intimidation. <strong>Safeguards:</strong> from the profession or legislation (education, CPD, disciplinary regimes, reviews), from the firm (quality control, rotation, independent review, fee policies) and in the engagement (second partner review, declining work, documenting judgements).</p>
+      <p><strong>Punitive measures</strong> (May 2022): ICAN disciplinary tribunal (reprimand, suspension, expulsion), penalties under the tax laws for aiding offences, criminal prosecution.</p>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Tax accounting & deferred tax (pitfall Nov 2022)</span>
+      <p>Deferred tax arises from temporary differences, mostly carrying amount vs tax written-down value.</p>
+      <ul><li>Deferred tax liability = (carrying amount − TWDV) × 30%</li><li>Deferred tax asset = (TWDV − carrying amount) × 30%</li><li>Charge in profit or loss = current CIT + development levy ± prior-year adjustments + movement in deferred tax</li></ul>
+      <p class="small">Compute depreciation correctly before anything else: the 2022 report says that is exactly where candidates failed. Disclose current and deferred tax separately; misleading disclosure risks penalties, qualified opinions and reputational damage.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART F ============ -->
+<div class="part-banner"><span class="letter">F</span><h2>Extractive industries</h2><span class="weight">balance of the grid · Study Text ch. 28–30</span><a class="backtoc" href="#ptoc" style="display:none">↑ Contents</a></div>
+
+<section class="topic" id="oil">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 28 · PIA 2021; NTA ss.68–122</p><h3>Oil and gas: hydrocarbon tax and upstream CIT</h3>
+  <p>Converted leases pay <strong>hydrocarbon tax</strong> and <strong>CIT</strong>; unconverted OPLs and OMLs stay under petroleum profits tax until they expire or convert. The NTA now houses all three charges; the PIA keeps licensing, royalty, host communities and conversion.</p></div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Who pays what</span>
+      <ul><li><strong>HT rate (s.72):</strong> 30% for petroleum mining leases (PML), onshore and shallow water; 15% for petroleum prospecting licences (PPL) and marginal fields.</li><li><strong>CIT:</strong> 30% on all upstream operations, plus development levy 4% of assessable profit.</li><li><strong>PPT</strong> (unconverted): 85% of chargeable profit; 65.75% for up to 5 years before pre-production costs are amortised.</li><li><strong>Deep offshore</strong> (water deeper than 200m): no HT, CIT only. Frontier acreage: no HT until reclassified.</li><li>HT is charged only on crude oil, field condensates and NGLs from associated gas upstream of the measurement point, plus balancing charges. Not on associated gas itself or non-associated gas and its liquids.</li></ul>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Conversion and transition</span>
+      <ul><li>18-month window from 16 August 2021 for voluntary conversion; conversion is automatic on expiry (Opobo: OML expired 31 Dec 2022, PML from 1 Jan 2023).</li><li>Year of conversion: PPT from 1 January to the conversion date, PIA after it.</li><li>Mixed licences: one return with three computations (PPT, HT, CIT).</li><li>PPT losses and unrecouped allowances carry into HT and CIT; investment tax credit does not.</li><li>Accounting period is the calendar year; the first starts on the first sale or bulk disposal. HT is on actual year basis, paid in 12 monthly estimates from March with a 13th balancing payment within 21 days of assessment.</li></ul>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Allowed for HT (s.68 NTA / s.263 PIA)</span>
+      <ul><li>Royalties incurred and paid; production-sharing payments to the Federation Account</li><li>Concession rentals under the lease or licence</li><li>Production costs; terminalling</li><li>Repairs of plant, machinery and fixtures; renewal, repair or alteration of production implements and utensils</li><li>Drilling costs, tangible and intangible, of the <strong>first exploration well and first two appraisal wells</strong> in a field (later wells are qualifying drilling expenditure for allowances)</li><li>Gas reinjection wells (ratified by NUPRC)</li><li>Levies, stamp duties and fees to any government (State ground rent)</li><li>Acquisition of geophysical, geological and geochemical data</li><li>Decommissioning and abandonment fund contributions (deductible only with at least 15% in a Nigerian-bank escrow)</li><li>Host Community Development Trust (3% of prior-year opex), Environmental Remediation Fund, NDDC</li><li>Excess cost brought forward under the CPR</li></ul>
+    </div>
+    <div class="box trap"><span class="tag"><i class="shape tri"></i>Disallowed for HT (s.69 NTA)</span>
+      <ul><li>Purchase of information on deposits (other than geological and geophysical data)</li><li>Penalties and <strong>gas flaring</strong> fees</li><li>Finance and bank charges, interest, arbitration and litigation costs, bad debts</li><li><strong>Head office, affiliate and shared costs</strong>; R&D; shared indirect costs</li><li>Production bonuses, <strong>signature bonuses</strong>, lease or licence fees, assignment fees</li><li>Tax grossed up or borne for contractors</li><li>Capital, improvements, depreciation</li><li>Insurance recoveries; non-operational premises</li><li>Income taxes and development levy</li><li>Unapproved pension contributions; donations</li></ul>
+      <p class="small">For upstream CIT the list is wider: indirect and above-field costs, and interest, are allowed under ordinary rules; the CPR does not apply.</p>
+    </div>
+  </div>
+  <div class="calc"><div class="ch"><b>Hydrocarbon tax pro-forma, with the May 2026 figures</b><span>Opobo Petroleum, PML, 2024 YOA, ₦ million</span></div><div class="cb"><table>
+    <tr class="h"><td colspan="2">Revenue at FISCAL price × barrels × ₦1,530/$</td></tr>
+    <tr><td class="in">Crude oil: Bonny Light 10.8m × $75; Forcados 7.5m × $66</td><td class="n">1,996,650</td></tr>
+    <tr><td class="in">Condensates: OSO 3m × $33; Escravos 2.3m × $30</td><td class="n">257,040</td></tr>
+    <tr><td class="in">NGLs from associated gas</td><td class="n">130,050</td></tr>
+    <tr class="sub"><td>Gross revenue</td><td class="n">2,383,740</td></tr>
+    <tr><td>Less: allowable costs (incl. ⅔ of drilling for 3 appraisal wells, excess cost b/f 170)</td><td class="n">(1,277,140)</td></tr>
+    <tr class="sub"><td>Adjusted profit (after CPR test below)</td><td class="n">1,106,600</td></tr>
+    <tr><td>Less: losses b/f (same class)</td><td class="n">(1,215)</td></tr>
+    <tr class="sub"><td>Assessable profit</td><td class="n">1,105,385</td></tr>
+    <tr><td>Less: capital allowances, year 1,487 + b/f 480</td><td class="n">(1,967)</td></tr>
+    <tr><td>Less: production allowance, onshore 1,200 + shallow 1,100</td><td class="n">(2,300)</td></tr>
+    <tr class="sub"><td>Chargeable profit</td><td class="n">1,101,118</td></tr>
+    <tr class="tot"><td>Hydrocarbon tax @ 30%</td><td class="n">330,335.4</td></tr>
+  </table></div><div class="note">Revenue uses the fiscal price, not the actual selling price, when they differ. The crude and condensate lines here are the totals of the model answer's individual streams.</div></div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Cost-price-ratio limit: the NRS format</span>
+      <ol><li><strong>A</strong> gross revenue × 65% = maximum: 2,383,740 × 65% = 1,549,431</li><li><strong>B</strong> total eligible costs = operating costs + allowances for the year + allowances b/f: 1,277,140 + 1,487 + 480 = 1,279,107</li><li><strong>C1</strong> exempt costs (royalty, environmental remediation, NDDC, host community, concession rentals) = 404,350</li><li>Costs subject to CPR = B − C1 = 874,757</li><li><strong>C2</strong> = lower of (B − C1) and A = 874,757</li><li><strong>D</strong> allowable = C1 + C2 = 1,279,107 → no restriction here; any excess (B − D) is carried forward, and lost if operations end</li></ol>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Production allowance (Sixth Schedule PIA)</span>
+      <div class="tw"><table>
+        <thead><tr><th>Lease</th><th>Allowance per barrel</th></tr></thead>
+        <tbody>
+          <tr><td>Converted OML (concession)</td><td>Lower of $2.50 and 20% of fiscal price</td></tr>
+          <tr><td>New lease, onshore</td><td>Lower of $8 and 20% to 50m barrels; then $4</td></tr>
+          <tr><td>New lease, shallow water</td><td>Same, to 100m barrels</td></tr>
+          <tr><td>New lease, deep offshore</td><td>Same, to 500m barrels</td></tr>
+        </tbody>
+      </table></div>
+      <p class="small">Upstream allowances: plant, pipeline, building and drilling QCE at 20% a year for four years and 19% in year five, keeping 1%. Petroleum rights: 20% a year. HT computes allowances per field; CIT aggregates them. Losses for HT stay within their class: Class A (PML) or Class B (PPL); for CIT they are pooled across upstream terrains.</p>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Gas utilisation investment allowance (pitfall Nov 2025)</span>
+      <p>25% of the actual cost of plant and equipment of NMDPRA-licensed midstream gas businesses (transport to and from processing plants, processing and conditioning plants, bulk storage of condensate, LPG or LNG not for sale). Granted on top of normal allowances without reducing asset value.</p>
+      <p><strong>Conditions:</strong> the company incurred the cost itself; incurred on or after the Order's commencement (Oil & Gas Companies (Tax Incentives) Order 2024); proof of ownership; evidence of direct use in midstream gas processing or transport.</p>
+      <p><strong>Lost if:</strong> sold to an unrelated business or put to other use within 5 years; not bona fide; the company is an end user of gas.</p>
+    </div>
+    <div class="box new"><span class="tag"><i class="shape dia"></i>Non-associated gas greenfield (s.85 NTA)</span>
+      <p>First commercial gas by 1 January 2029: gas tax credit of the lower of $1.00 per Mcf or 30% of fiscal gas price where liquids ≤ 30 bbl/MMscf; $0.50 or 30% for 30–100 bbl; none above 100. Ten years, then a gas production allowance at the same rates. After 2029: allowance of $0.50 or 30%. Credit capped at tax payable, carried forward 3 years, not combined with AGFA incentives; NUPRC certifies liquids content.</p>
+    </div>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Petroleum pitfalls</span>
+    <ul><li>Nov 2022, May 2023, Nov 2023, May 2024, Nov 2024, May 2025: wrong allowable and disallowable costs in the CPR. Examiners point to the NRS circular on HT computation.</li><li>May 2026: wrong costs in "total operating cost". Only the first two appraisal wells count; signature bonus, gas flaring penalty, head office costs, donations, bank charges and depreciation are out.</li><li>Nov 2020: loss b/f and donations misplaced. Nov 2021: allowable PPT expenses.</li><li>Deep offshore implications (May 2024 Q2(b)): no HT, CIT and royalty only, longer production allowance threshold.</li></ul>
+  </div>
+</section>
+
+<section class="topic" id="mining">
+  <div class="sec-head read"><p class="sec-head ref">Chapter 29 · NMMA 2007; NTA s.64, Eighth Schedule; NEITI Act 2007</p><h3>Mining</h3>
+  <p>Mining companies pay CIT at 30% on preceding year basis and the development levy. Royalty is now imposed under the NTA at Eighth Schedule ad valorem rates (mostly 7.5%–15%) on the official or international price, is <strong>deductible</strong>, and is administered by the NRS. Contributions to environmental, rehabilitation, reclamation and closure funds are deductible if cash-backed in a dedicated account or trust managed by independent trustees.</p></div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Incentives under the Minerals and Mining Act</span>
+      <ol><li>Tax holiday of 3 years, renewable for 2; dividends in the holiday free of WHT</li><li>Retention of part of export earnings in a domiciliary account</li><li>Customs and import duty exemption on mining plant (duty due if sold locally)</li><li>Free transfer of foreign currency for certified loans and capital repatriation</li><li>Expatriate remittance quota free of tax</li><li>Accelerated allowance on mining expenditure: 95%, 5% retained (old CITA)</li><li>Investment allowance 10% on plant (ended 31 Aug 2023)</li><li>Approved infrastructure capitalised at 95% in year one, plus possible rural investment allowance</li><li>5% annual indexation of unused allowances (for early mines; later case by case)</li><li>Royalty deferral with FEC approval</li><li>Environmental and closure reserves deductible when spent and certified</li></ol>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Rules candidates misstated</span>
+      <p><strong>Possession and purchase (May 2025).</strong> s.93: no one may possess a mineral unless it was won from their own title area, they hold a permit to possess or purchase, or they are an authorised agent or employee of such a person. s.94: no purchase without a licence to purchase minerals. s.95: small-scale lease output must be sold to a licensed mineral buying centre with receipts. s.96: buying centres keep records of purchases, sales and the source mine. s.92 exempts genuine specimens.</p>
+      <p><strong>Fees (Nov 2025).</strong> Application fees and an annual service fee per cadastral unit. If unpaid, the Mining Cadastre Office gives <strong>30 days'</strong> written notice, then records the default and revokes the title.</p>
+      <p><strong>Priority of land (Nov 2025).</strong> Mining has priority over other land uses and is an overriding public interest under the Land Use Act. Where a lease is granted over land with an existing right of occupancy, the State Governor revokes that right within <strong>60 days</strong>.</p>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="box"><span class="tag" style="color:var(--muted)">Administration</span><p>Mining Cadastre Office (sole licensing agency; registers for reconnaissance permits, exploration licences, mining leases, small-scale leases, quarry leases and water use permits; first come, first served by the priority register). Mines Inspectorate and Mines Environmental Compliance departments; State Mineral Resources and Environmental Management Committees. Titles: reconnaissance permit, exploration licence, small-scale mining lease, mining lease, quarry lease, water use permit. Environmental programmes are deemed approved after 60 days' silence; a second rejection can go to arbitration within 30 days.</p></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">NEITI (pitfall May 2024)</span><p><strong>Vision:</strong> an accountable, effective, well-resourced and result-oriented NEITI. <strong>Mission:</strong> a culture of transparency, accountability, due process and zero tolerance for corruption in the extractive industries, for the benefit of citizens. <strong>Objectives:</strong> due process and transparency in payments to government; accountability in revenue receipts; eliminate corruption in determining, paying, receiving and posting revenue; transparency in how government applies the revenue; conformity with global EITI principles. Governed by a National Stakeholders Working Group (chair plus up to 14 members, quorum 8, meets quarterly).</p></div>
+  </div>
+  <div class="box trap"><span class="tag"><i class="shape tri"></i>Mining pitfalls</span><ul><li>May 2022: certified exploration and processing expenditure in adjusted profit; mining incentives.</li><li>Nov 2023, Nov 2024: allowable and disallowable expenses for a mining company.</li><li>Penalties under the Act: illegal mining or false statements → licence revoked, fine of at least ₦20m and at least five years' imprisonment; ₦20,000 a day if continuing.</li></ul></div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<div class="part-banner"><span class="letter">⌗</span><h2>Toolkit</h2><span class="weight">for the last week</span><a class="backtoc" href="#ptoc" style="display:none">↑ Contents</a></div>
+
+<section class="topic" id="numbers">
+  <div class="sec-head read"><h3>Numbers sheet</h3><p>Every rate, threshold and deadline in the 2026 Study Text that a question can turn on.</p></div>
+  <div class="grid2">
+    <div class="tw"><table>
+      <thead><tr><th>Companies</th><th class="n">Figure</th></tr></thead>
+      <tbody>
+        <tr><td>Small company: turnover / fixed assets</td><td class="n">≤ ₦100m / ≤ ₦250m</td></tr>
+        <tr><td>CIT rate (other companies)</td><td class="n">30% (25% by order)</td></tr>
+        <tr><td>Development levy on assessable profit</td><td class="n">4%</td></tr>
+        <tr><td>Minimum ETR; scope</td><td class="n">15%; ₦50bn or €750m</td></tr>
+        <tr><td>Dividend tax rate</td><td class="n">30%</td></tr>
+        <tr><td>Interest cap; carry forward</td><td class="n">30% EBITDA; 5 YOAs</td></tr>
+        <tr><td>Donations cap</td><td class="n">10% of PBT</td></tr>
+        <tr><td>R&D cap</td><td class="n">5% of turnover</td></tr>
+        <tr><td>Pre-commencement costs window</td><td class="n">6 years</td></tr>
+        <tr><td>CA classes</td><td class="n">10% / 20% / 25%</td></tr>
+        <tr><td>Notional CA record</td><td class="n">1% of cost</td></tr>
+        <tr><td>Exempt-income share that triggers CA pro-rating</td><td class="n">≥ 10%</td></tr>
+        <tr><td>Cessation: tax due</td><td class="n">6 months</td></tr>
+        <tr><td>Post-cessation receipts disclosed</td><td class="n">1 month</td></tr>
+        <tr><td>Change of date notice</td><td class="n">30 days before due date</td></tr>
+        <tr><td>Agric exemption period</td><td class="n">first 5 years</td></tr>
+        <tr><td>REIC distribution test</td><td class="n">75% in 12 months</td></tr>
+        <tr><td>Deemed distribution direction</td><td class="n">within 3 years</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tw"><table>
+      <thead><tr><th>Gains, incentives, international</th><th class="n">Figure</th></tr></thead>
+      <tbody>
+        <tr><td>Share disposal exemption</td><td class="n">&lt; ₦150m proceeds & ≤ ₦10m gain</td></tr>
+        <tr><td>Loss of office exemption</td><td class="n">₦50m</td></tr>
+        <tr><td>Personal chattels</td><td class="n">₦5m or 3× min. wage</td></tr>
+        <tr><td>Replacement of destroyed asset</td><td class="n">within 3 years</td></tr>
+        <tr><td>Instalment spreading</td><td class="n">&gt; 12 months</td></tr>
+        <tr><td>Startup holding period</td><td class="n">24 months</td></tr>
+        <tr><td>Foreign shares deemed Nigerian</td><td class="n">&gt; 50% value, 365 days</td></tr>
+        <tr><td>EDI credit</td><td class="n">5% × 5 years</td></tr>
+        <tr><td>EDI period / extension</td><td class="n">5 + 5 years</td></tr>
+        <tr><td>EDI fee</td><td class="n">0.1% QCE, max ₦5m</td></tr>
+        <tr><td>FTZ customs-territory limit</td><td class="n">25%; nil from 2028</td></tr>
+        <tr><td>WHT non-treaty / treaty</td><td class="n">10% / 7.5%</td></tr>
+        <tr><td>Startup services WHT (final)</td><td class="n">5%</td></tr>
+        <tr><td>DTR claim (NTA)</td><td class="n">2 years after YOA</td></tr>
+        <tr><td>Commonwealth relief claim (old)</td><td class="n">6 years</td></tr>
+        <tr><td>CbCR threshold; deadline</td><td class="n">₦160bn; 12 months</td></tr>
+        <tr><td>TP declaration / disclosure</td><td class="n">30 Jun / 30 Sep</td></tr>
+        <tr><td>MAP to arbitration</td><td class="n">after 2 years</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="grid2">
+    <div class="tw"><table>
+      <thead><tr><th>Administration</th><th class="n">Figure</th></tr></thead>
+      <tbody>
+        <tr><td>Objection</td><td class="n">30 days</td></tr>
+        <tr><td>Authority response, else upheld</td><td class="n">90 days</td></tr>
+        <tr><td>Appeal to TAT; to FHC</td><td class="n">30 days each</td></tr>
+        <tr><td>TAT settlement window</td><td class="n">≤ 30 days</td></tr>
+        <tr><td>TAT hearing notice</td><td class="n">7 clear days</td></tr>
+        <tr><td>Security deposit</td><td class="n">lesser of last year's tax, ½ disputed</td></tr>
+        <tr><td>Additional assessment</td><td class="n">6 years (fraud: none)</td></tr>
+        <tr><td>Refund paid; claim limit</td><td class="n">90 days; 6 years</td></tr>
+        <tr><td>Remit WHT / self-account</td><td class="n">by 21st of next month</td></tr>
+        <tr><td>NTP transition before new tax</td><td class="n">3–6 months</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tw"><table>
+      <thead><tr><th>Extractive</th><th class="n">Figure</th></tr></thead>
+      <tbody>
+        <tr><td>HT: PML / PPL & marginal fields</td><td class="n">30% / 15%</td></tr>
+        <tr><td>PPT unconverted / pre-amortisation</td><td class="n">85% / 65.75%</td></tr>
+        <tr><td>Cost-price-ratio limit</td><td class="n">65% of revenue</td></tr>
+        <tr><td>Upstream CA</td><td class="n">20% × 4, 19%, 1% kept</td></tr>
+        <tr><td>Petroleum rights allowance</td><td class="n">20% a year</td></tr>
+        <tr><td>Host community trust</td><td class="n">3% of opex</td></tr>
+        <tr><td>Decommissioning escrow for deduction</td><td class="n">≥ 15%</td></tr>
+        <tr><td>GUIA</td><td class="n">25% of cost</td></tr>
+        <tr><td>Deep offshore threshold</td><td class="n">&gt; 200m water</td></tr>
+        <tr><td>Conversion window</td><td class="n">18 months from 16 Aug 2021</td></tr>
+        <tr><td>Mining fee default notice</td><td class="n">30 days</td></tr>
+        <tr><td>Governor revokes occupancy right</td><td class="n">60 days</td></tr>
+        <tr><td>Mining tax holiday (NMMA)</td><td class="n">3 + 2 years</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section class="topic" id="penalties">
+  <div class="sec-head read"><h3>Penalties under the NTAA 2025</h3></div>
+  <div class="tw"><table>
+    <thead><tr><th>Default</th><th>Penalty</th></tr></thead>
+    <tbody>
+      <tr><td>Failure to register</td><td>₦50,000 first month + ₦25,000 each further month; awarding a contract to an unregistered person ₦5m</td></tr>
+      <tr><td>Failure to file, or incomplete or inaccurate returns</td><td>₦100,000 first month + ₦50,000 each further month</td></tr>
+      <tr><td>Failure to keep or produce books</td><td>₦10,000 (individuals); ₦50,000 (companies)</td></tr>
+      <tr><td>Failure to deduct tax at source</td><td>40% of the amount not deducted</td></tr>
+      <tr><td>Failure to remit by the 21st, or to self-account</td><td>The tax + 10% a year + interest at the CBN MPR; on conviction up to 3 years or a fine of at least the principal plus up to 50%</td></tr>
+      <tr><td>Refusing access to deploy technology (after 30 days)</td><td>₦1m first day + ₦10,000 a day</td></tr>
+      <tr><td>Not using the fiscalisation system</td><td>₦200,000 + 100% of the tax + MPR interest</td></tr>
+      <tr><td>Ignoring notices; refusing information</td><td>₦100,000 + ₦10,000 a day; ₦200,000 + ₦10,000 a day</td></tr>
+      <tr><td>Failure to notify a change of address within 30 days</td><td>₦100,000 first month + ₦50,000 each further month</td></tr>
+      <tr><td>Virtual asset service provider default</td><td>₦10m first month + ₦1m a month, or licence suspension</td></tr>
+      <tr><td>Failure to stamp</td><td>10% of unpaid duty + MPR interest</td></tr>
+      <tr><td>False refund claim / false VAT refund</td><td>Repayment + 50% / + 100%, plus MPR interest</td></tr>
+      <tr><td>Unpaid mineral royalty after 30 days</td><td>10% + SOFR + 10% (foreign currency) or MPR (Naira)</td></tr>
+      <tr><td>False declaration; counterfeit documents; general penalty</td><td>₦1m (or prosecution)</td></tr>
+      <tr><td>Inducing an officer</td><td>₦500,000 individual; ₦2m body corporate; or up to 3 years</td></tr>
+      <tr><td>Officer's corruption or embezzlement</td><td>Fine of 200% of the sum, or up to 3 years</td></tr>
+    </tbody>
+  </table></div>
+  <p class="read small muted">Directors and officers are liable for a company's offences unless they prove it happened without their knowledge or consent. TP and CbCR penalties are in <a href="#tp">Transfer pricing</a> and <a href="#beps">BEPS</a>.</p>
+</section>
+
+<section class="topic" id="pitfalls">
+  <div class="sec-head read"><h3>Pitfall register</h3><p>Every pitfall named in the examiner's reports from November 2020 to May 2026, with the fix. Tick each one once you can explain the correct answer without notes; your ticks stay in this browser only.</p></div>
+  <div class="reg-tools">
+    <label for="regq" class="small muted">Filter</label>
+    <input type="search" id="regq" placeholder="Search: rollover, CPR, Vienna, basis period…">
+    <select id="regt" aria-label="Topic"><option value="">All topics</option></select>
+    <span class="count" id="regc"></span>
+  </div>
+  <div class="tw"><table class="reg" id="reg">
+    <thead><tr><th>Diet · Q</th><th>What went wrong</th><th>The fix</th><th class="ck">Done</th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+</section>
+
+<footer class="foot">
+  <p><strong>Sources.</strong> ICAN Advanced Taxation Study Text, 6th edition (May 2026), chapters 1–30; ICAN Pathfinder, Professional Level, Advanced Taxation questions, suggested solutions, marking guides and examiner's reports for November 2020, May and November 2021, 2022, 2023, 2024 and 2025, and May 2026.</p>
+  <p>Where the Study Text and a model answer differ, this guide follows the Study Text for 2026 law and flags the model answer as pre-2026 practice. Figures marked as old law apply to periods ending on or before 31 December 2025. Check any rule against the Study Text before relying on it in the hall.</p>
+</footer>
+</main>
+</div>
+
+<script>
+(function(){
+  // ---------- Heat map ----------
+  var diets=["Nov 20","May 21","Nov 21","May 22","Nov 22","May 23","Nov 23","May 24","Nov 24","May 25","Nov 25","May 26"];
+  var early={0:1,1:1}; // Q1 = 40 marks; other questions optional 20
+  function sec(d,q){var n=+q.replace("Q","");if(n===1)return"A";if(early[d])return"B";return n<=4?"B":"C";}
+  var rows=[
+    ["Company income tax computation",{0:"Q1",1:"Q1",2:"Q1",3:"Q1",4:"Q1",5:"Q1",6:"Q1",7:"Q1",8:"Q1",9:"Q1",10:"Q1 Q3",11:"Q1"}],
+    ["Pioneer status & incentives",{0:"Q4",1:"Q2",4:"Q1",5:"Q7",6:"Q1",8:"Q1",9:"Q7",11:"Q1"}],
+    ["Petroleum: PPT / hydrocarbon tax",{0:"Q2",2:"Q2",3:"Q7",4:"Q2",5:"Q4",6:"Q2",7:"Q2",8:"Q2",9:"Q2",10:"Q4",11:"Q4"}],
+    ["Mining & NEITI",{3:"Q4",4:"Q7",5:"Q7",6:"Q7",7:"Q5",8:"Q7",9:"Q7",10:"Q7"}],
+    ["Capital gains",{1:"Q5",2:"Q4",3:"Q3",4:"Q3",5:"Q5",6:"Q3",7:"Q6",8:"Q6",9:"Q5",10:"Q3",11:"Q5"}],
+    ["Non-residents, branches & DTR",{0:"Q1",1:"Q4",3:"Q6",4:"Q6",6:"Q4",7:"Q3",8:"Q3",11:"Q3"}],
+    ["TP, BEPS, thin cap, treaty shopping",{1:"Q1",2:"Q3 Q6",4:"Q4",5:"Q3 Q6",7:"Q7",9:"Q6",10:"Q2 Q6"}],
+    ["Digital economy / SEP",{2:"Q5",9:"Q3"}],
+    ["Regional blocs & international policy",{0:"Q3 Q5",1:"Q1 Q3",6:"Q7",7:"Q7",8:"Q5",11:"Q2"}],
+    ["Administration, policy, appeals",{0:"Q2 Q6",1:"Q6",2:"Q7",6:"Q6",7:"Q5",8:"Q5",10:"Q7",11:"Q6"}],
+    ["Current issues, SDGs, ESG, technology",{3:"Q2",5:"Q2",10:"Q5",11:"Q2 Q6"}],
+    ["Mergers & reorganisations",{1:"Q3",3:"Q7",4:"Q5",5:"Q1",9:"Q4"}],
+    ["Practice, ethics, audit & investigation",{2:"Q1",3:"Q5",5:"Q2",6:"Q5 Q6",7:"Q4",8:"Q4 Q7",9:"Q1",10:"Q1",11:"Q7"}],
+    ["Deferred tax",{4:"Q7"}]
+  ];
+  var heat=document.getElementById("heat");
+  var th="<tr><th>Topic</th>"+diets.map(function(d){return"<th>"+d+"</th>"}).join("")+"<th>Diets</th></tr>";
+  heat.tHead.innerHTML=th;
+  heat.tBodies[0].innerHTML=rows.map(function(r){
+    var c=0;var cells=diets.map(function(_,i){var v=r[1][i];if(!v)return"<td></td>";c++;return"<td>"+v.split(" ").map(function(q){return'<span class="chip '+sec(i,q)+'">'+q+"</span>"}).join("")+"</td>"}).join("");
+    return"<tr><td>"+r[0]+"</td>"+cells+'<td class="cnt">'+c+"/12</td></tr>";
+  }).join("");
+
+  // ---------- Pitfall register ----------
+  var P=[
+    ["Nov 20 Q1","Non-residents","Confused an overseas branch with a separate company","A branch's profits are the Nigerian company's profits: taxed in full, with allowances, losses and DTR","#nonres"],
+    ["Nov 20 Q2","Petroleum","Misplaced loss b/f and donations in the PPT computation","Losses off adjusted profit; allowances off assessable profit; donations are not on the allowable list","#oil"],
+    ["Nov 20 Q3","Regional","Could not separate common market from economic union","Common market = free labour & capital; economic union adds common economic policy","#regional"],
+    ["Nov 20 Q4","Incentives","Missed incentives for agriculture and telecoms","Agric: 5-year exemption (NTA), interest exemption on agric loans, 95% plant allowance (old). Learn sector lists","#incentives"],
+    ["Nov 20 Q5","BEPS","Could not give OECD factors for a tax haven","No/nominal tax; no effective information exchange; no transparency; no substantial activity","#beps"],
+    ["Nov 20 Q6","Administration","Weak on causes and solutions of multiple taxation","Autonomous tiers, revenue imbalance, illegal levies, consultants; fix with harmonised lists, one agency, JRB","#admin"],
+    ["May 21 Q1","Regional","AfCFTA vs ECOWAS treaty in trade in goods","AfCFTA = continental FTA with rules of origin; ECOWAS = customs union with CET","#regional"],
+    ["May 21 Q2","Basis periods","Commencement rules not applied to years 2 and 3 after pioneer","Day after the pioneer period is a new trade; apply commencement rules","#basis"],
+    ["May 21 Q3","M&A","Ignored AfCFTA and local economy in an acquisition","Link market access, tariffs and rules of origin to the deal's value and tax","#ma"],
+    ["May 21 Q4","Non-residents","Wrong disallowables for a non-resident","Head-office costs for the Nigerian business allowed; internal royalties, fees and interest to head office not","#nonres"],
+    ["May 21 Q6","Administration","Could not define fiscal federalism","Revenue generation and redistribution among tiers of a federation; s.2 Constitution","#admin"],
+    ["Nov 21 Q1","Practice","FA 2019 rules on books and records","Keep books in Nigeria; English (or certified translation); 6 years; penalties for failing to produce","#practice"],
+    ["Nov 21 Q2","Petroleum","Wrong allowable PPT expenses","Learn s.263 PIA / s.68 NTA list exactly","#oil"],
+    ["Nov 21 Q3","Planning","Did not state tax implications of planning, avoidance, thin cap","Planning: lawful saving. Avoidance: disregarded, TP and interest adjustments. Evasion: penalties and prosecution","#planning"],
+    ["Nov 21 Q4","Gains","Could not identify assets that qualify for roll-over","Land & buildings, fixed plant & machinery, ships, aircraft, goodwill; not vehicles","#gains"],
+    ["Nov 21 Q5","Digital","Objectives of FA 2019 and SEP Order 2020","Bring foreign digital and service income into the net; define SEP under s.13(2) CITA","#digital"],
+    ["Nov 21 Q6","BEPS","Gave examples instead of BEPS techniques","IP licensing, thin capitalisation, hybrid mismatches, assets in entities without substance","#beps"],
+    ["Nov 21 Q7","Administration","Strategies to tax the self-employed","Registration drives, presumptive regimes, data from BVN/NIMC/CAC, technology, education, enforcement","#admin"],
+    ["May 22 Q1","Investment income","CITA dividend exemption rules","Franked income; foreign-currency equity of 10%+ for 3 or 5 years; pioneer dividends; foreign dividends via approved channels","#invest"],
+    ["May 22 Q2","Current issues","Could not name and explain technology tools","Cloud platforms, AI/RPA, analytics, e-filing, e-invoicing; then impact and challenges","#current"],
+    ["May 22 Q3","Gains","Gains on an option and on an asset taken for a debt","Option: disposal on exercise. Creditor's cost ≤ market value; gain ≤ gain using the debt as cost","#gains"],
+    ["May 22 Q4","Mining","Certified exploration and processing costs; mining incentives","Treat as qualifying mining expenditure; learn the 11 NMMA incentives","#mining"],
+    ["May 22 Q5","Ethics","Could not identify ethical issues in an engagement","Map each fact to an IESBA principle and threat","#practice"],
+    ["May 22 Q6","Treaties","DTR on an overseas branch's foreign tax","Foreign rate on branch profit vs ½ Nigerian rate; apply the lower to branch total profit","#treaties"],
+    ["May 22 Q7","Petroleum","Allowable expenses under PIA 2021","Royalty, rentals, repairs, first exploration + 2 appraisal wells, levies, reinjection, HCDT/NDDC/remediation","#oil"],
+    ["Q1, 7 diets","Adjusted profit","Allowable vs disallowable expenses (Nov 22, May 23, Nov 23, Nov 24, May 25, Nov 25, May 26)","Drill the s.20 / s.21 lists and the add-back table until automatic","#adjusted"],
+    ["HT, 7 diets","Petroleum","Allowable vs disallowable costs for CPR and HT (Nov 22 – May 26)","Use the NRS CPR format; know the exempt costs and the disallowed list","#oil"],
+    ["Nov 22 Q3","Gains","FA 2020 on compensation for loss of office","Old: first ₦10m exempt. NTA: first ₦50m exempt; payer deducts tax on excess","#gains"],
+    ["Nov 22 Q4","Transfer pricing","Areas taxpayers must comply with under TP Regs 2018","Arm's length, documentation, declaration and disclosure forms, deadlines, APAs","#tp"],
+    ["Nov 22 Q5","M&A","Powers of the tax authority in M&A","Consent and direction before any merger; tax clearance including gains; security","#ma"],
+    ["Nov 22 Q6","Treaties","Benefits to a Singapore resident under the DTA","Reduced WHT, PE threshold for business profits, credit, MAP, non-discrimination","#treaties"],
+    ["Nov 22 Q7","Tax accounting","Depreciation wrong in a deferred tax computation","Compute carrying amount first, then compare with TWDV × 30%","#practice"],
+    ["May 23 Q1","Incentives","Incentives for a reconstituted company","Cite the CITA reconstitution relief and today's s.189 NTA rules on transfers","#ma"],
+    ["May 23 Q2","Practice","Measures to mitigate practice risks","Competence, review, documentation, engagement letters, insurance, CPD","#practice"],
+    ["May 23 Q3","Transfer pricing","Contents of the TP disclosure form","Entity; income and costs of controlled transactions; summary; method; group financials; declarant","#tp"],
+    ["May 23 Q5","Gains","Cost on which allowances are granted after replacement","Under roll-over the new asset's cost is reduced by the deferred gain; under NTA see lost-asset rule","#gains"],
+    ["May 23 Q6","BEPS","FA 2019 thin capitalisation rules","Interest to foreign connected lenders capped at 30% EBITDA; excess 5 years; banks and insurers excluded","#adjusted"],
+    ["May 23 Q7","Incentives","Road Infrastructure Tax Credit Scheme","Fund approved roads; recover cost + MPR uplift as CIT credit; committee chaired by Finance Minister","#incentives"],
+    ["Nov 23 Q3","Gains","Computing roll-over relief","Gain deferred to the extent proceeds are reinvested; new cost = cost − deferred gain","#gains"],
+    ["Nov 23 Q4","Treaties","Explaining Nigeria–UK DTA articles","Learn Arts 6, 7, 8, 10, 11, 12, 13, 14, 16, 17, 22","#treaties"],
+    ["Nov 23 Q5","Practice","FIRS tax audit schedule of requirements","Accounts, ledgers, trial balance, asset register, payroll, WHT/VAT schedules, contracts, bank statements","#practice"],
+    ["Nov 23 Q6","Ethics","IESBA principles and guidance","Integrity, objectivity, competence and due care, confidentiality, professional behaviour","#practice"],
+    ["May 24 Q1","Basis periods","Basis periods for a 2018 start under FA 2019","Old rule for the first YOA before 2020; preceding year basis after; watch for a gap year","#basis"],
+    ["May 24 Q3","Treaties","DTA effect on WHT deductions","Non-treaty 10% final; treaty reduced rate (7.5% per the text)","#invest"],
+    ["May 24 Q4","Ethics","Safeguards against threats in tax work","Profession/legislation, firm-level and engagement-level safeguards","#practice"],
+    ["May 24 Q5","Mining","NEITI vision and mission","Vision: accountable, effective, well-resourced, result-oriented. Mission: transparency, accountability, zero corruption","#mining"],
+    ["May 24 Q6","Gains","Time lag between disposal and reacquisition","Model answers: replacement within 12 months or no relief","#gains"],
+    ["May 24 Q7","Regional","ECOWAS CET trade defence measures","Safeguard, anti-dumping, anti-subsidy/countervailing, supplementary protection","#regional"],
+    ["Nov 24 Q3","Non-residents","FA 2019 provisions on non-residents","SEP, turnkey projects, fair turnover basis, WHT as final tax","#nonres"],
+    ["Nov 24 Q4","Practice","Risks of a new tax client","Inadequate records, undisclosed liabilities, integrity of management, fee recovery, scope creep","#practice"],
+    ["Nov 24 Q5","Regional","Roles of international organisations","OECD, UN, IMF, World Bank, ATAF, WTO: standards, cooperation, assistance","#regional"],
+    ["Nov 24 Q6","Gains","FA 2021 on shares in listed companies","Exempt if proceeds below threshold or reinvested; NTA: < ₦150m and gain ≤ ₦10m, or reinvested same YOA","#gains"],
+    ["May 25 Q3","Digital","FA 2019 on SEP for digital and other services","₦25m threshold; .ng domain; Naira targeting; any income for technical services","#digital"],
+    ["May 25 Q4","M&A","Concessions for business reorganisation","No commencement/cessation; residue values; no VAT or gain; 1-year conditions","#ma"],
+    ["May 25 Q5","Gains","FA 2023 roll-over on shares","Reinvest in Nigerian shares within the same YOA","#gains"],
+    ["May 25 Q7","Mining","Possession and purchase of minerals","ss.92–96 NMMA: own title, permit, agent; purchase licence; buying centres","#mining"],
+    ["Nov 25 Q2","Transfer pricing","TP penalties","₦10m + ₦10k/day; 1% of value; ₦25k/day for updates","#tp"],
+    ["Nov 25 Q3","Total profit","FA 2019 rule when dividend exceeds profit","Dividend taxed as total profit at 30%, minus the four exclusions","#total"],
+    ["Nov 25 Q4","Petroleum","Conditions for GUIA","Cost incurred by the company, after the Order, owned, used directly in midstream gas","#oil"],
+    ["Nov 25 Q5","Current issues","Explaining cooperative compliance","Trust-based relationship; tax control framework; early certainty","#current"],
+    ["Nov 25 Q6","BEPS","OECD strategies against aggressive BEPS","Name and explain BEPS actions (hybrids, CFC, interest, treaty abuse, PE, TP, CbCR, MLI)","#beps"],
+    ["Nov 25 Q7","Mining","Priority of land for mining","Overriding public interest; Governor revokes occupancy right within 60 days","#mining"],
+    ["May 26 Q2","Regional","Supranational organisations and their roles","OECD, UN, IMF, World Bank, EU, AU, ATAF: standards, frameworks, assistance","#regional"],
+    ["May 26 Q3","Treaties","Roles of the Vienna Convention","Codifies interpretation; pacta sunt servanda; no internal-law excuse; good-faith ordinary meaning","#treaties"],
+    ["May 26 Q5","Gains","Assets transferred between connected parties","Related 365 days before, kept 365 days after: exempt (FA 2019); NTA s.189 for 2026","#gains"],
+    ["May 26 Q7","Practice","Legal requirements for an accountant in practice","ICAN code: no incompatible activity; accreditation as tax practitioner","#practice"]
+  ];
+  var KEY="atx26-pitfalls";var done={};
+  try{done=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){done={}}
+  var tb=document.querySelector("#reg tbody"),q=document.getElementById("regq"),ts=document.getElementById("regt"),cnt=document.getElementById("regc");
+  var topics=[];P.forEach(function(p){if(topics.indexOf(p[1])<0)topics.push(p[1])});topics.sort();
+  topics.forEach(function(t){var o=document.createElement("option");o.value=t;o.textContent=t;ts.appendChild(o)});
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  tb.innerHTML=P.map(function(p,i){var id="pf"+i;return'<tr data-i="'+i+'"'+(done[i]?' class="done"':'')+'><td>'+esc(p[0])+'</td><td class="what"><div class="topic-tag">'+esc(p[1])+'</div>'+esc(p[2])+'</td><td>'+esc(p[3])+' <a href="'+p[4]+'">Go</a></td><td class="ck"><input type="checkbox" id="'+id+'" aria-label="Mark pitfall '+(i+1)+' as done"'+(done[i]?" checked":"")+'></td></tr>'}).join("");
+  function apply(){var s=q.value.trim().toLowerCase(),t=ts.value,shown=0,ok=0;
+    Array.prototype.forEach.call(tb.rows,function(r){var p=P[+r.dataset.i];var hit=(!t||p[1]===t)&&(!s||(p.join(" ").toLowerCase().indexOf(s)>=0));r.hidden=!hit;if(hit){shown++;if(done[r.dataset.i])ok++}});
+    cnt.textContent=shown+" shown · "+ok+" done";}
+  tb.addEventListener("change",function(e){if(e.target.type!=="checkbox")return;var tr=e.target.closest("tr"),i=tr.dataset.i;if(e.target.checked)done[i]=1;else delete done[i];tr.classList.toggle("done",e.target.checked);try{localStorage.setItem(KEY,JSON.stringify(done))}catch(err){}apply()});
+  q.addEventListener("input",apply);ts.addEventListener("change",apply);apply();
+
+  window.addEventListener("beforeprint",function(){document.querySelectorAll("details").forEach(function(d){d.open=true});q.value="";ts.value="";apply()});
+  // ---------- Contents highlight ----------
+  var links=Array.prototype.slice.call(document.querySelectorAll(".rail a[href^='#']"));
+  var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a});
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.remove("on")});var a=map[e.target.id];if(a)a.classList.add("on")}})},{rootMargin:"-20% 0px -70% 0px"});
+    document.querySelectorAll("section.topic[id]").forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
+
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}</script>
+</body>
+</html>
