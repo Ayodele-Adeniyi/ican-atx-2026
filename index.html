@@ -202,6 +202,14 @@ td.n,th.n{text-align:right;white-space:nowrap}
 .chip.B{background:var(--heat-b);color:var(--heat-ink-a)}
 .chip.C{background:var(--heat-c);color:var(--heat-ink-c)}
 .heat td.cnt{font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+.heat-tools{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+#heatSort{display:flex;flex-wrap:wrap;gap:6px}
+#heatSort button{font:inherit;font-family:var(--f-display);font-size:.84rem;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--muted);cursor:pointer}
+#heatSort button:hover{border-color:var(--green);color:var(--ink)}
+#heatSort button.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.heat .rank{display:inline-block;min-width:1.6em;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.heat .wt{font-size:.68rem;color:var(--muted)}
+@media print{.heat-tools .seg{display:none}}
 .keyrow{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.84rem;color:var(--muted);align-items:center}
 
 /* details */
@@ -366,6 +374,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
     <h2>Exam heat map, 2020 – 2026</h2>
     <p>Every question of the last twelve diets placed against the topic it tested. Read across a row to see how reliably a topic returns; read down a column to see the shape of a paper. Dark chips are the compulsory question, mid chips are Section B (20 marks), light chips are Section C (15 marks).</p>
   </div>
+  <div class="heat-tools"><span class="eyebrow">Sort topics</span><div id="heatSort" role="group" aria-label="Sort topics"></div><span class="small muted" id="heatNote"></span></div>
   <div class="keyrow"><span><span class="chip A">Q1</span> compulsory (30–40 marks)</span><span><span class="chip B">Q3</span> Section B / optional 20</span><span><span class="chip C">Q6</span> Section C, 15 marks</span></div>
   <div class="tw"><table class="heat" id="heat"><thead></thead><tbody></tbody></table></div>
   <div class="grid2">
@@ -1455,10 +1464,30 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
   var heat=document.getElementById("heat");
   var th="<tr><th>Topic</th>"+diets.map(function(d){return"<th>"+d+"</th>"}).join("")+"<th>Diets</th></tr>";
   heat.tHead.innerHTML=th;
-  heat.tBodies[0].innerHTML=rows.map(function(r){
-    var c=0;var cells=diets.map(function(_,i){var v=r[1][i];if(!v)return"<td></td>";c++;return"<td>"+v.split(" ").map(function(q){return'<span class="chip '+sec(i,q)+'">'+q+"</span>"}).join("")+"</td>"}).join("");
-    return"<tr><td>"+r[0]+"</td>"+cells+'<td class="cnt">'+c+"/12</td></tr>";
-  }).join("");
+  // stats per topic: diets tested, questions asked, marks weight (A=30, B=20, C=15), diets in the last four
+  rows.forEach(function(r,idx){var d=0,q=0,w=0,rec=0;diets.forEach(function(_,i){var v=r[1][i];if(!v)return;d++;if(i>=8)rec++;v.split(" ").forEach(function(x){q++;var s=sec(i,x);w+=s==="A"?30:s==="B"?20:15})});r.s={i:idx,d:d,q:q,w:w,rec:rec}});
+  var SORTS={
+    tested:{label:"Most tested",fn:function(a,b){return b.s.d-a.s.d||b.s.q-a.s.q||b.s.w-a.s.w}},
+    marks:{label:"Most marks",fn:function(a,b){return b.s.w-a.s.w||b.s.d-a.s.d}},
+    recent:{label:"Most recent (last 4 diets)",fn:function(a,b){return b.s.rec-a.s.rec||b.s.d-a.s.d||b.s.w-a.s.w}},
+    syllabus:{label:"Syllabus order",fn:function(a,b){return a.s.i-b.s.i}}
+  };
+  var hs=document.getElementById("heatSort"),hn=document.getElementById("heatNote");
+  function renderHeat(mode){
+    var list=rows.slice().sort(SORTS[mode].fn);
+    heat.tBodies[0].innerHTML=list.map(function(r,k){
+      var cells=diets.map(function(_,i){var v=r[1][i];if(!v)return"<td></td>";return"<td>"+v.split(" ").map(function(q){return'<span class="chip '+sec(i,q)+'">'+q+"</span>"}).join("")+"</td>"}).join("");
+      var rank=mode==="syllabus"?"":'<span class="rank">'+(k+1)+"</span>";
+      return"<tr><td>"+rank+r[0]+"</td>"+cells+'<td class="cnt">'+r.s.d+"/12<br><span class=\"wt\">"+r.s.w+" mk</span></td></tr>";
+    }).join("");
+    Array.prototype.forEach.call(hs.querySelectorAll("button"),function(b){var on=b.dataset.sort===mode;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
+    hn.textContent={tested:"Ranked by number of diets that tested the topic, then number of questions.",marks:"Ranked by total marks of the questions on the topic (Q1 counted as 30, Section B 20, Section C 15).",recent:"Ranked by how many of the last four diets (Nov 2024 – May 2026) tested the topic.",syllabus:"Topics in syllabus order."}[mode];
+    try{localStorage.setItem("atx26-heatsort",mode)}catch(e){}
+  }
+  hs.innerHTML=Object.keys(SORTS).map(function(k){return'<button type="button" data-sort="'+k+'" aria-pressed="false">'+SORTS[k].label+"</button>"}).join("");
+  hs.addEventListener("click",function(e){var b=e.target.closest("button");if(b)renderHeat(b.dataset.sort)});
+  var hmode="tested";try{var sv=localStorage.getItem("atx26-heatsort");if(sv&&SORTS[sv])hmode=sv}catch(e){}
+  renderHeat(hmode);
 
   // ---------- Pitfall register ----------
   var P=[
