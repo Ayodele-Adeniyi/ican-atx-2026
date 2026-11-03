@@ -1,5 +1,5 @@
 // Offline support: pages and icons are cached on install; fonts are cached the first time they load.
-const VERSION = "atx2026-v2";
+const VERSION = "atx2026-v3";
 const CORE = [
   "./",
   "index.html",

@@ -118,6 +118,9 @@ section.topic>.read{display:grid;gap:16px}
 .shape.old{background:var(--slate);clip-path:polygon(0 0,100% 0,100% 100%,0 100%,0 40%,100% 40%,100% 60%,0 60%)}
 .box{border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:grid;gap:8px;background:var(--card)}
 .box .tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-size:.74rem;font-weight:720;letter-spacing:.11em;text-transform:uppercase}
+.box.plain{background:var(--card);border:1px dashed color-mix(in srgb,var(--ink) 35%,transparent)} .box.plain .tag{color:var(--ink)}
+.box.plain p{font-size:1.02rem}
+.shape.ring{border:2px solid var(--ink);border-radius:50%;background:transparent;width:11px;height:11px}
 .box.rule{background:var(--blue-soft);border-color:color-mix(in srgb,var(--blue) 30%,transparent)} .box.rule .tag{color:var(--blue)}
 .box.trap{background:var(--red-soft);border-color:color-mix(in srgb,var(--red) 35%,transparent)} .box.trap .tag{color:var(--red)}
 .box.radar{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,transparent)} .box.radar .tag{color:var(--amber)}
@@ -358,6 +361,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
     <div class="stat"><b>11 / 12</b><span>diets with a capital gains computation</span></div>
   </div>
   <div class="legend" aria-label="Callout legend">
+    <span><i class="shape ring"></i>In plain words</span>
     <span><i class="shape sq"></i>Rule from the Study Text</span>
     <span><i class="shape tri"></i>Examiner's pitfall</span>
     <span><i class="shape dot"></i>Exam radar</span>
@@ -483,6 +487,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 
 <section class="topic" id="policy">
   <div class="sec-head read"><p class="sec-head ref">Chapter 1</p><h3>National Tax Policy 2017 and the canons of taxation</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>A tax policy is the government's stated thinking behind its taxes: what the tax system is for and the principles every tax must respect. Nigeria's is written down in the National Tax Policy 2017, which applies to all three tiers of government. The canons of taxation are the classic tests of a good tax: fair, certain, cheap to collect and convenient to pay. In the exam this topic is theory only: you list and explain principles, objectives and who is responsible for what.</p></div>
   <div class="read">
     <p><strong>Canons</strong> are the qualities of a good tax: <em>equality</em> (ability to pay, with horizontal and vertical equity), <em>certainty</em> (Adam Smith: time, manner and amount known in advance), <em>economy</em> (low collection cost), <em>convenience</em>, <em>productivity</em> (Bastable: a sizeable yield that does not hamper production), <em>elasticity</em> (yield responds to need), <em>simplicity</em> and <em>diversity</em>.</p>
     <p>The NTP defines tax as any compulsory payment to government imposed by law without direct benefit or return of value, whatever it is called. Its five <strong>objectives</strong>: guide the operation and review of the system; provide the basis for future legislation and administration; be a reference point for stakeholders; set benchmarks for accountability; clarify roles and responsibilities.</p>
@@ -515,6 +520,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 
 <section class="topic" id="admin">
   <div class="sec-head read"><p class="sec-head ref">Chapter 2</p><h3>Tax organs, taxing rights and multiple taxation</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Tax administration is the machinery that collects tax: who may tax what, and which agency does the work. Nigeria is a federation, so the Constitution splits taxing powers: the Federal Government taxes companies, States tax resident individuals, and local governments collect rates and levies. Where tiers overlap, the same person pays several charges on the same base, which is called multiple taxation. From 2026 the Nigeria Revenue Service (NRS) replaces the FIRS, and the Joint Revenue Board coordinates all the tax authorities.</p></div>
   <div class="tw"><table>
     <thead><tr><th>Authority</th><th>Taxes it administers under the NTAA 2025</th></tr></thead>
     <tbody>
@@ -543,6 +549,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 
 <section class="topic" id="appeals">
   <div class="sec-head read"><p class="sec-head ref">Chapter 3 · NTAA ss.34–55, JRB Act 2025</p><h3>Objections, appeals, the Tax Ombud and refunds</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>An assessment is the tax authority's formal demand for tax. A taxpayer who disagrees follows a strict ladder: object to the authority first, then appeal to the Tax Appeal Tribunal, then go to the courts on points of law. Each step has a deadline, mostly 30 days, and missing one makes the assessment final. The NTAA 2025 adds two softer routes: negotiated settlement (ADR) and complaints to the Tax Ombud.</p></div>
   <div class="flow" aria-label="Dispute timeline">
     <div class="st"><span class="d">Day 0</span><b>Notice of assessment served</b><span>registered post, courier or electronic; states objection rights</span></div>
     <div class="st"><span class="d">≤ 30 days</span><b>Written objection</b><span>to the tax authority; extendable for good cause</span></div>
@@ -589,6 +596,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 <section class="topic" id="basis">
   <div class="sec-head read"><p class="sec-head ref">Chapter 4 · NTA ss.22–24</p><h3>Basis periods: commencement, cessation, change of date</h3>
   <p>A company is Nigerian if incorporated under CAMA 2020 and is taxed on its worldwide profits. A foreign company is taxed on profits attributable to its Nigerian operations. Since the Finance Act 2019, and retained in s.22 NTA, <strong>every year is on preceding year basis</strong>: there are no overlaps and no double-counting at commencement.</p></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Companies are taxed for a year of assessment, which is a calendar year, but each company makes up accounts to its own year end. The basis period links the two: it is the set of accounts whose profit is taxed in a given year of assessment. The normal rule is preceding year basis, so accounts ending in 2026 are taxed in the 2027 year of assessment. Special rules apply when a business starts, stops or changes its year end, and a wrong basis period throws every later figure off.</p></div>
   <div class="grid2">
     <div class="calc"><div class="ch"><b>Commencement</b><span>Obiageli Ltd: starts 1 Mar 2020, year end 31 Oct</span></div><div class="cb"><table>
       <tr class="h"><td>YOA</td><td>Basis period</td></tr>
@@ -624,6 +632,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 <section class="topic" id="adjusted">
   <div class="sec-head read"><p class="sec-head ref">Chapter 5 · NTA ss.20–21, 163–164, 192</p><h3>Adjusted profit: what you add back and what you take out</h3>
   <p>Start from net profit per accounts. Add expenses that are not deductible and taxable income left out; deduct income that is not taxable and deductible expenses not charged. Under the NTA an expense must be incurred <strong>wholly and exclusively</strong> in producing the income; the CITA test also demanded "necessarily and reasonably".</p></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Accounting profit is not taxable profit. The tax law refuses some costs (depreciation, fines, reserves) and exempts some income (franked dividends, government bond interest), so you start from profit before tax and adjust it. Adding back the refused costs and taking out the exempt income gives adjusted profit, which for a continuing company is its assessable profit. This is step one of every company tax question and the step examiners say candidates get wrong most often.</p></div>
   <div class="grid2">
     <div class="box new"><span class="tag"><i class="shape dia"></i>Allowable (s.20 NTA)</span>
       <ul><li>Interest on debt used to earn the income, within the connected-person cap</li><li>Rent and premiums on premises used for the business</li><li>Salaries, wages and staff benefits</li><li>Repairs and renewals of premises, plant, implements and utensils</li><li><span class="new-mark">Costs of establishing, preserving or defending title to an asset</span></li><li>Contributions to approved pension schemes</li><li>Proven loss or damage of stock</li><li>Bad and doubtful debts (not with related parties; doubtful debts per GAAP; evidence of recovery efforts)</li><li>Research and development, capped at <span class="hl">5% of turnover</span></li><li>Pre-commencement costs within 6 years, deemed incurred on day one</li><li>REIC dividends and mandatory distributions</li><li>Compensating payments that qualify as interest in a regulated securities lending transaction</li><li><span class="new-mark">Assistive devices and disability-related products</span></li><li>Donations to qualifying bodies within 10% of profit before tax</li></ul>
@@ -678,6 +687,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 <section class="topic" id="ca">
   <div class="sec-head read"><p class="sec-head ref">Chapter 7 · NTA First Schedule</p><h3>Capital allowances</h3>
   <p>Capital allowances replace depreciation so every taxpayer writes off assets at the same statutory rate. The company must own the asset at the end of the basis period and use it in the business.</p></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Depreciation is an accounting estimate each company chooses for itself, so the tax law ignores it and gives capital allowances instead: a fixed, statutory write-off of the cost of business assets. Qualifying capital expenditure (QCE) is the cost of an asset that earns allowances, and tax written-down value (TWDV) is the part of that cost not yet written off. Allowances are deducted after adjusted profit to reach total profit, so they reduce tax without changing the accounts. From 2026 the NTA writes assets off straight-line in three classes; older assets follow transition rules.</p></div>
   <div class="grid2">
     <div class="tw"><table>
       <thead><tr><th>CITA rates (exam rate sheet)</th><th class="n">Initial</th><th class="n">Annual</th></tr></thead>
@@ -720,6 +730,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 
 <section class="topic" id="losses">
   <div class="sec-head read"><p class="sec-head ref">Chapter 6 · NTA s.27</p><h3>Loss relief</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>A tax loss arises when a company's allowable expenses exceed its taxable income for a basis period. The company does not get a refund; it carries the loss forward and sets it against later profits of the same trade until it is used up. In the computation, losses come off after assessable profit and gains, and before capital allowances.</p></div>
   <div class="grid2">
     <div class="box rule"><span class="tag"><i class="shape sq"></i>Companies</span>
       <ul><li>Carry forward only, against profits of the <strong>same trade</strong>, first available year onward, until used. No time limit.</li><li>Never relieve more than the loss.</li><li>Compute the loss on the same basis period as assessable profit.</li><li>No current-year relief (that is for individuals, claimed within 12 months) and no terminal loss relief.</li><li>Order in the computation: assessable profit + chargeable gains − losses b/f − capital allowances = total profit.</li></ul>
@@ -731,6 +742,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 
 <section class="topic" id="total">
   <div class="sec-head read"><p class="sec-head ref">Chapter 11 · NTA ss.9, 27, 57, 59; NTAA s.38</p><h3>Total profit, CIT, development levy and the 15% minimum</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Total profit is the figure actually taxed: assessable profit plus chargeable gains, less losses brought forward and capital allowances. Income tax is 30% of total profit (0% for small companies). The 4% development levy sits on top, charged on assessable profit and replacing four older levies. Very large companies then check that their tax is at least 15% of accounting profit (the minimum effective tax rate) and pay a top-up if it is not.</p></div>
   <div class="calc"><div class="ch"><b>Pro-forma: income tax and development levy (NTA)</b><span>year ended 31 Dec 2026 → 2027 YOA</span></div><div class="cb"><table>
     <tr><td>Profit before tax per accounts</td><td class="n">x</td></tr>
     <tr class="h"><td colspan="2">Add: disallowed items</td></tr>
@@ -791,6 +803,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 <section class="topic" id="gains">
   <div class="sec-head read"><p class="sec-head ref">Chapter 8 · NTA ss.34–47</p><h3>Chargeable gains</h3>
   <p>The Capital Gains Tax Act is repealed. A company's chargeable gains are now <strong>added to total profit and taxed at 30%</strong>, on preceding year basis (a disposal in the 2026 accounts falls into the 2027 year of assessment).</p></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>A chargeable gain is the profit a company makes when it sells or otherwise disposes of an asset such as land, shares or plant, as distinct from its trading profit. Until 2025 it was taxed separately at 10% under the Capital Gains Tax Act. From 2026 the NTA adds the gain to total profit, so it bears the normal 30%. The gain is the proceeds less the asset's cost, or its TWDV if allowances were claimed, less incidental costs, subject to exemptions and reliefs.</p></div>
   <div class="grid2">
     <div class="calc"><div class="ch"><b>Computation (NTA)</b><span>Mobolaje Ltd, 2028 YOA</span></div><div class="cb"><table>
       <tr class="h"><td colspan="2">Plant that had allowances</td></tr>
@@ -832,6 +845,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 
 <section class="topic" id="invest">
   <div class="sec-head read"><p class="sec-head ref">Chapter 9 · NTA ss.4, 9–10, 19, 162; NTAA s.51</p><h3>Investment income: dividends, interest, royalties, rent, REICs</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Investment income is what a company earns from holding investments rather than trading: dividends, interest, royalties and rent. Most of it suffers withholding tax (WHT): the payer deducts tax and pays it to the tax authority. For a Nigerian company WHT is usually an advance payment of its own tax, but on dividends from Nigerian companies it is final. That is why such dividends, called franked investment income, are taken out of the computation.</p></div>
   <div class="grid2">
     <div class="box rule"><span class="tag"><i class="shape sq"></i>Dividends</span>
       <ul><li>Income = the gross dividend, arising on the day it becomes payable.</li><li>Dividend received after WHT is <strong>franked investment income</strong>: final tax, excluded from total profit. On redistribution, the WHT suffered offsets WHT due.</li><li>Scrip or bonus shares: not taxable and no WHT.</li><li>To a non-resident: WHT is final, and neither payer nor recipient can reclaim it.</li><li>Exempt: from authorised collective investment schemes; from wholly export-oriented businesses; foreign dividends brought in through approved channels.</li><li>Old CITA exemptions: dividends out of pioneer profits; dividends on foreign-currency equity of 10%+ for 5 years (agriculture, petrochemicals, LNG) or 3 years (others).</li></ul>
@@ -850,6 +864,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 <section class="topic" id="incentives">
   <div class="sec-head read"><p class="sec-head ref">Chapter 10 · NTA s.162, ss.168–169, Tenth Schedule</p><h3>Incentives: economic development credit, pioneer transition, free zones</h3>
   <p>The NTA swaps the blanket pioneer tax holiday for an <strong>investment-linked tax credit</strong>. Pioneer companies keep their reliefs for the unexpired period at 1 January 2026, so both regimes will appear in questions for some time.</p></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Tax incentives are reliefs the government offers to steer investment into sectors it wants to grow. Until 2025 the main one was pioneer status: a tax holiday of up to five years. From 2026 it is the economic development incentive: instead of paying no tax, a qualifying company gets a tax credit worth 5% of its qualifying capital spending every year for five years. Pioneer companies keep the rest of their holiday, so both regimes can appear in one question.</p></div>
   <div class="tw"><table class="ledger">
     <thead><tr><th>Feature</th><th>Pioneer status (IDA)</th><th>Economic development incentive (NTA)</th></tr></thead>
     <tbody>
@@ -894,6 +909,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 <section class="topic" id="leases">
   <div class="sec-head read"><p class="sec-head ref">Chapter 12</p><h3>Taxation of leases</h3>
   <p>IFRS 16 puts nearly every lease on the lessee's balance sheet as a right-of-use asset and a lease liability (except leases of 12 months or less and low-value assets). Tax law still splits leases into finance leases, treated as financed purchases, and operating leases, treated as true rentals. A lease is a finance lease if it transfers substantially all risks and rewards: ownership passes, a bargain purchase option, a term of about 80% or more of the asset's life, minimum payments close to fair value, or a specialised asset.</p></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>A lease lets one party (the lessee) use an asset owned by another (the lessor) in return for rentals. For tax the key question is who owns the asset in substance. In a finance lease the lessee carries the risks and rewards of ownership, so the lessee claims capital allowances and only the interest in each payment is the lessor's income. In an operating lease the lessor keeps ownership, claims the allowances and is taxed on the whole rental.</p></div>
   <div class="tw"><table>
     <thead><tr><th></th><th>Finance lease</th><th>Operating lease</th></tr></thead>
     <tbody>
@@ -905,7 +921,22 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
       <tr><td><strong>Gains</strong></td><td>Lessor's gain on sale at the end, or lessee's after exercising the option, is a chargeable gain in total profit</td><td>Lessor's gain on disposal is a chargeable gain</td></tr>
     </tbody>
   </table></div>
-  <p class="read small muted">Also in the syllabus: sale and leaseback (cash released, allowances kept if it is a finance lease, instalments deductible), leveraged leases, sales-type leases, sub-leases, leasing as a business, COVID-19 rent concessions, IBOR reform phase 2, lessor forgiveness of payments, lease term vs life of leasehold improvements, and the 2022 amendment on lease liability in a sale and leaseback.</p>
+  <div class="grid2">
+  <div class="box rule"><span class="tag"><i class="shape sq"></i>Other lease types in the syllabus</span><ul>
+    <li><strong>Sale and leaseback:</strong> the owner sells an asset and leases it back. It releases cash; if the leaseback is a finance lease the seller keeps claiming allowances, and the instalments are deductible.</li>
+    <li><strong>Leveraged lease:</strong> three parties: a lender funds most of the asset's price, alongside the lessor and lessee.</li>
+    <li><strong>Sales-type lease:</strong> a manufacturer or dealer leases its own product, so it recognises a selling profit or loss when the lease starts.</li>
+    <li><strong>Sub-lease:</strong> the original lessee leases the asset on to a third party, becoming a lessor for that sub-lease while staying a lessee under the head lease.</li>
+    <li><strong>Leasing as a business:</strong> letting movable property for hire, with or without an option to purchase, covering rentals, operating and finance leases and hire purchase.</li>
+  </ul></div>
+  <div class="box rule"><span class="tag"><i class="shape sq"></i>IFRS 16 amendments examined under this heading</span><ul>
+    <li><strong>COVID-19 rent concessions (May 2020):</strong> a lessee may treat a pandemic rent concession as not being a lease modification, if the new rent is substantially the same or lower, only payments due by 30 June 2021 are reduced, and other terms do not change substantively.</li>
+    <li><strong>Interest rate benchmark (IBOR) reform, phase 2:</strong> when a lease's reference rate (such as NIBOR) is replaced on an economically equivalent basis, the lessee simply updates the discount rate instead of treating it as a modification; hedge relationships are not discontinued.</li>
+    <li><strong>Lessor forgives lease payments:</strong> for an operating lease, the lessor remeasures expected credit losses and derecognises the forgiven receivable under IFRS 9; the lessee may recognise a gain equal to the amount forgiven, and the lessor's loss may be deductible.</li>
+    <li><strong>Lease term and leasehold improvements:</strong> the lease term is the non-cancellable period plus extension options the lessee is reasonably certain to exercise; improvements are depreciated over the shorter of their useful life and the remaining lease term.</li>
+    <li><strong>Lease liability in a sale and leaseback (Sept 2022, effective 2024):</strong> the seller-lessee measures the lease liability from the lease payments, not the sale proceeds, so it recognises no gain on the right of use it keeps.</li>
+  </ul></div>
+</div>
 </section>
 
 <!-- ============ PART C ============ -->
@@ -914,6 +945,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 <section class="topic" id="nonres">
   <div class="sec-head read"><p class="sec-head ref">Chapter 13 · NTA ss.17, 19</p><h3>Non-resident companies, branches and subsidiaries</h3>
   <p>A company is resident in Nigeria if it is incorporated or registered here. The old place-of-management test is gone, so dual residence now arises only when another country uses management and control; the treaty tie-breaker (place of incorporation, else mutual agreement) resolves it.</p></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Nigeria taxes a Nigerian company on its worldwide profits but a foreign company only on profits that come from Nigeria. The hard question is when a foreign company has enough presence here to be taxable. The main test is a permanent establishment (PE): a fixed place of business, a dependent agent, a project, or services delivered here. A Nigerian company's branch abroad and its subsidiary abroad are taxed very differently, and examiners test that difference often.</p></div>
   <div class="grid2">
     <div class="box rule"><span class="tag"><i class="shape sq"></i>When a non-resident company is taxable in Nigeria</span>
       <ol><li>Through a permanent establishment (fixed base)</li><li>Through a dependent agent who habitually concludes contracts</li><li>Supervisory activities lasting more than three months</li><li>A turnkey project (taxed wholly in Nigeria, never split into "offshore" and local)</li><li>Professional, consultancy, management or technical services in Nigeria</li><li>Dividends, interest, rent and royalties (WHT is the final tax)</li><li>A contract awarded to a Nigerian company and subcontracted to it</li><li>Significant economic presence, including digital services (see next section)</li><li>Transactions with connected persons not at arm's length (adjusted)</li></ol>
@@ -939,6 +971,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 
 <section class="topic" id="digital">
   <div class="sec-head read"><p class="sec-head ref">Chapter 14 · NTA ss.17(9), 35</p><h3>Taxing the digital economy</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Digital businesses can earn from Nigerian customers with no office or staff here, so the physical-presence rules miss them. Significant economic presence (SEP) closes the gap: a foreign company becomes taxable when its digital or service activity aimed at Nigeria is large or targeted enough, even without a physical presence. The topic also covers why digital trade is hard to tax and the OECD's global responses.</p></div>
   <div class="grid2">
     <div class="box old"><span class="tag"><i class="shape old"></i>FA 2019 + CIT (Significant Economic Presence) Order 2020</span>
       <p><strong>Objective:</strong> bring foreign companies earning from Nigeria without a physical presence into the tax net; the Order defines SEP under s.13(2)(c) and (e) CITA.</p>
@@ -962,6 +995,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 <section class="topic" id="treaties">
   <div class="sec-head read"><p class="sec-head ref">Chapter 15 · CITA ss.44–46 (old); NTA ss.120–122</p><h3>Treaties and double taxation relief</h3>
   <p>A double taxation agreement binds Nigeria only after signature, Federal Executive Council approval and ratification by both chambers of the National Assembly. It takes effect from 1 January of the year after it enters into force. Relief can be unilateral (domestic law), bilateral (a DTA) or multilateral (the OECD Multilateral Instrument).</p></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Double taxation happens when the same income is taxed twice, usually in the country where it is earned and again where the earner is resident. Double taxation relief removes or reduces the second charge. It comes from Nigerian law alone (unilateral relief) or from a double taxation agreement (DTA) between two countries, which also decides which country may tax each kind of income and caps withholding tax. In a computation Nigeria taxes the foreign income, then gives a credit for the foreign tax within a limit.</p></div>
   <div class="grid2">
     <div class="calc"><div class="ch"><b>Commonwealth relief, old s.44</b><span>Ajoseh Nigeria Ltd, branch in Canada (May 2026)</span></div><div class="cb"><table>
       <tr><td>Total profit (Nigeria + Canada)</td><td class="n">395,705</td></tr>
@@ -1012,6 +1046,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 
 <section class="topic" id="tp">
   <div class="sec-head read"><p class="sec-head ref">Chapter 16 · TP Regulations 2018; NTA ss.191–192, 202</p><h3>Transfer pricing</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Transfer pricing is the price charged between companies in the same group for goods, services, loans or royalties. Because one owner controls both sides, prices can be set to move profit to wherever tax is lowest. The arm's length principle requires the price that unrelated parties would have agreed. The TP Regulations 2018 set out the methods, documents and penalties that enforce it.</p></div>
   <div class="grid2">
     <div class="box rule"><span class="tag"><i class="shape sq"></i>Objectives of the Regulations</span><ol><li>Tax Nigeria's fair share of the economic activity done here, including with related persons</li><li>Give the authority tools against over- and under-pricing</li><li>Reduce economic double taxation</li><li>A level field between MNEs and independent firms</li><li>Certainty for taxpayers</li></ol></div>
     <div class="box rule"><span class="tag"><i class="shape sq"></i>Scope: controlled transactions</span><ul><li>Sale and purchase of goods and services</li><li>Sale, purchase or lease of tangible assets</li><li>Transfer, licence or use of intangibles</li><li>Provision of services</li><li>Lending and borrowing</li><li>Manufacturing arrangements</li><li>Anything else affecting profit or loss</li></ul><p class="small">Commenced 12 March 2018 (2012 Regulations from 2 August 2012). The Study Text cites documentation for connected transactions of ₦300m or more a year.</p></div>
@@ -1053,10 +1088,27 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 <section class="topic" id="beps">
   <div class="sec-head read"><p class="sec-head ref">Chapters 17, 24</p><h3>BEPS, CbCR, thin capitalisation, treaty shopping, tax havens</h3>
   <p><strong>Base erosion</strong> shrinks the taxable profit reported in a country; <strong>profit shifting</strong> moves profit to a low-tax country. MNE groups dominate because they have the network of entities, the capital to build structures and the profits to pay for advice.</p></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Base erosion and profit shifting (BEPS) describes how multinational groups cut their tax by moving profit from high-tax countries to low-tax ones, using gaps and mismatches between countries' rules. The OECD and G20 answered in 2015 with 15 actions to close those gaps. Thin capitalisation, treaty shopping and tax havens are three of the main tools; country-by-country reporting is one of the main remedies.</p></div>
   <div class="grid2">
     <div class="box trap"><span class="tag"><i class="shape tri"></i>Techniques, not examples (Nov 2021)</span><ol><li>Trademark and technology licensing: IP parked in a low-tax entity charging royalties to the group</li><li>Thin capitalisation: subsidiaries funded with debt, so interest strips profit</li><li>Hybrid mismatch arrangements: instruments or entities treated differently by two countries, giving double non-taxation or double deduction</li><li>Assets in entities without substance in preferential regimes</li></ol><p class="small">Contributing factors: the digital economy and weak international cooperation.</p></div>
     <div class="box rule"><span class="tag"><i class="shape sq"></i>OECD's 15 actions</span>
-      <ol><li>Digital economy</li><li>Hybrid mismatches</li><li>CFC rules</li><li>Interest deductions</li><li>Harmful tax practices (transparency, substance)</li><li>Treaty abuse</li><li>Artificial avoidance of PE status</li><li>TP: intangibles</li><li>TP: risks and capital</li><li>TP: other high-risk transactions</li><li>Measuring and monitoring BEPS</li><li>Mandatory disclosure rules</li><li>TP documentation and country-by-country reporting</li><li>Dispute resolution (MAP)</li><li>Multilateral instrument</li></ol>
+      <ol>
+<li><strong>Digital economy:</strong> identify how digital business defeats existing rules and develop options covering direct and indirect tax (now Pillars One and Two).</li>
+<li><strong>Hybrid mismatches:</strong> neutralise instruments and entities treated differently by two countries, which give double non-taxation, double deductions or long deferral.</li>
+<li><strong>CFC rules:</strong> strengthen controlled foreign company rules so profits parked in low-tax subsidiaries are taxed in the parent's country.</li>
+<li><strong>Interest deductions:</strong> limit excessive interest on related- and third-party debt (the source of Nigeria's 30% of EBITDA cap).</li>
+<li><strong>Harmful tax practices:</strong> require substantial activity for preferential regimes and exchange rulings spontaneously.</li>
+<li><strong>Treaty abuse:</strong> model treaty provisions and domestic rules to deny treaty benefits in inappropriate cases such as treaty shopping.</li>
+<li><strong>Artificial avoidance of PE status:</strong> widen the PE definition to catch commissionaire arrangements and split activities.</li>
+<li><strong>TP – intangibles:</strong> align returns from intangibles with where value is created.</li>
+<li><strong>TP – risks and capital:</strong> stop profit following risks or capital allocated by contract alone.</li>
+<li><strong>TP – other high-risk transactions:</strong> recharacterise transactions independents would not undertake; guidance on profit splits and management fees.</li>
+<li><strong>Measuring BEPS:</strong> collect and analyse data on its scale and on the effect of the actions.</li>
+<li><strong>Mandatory disclosure:</strong> require taxpayers and advisers to disclose aggressive tax planning arrangements.</li>
+<li><strong>TP documentation and CbCR:</strong> master file, local file and country-by-country report to give tax authorities a full picture.</li>
+<li><strong>Dispute resolution:</strong> make mutual agreement procedures faster and more effective.</li>
+<li><strong>Multilateral instrument:</strong> one convention that amends many bilateral treaties at once to apply the treaty-related actions.</li>
+</ol>
     </div>
   </div>
   <div class="grid3">
@@ -1075,6 +1127,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 
 <section class="topic" id="regional">
   <div class="sec-head read"><p class="sec-head ref">Chapters 18–19</p><h3>Regional blocs and international tax policy</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Regional integration is when neighbouring countries agree to trade and cooperate more closely through shared rules and institutions. It comes in stages, from a free trade area up to a full economic union, and each stage changes tariffs and tax policy. ECOWAS and the African Continental Free Trade Area (AfCFTA) are the blocs that matter for Nigeria. International tax policy asks the wider question of how countries share taxing rights and cooperate.</p></div>
   <div class="ladder" aria-label="Stages of economic integration">
     <div class="rung"><div class="bar" style="width:25%"></div><b>Free trade area</b><span>Internal barriers removed; each member sets its own external tariff. NAFTA.</span></div>
     <div class="rung"><div class="bar" style="width:50%"></div><b>Customs union</b><span>+ a common external tariff on non-members. ECOWAS CET.</span></div>
@@ -1098,6 +1151,12 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
     <div class="box"><span class="tag" style="color:var(--muted)">Information exchange & neutrality</span><p>Exchange <strong>on request</strong>, <strong>automatic</strong> (CRS; Nigeria signed the MCAA in August 2017) and <strong>spontaneous</strong>. Nigeria's framework sits under the Data Protection Act (adequacy, consent, AG whitelist). <strong>Neutrality</strong> (Nov 2023): a neutral tax does not change behaviour. Applications: broaden the base and lower rates; prefer credits to deductions when encouraging behaviour; tax undesired activities deliberately.</p></div>
   </div>
   <p class="read small muted">Jurisdiction rests on residence (worldwide income) or source (income earned within borders). Its limits are geographical, subject-matter and personal. International tax policy aims at fairness, efficiency, neutrality, competitiveness and revenue.</p>
+  <div class="box rule"><span class="tag"><i class="shape sq"></i>Other blocs the syllabus compares</span><ul>
+    <li><strong>European Union:</strong> 27 states with common economic, social and security policies. Goals: peace and citizens' well-being; sustainable growth with price stability and full employment; fighting social exclusion; scientific progress; economic, social and territorial cohesion.</li>
+    <li><strong>NAFTA</strong> (US, Canada, Mexico, 1994): a free trade area aiming at freer trade and wider choice, lower prices and better quality, stronger health and safety standards, economic stability, and a market driven by supply and demand rather than barriers.</li>
+    <li><strong>Why AfCFTA differs:</strong> it is continental and still building its rules of origin and tariff schedules, while the EU is an economic union and NAFTA a mature free trade area.</li>
+  </ul></div>
+
 </section>
 
 <!-- ============ PART D ============ -->
@@ -1105,13 +1164,19 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 
 <section class="topic" id="current">
   <div class="sec-head read"><h3>International initiatives, SDGs and ESG</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>This part tests awareness of recent developments rather than computation. It covers international cooperation on enforcement (joint audits, information exchange, capacity building), how technology is changing tax work, and how tax supports the UN Sustainable Development Goals and responsible ESG conduct in the extractive industries. Answers are lists of explained points, so clear headings and one point per mark matter most.</p></div>
   <div class="grid3">
     <div class="box rule"><span class="tag"><i class="shape sq"></i>Tax Inspectors Without Borders</span><p>An OECD and UNDP initiative that builds audit capacity in developing countries. Serving or recently retired audit experts work alongside local officials on live audits, including TP and sector cases. The host country leads and sets the scope; experts never replace local staff.</p></div>
     <div class="box rule"><span class="tag"><i class="shape sq"></i>Cooperative compliance (pitfall Nov 2025)</span><p>A relationship between the revenue authority and, usually, a large taxpayer based on trust, transparency and mutual understanding. The taxpayer runs a sound tax control framework and discloses risks early; the authority gives timely, certain responses. Result: fewer disputes, lower costs, earlier certainty.</p></div>
     <div class="box rule"><span class="tag"><i class="shape sq"></i>Simultaneous tax examination</span><p>Two or more countries examine the same taxpayer at the same time, each independently, and exchange information. It encourages compliance, exposes evasion and fosters cooperation, but needs careful coordination, protects confidentiality and copes with complex laws. Joint audits go a step further.</p></div>
   </div>
   <div class="grid2">
-    <div class="box"><span class="tag" style="color:var(--muted)">Also in this chapter</span><ul><li><strong>CRS:</strong> automatic exchange of financial account data; 95+ jurisdictions</li><li><strong>FATCA</strong> (US, 2010 HIRE Act): foreign financial institutions report US persons' accounts</li><li><strong>MAP:</strong> a taxpayer asks the competent authority (the Minister) to resolve treaty taxation</li><li><strong>Disruptive technologies:</strong> platforms, AI and analytics, blockchain and crypto, cloud computing. Benefits: efficiency, accuracy, risk targeting. Challenges: cost, skills, data security, tracking digital income.</li></ul></div>
+    <div class="box"><span class="tag" style="color:var(--muted)">Also in this chapter</span><ul>
+<li><strong>Common Reporting Standard (CRS):</strong> banks collect data on accounts held by foreign tax residents and send it to their tax authority, which passes it to the residents' home countries every year. Nigeria signed the Multilateral Competent Authority Agreement in August 2017, so it now receives data on Nigerians' accounts in more than 95 jurisdictions, including Bermuda, the Cayman Islands, Luxembourg and Mauritius, and Nigerian banks report foreigners' accounts in return.</li>
+<li><strong>FATCA</strong> (US, 2010, part of the HIRE Act): US citizens must report foreign accounts and assets; foreign financial institutions must report US account holders to the IRS (directly or under an intergovernmental agreement) or face exclusion and penalties. It shows how one country's rules reach banks worldwide.</li>
+<li><strong>Mutual agreement procedure (MAP):</strong> under a treaty, a Nigerian taxpayer taxed contrary to the treaty asks the competent authority (the Minister of Finance or delegate) to negotiate a solution with the other country.</li>
+<li><strong>Disruptive technologies:</strong> digital platforms and app stores make transactions hard to track; AI and data analytics help authorities spot risk but need investment and skills; blockchain and crypto are hard to trace and value; cloud computing blurs where income is earned. Benefits: efficiency and better compliance. Risks: data security. The future is "TaxTech" built through collaboration between authorities and the private sector.</li>
+</ul></div>
     <div class="box"><span class="tag" style="color:var(--muted)">Technology in tax practice (May 2022, May 2023)</span><ul><li>Cloud tax management platforms and e-filing (the NRS e-filing system)</li><li>AI and robotic process automation for data collation and analysis</li><li>Data analytics and visualisation for risk review</li><li>E-invoicing and fiscalisation links</li></ul><p class="small">Impact: speed, accuracy, real-time compliance, new advisory lines. Challenges: cost, cyber risk, skills gaps, unreliable power and internet.</p></div>
   </div>
   <div class="grid2">
@@ -1126,6 +1191,20 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
       <p><strong>Sustainable practices:</strong> benefits are competitive advantage, motivated staff, profitability, reputation, resource efficiency; challenges are inconsistent regulation, low awareness and cost.</p>
     </div>
   </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>The 17 Sustainable Development Goals (UN, 2015)</span>
+      <p class="small">No poverty · Zero hunger · Good health and well-being · Quality education · Gender equality · Clean water and sanitation · Affordable and clean energy · Decent work and economic growth · Industry, innovation and infrastructure · Reduced inequalities · Sustainable cities and communities · Responsible consumption and production · Climate action · Life below water · Life on land · Peace, justice and strong institutions · Partnerships for the goals.</p>
+      <p class="small"><strong>Principles:</strong> intergenerational equity and environmental stewardship. <strong>Achieved through</strong> renewable energy, sustainable agriculture and responsible consumption. A fourth taxation strategy is <strong>tax transparency</strong>, so taxes are seen to fund development.</p>
+      <p class="small"><strong>UNDP Tax for SDGs (2021):</strong> helps countries use tax to mobilise domestic resources; offers an SDG taxation framework and assessment tool and an annual Tax for SDGs Dialogue; runs TIWB with the OECD (over $2bn extra revenue raised since 2015); covered 25 countries in 2022. Expected results: more domestic revenue, stronger administration against evasion and illicit flows, tax policy aligned with the SDGs, digitalised tax services and gender-equal outcomes.</p>
+    </div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Why ESG matters in the extractive industries</span>
+      <p class="small"><strong>Need:</strong> risk management, long-term sustainability, stakeholder expectations, regulation (NESREA, NUPRC, NEITI) and brand value.</p>
+      <p class="small"><strong>Environmental compliance:</strong> environmental impact assessments, waste management, oil-spill response plans, biodiversity protection. <strong>Social:</strong> community engagement, livelihood restoration with fair compensation, social investment, cultural heritage protection. <strong>Governance:</strong> transparency, anti-corruption policies, board oversight.</p>
+      <p class="small"><strong>Benefits of sustainable practice:</strong> reputation, cost savings, innovation, risk management, access to capital, talent, avoiding "greenwashing". <strong>Challenges:</strong> high initial cost, complex supply chains, varied regulation, aligning stakeholders, measuring impact, short- vs long-term pressure. <strong>Best practice:</strong> adopt EITI and IFC Performance Standards, strategic planning, stakeholder engagement, technology, partnerships, continuous monitoring.</p>
+      <p class="small"><strong>History:</strong> Carson's <em>Silent Spring</em> (1962); socially responsible investing (1970s); Brundtland definition of sustainable development (1987); Rio Earth Summit (1992); Elkington's triple bottom line (1994); GRI (1997); "Who Cares Wins" coins ESG (2004); UN PRI (2006); SASB standards (2010s); ISSB's IFRS S1 and S2 (2023).</p>
+    </div>
+  </div>
+
 </section>
 
 <!-- ============ PART E ============ -->
@@ -1133,6 +1212,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 
 <section class="topic" id="ma">
   <div class="sec-head read"><p class="sec-head ref">Chapter 22 · NTA s.189</p><h3>Mergers, acquisitions and reorganisations</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>A merger joins two or more companies into one; an acquisition is one company buying control of another. Under the normal rules such deals would trigger cessation of one business, commencement of another, gains on the assets transferred and VAT. The law relieves genuine reorganisations, especially between related companies, so tax does not block a commercial combination, but it attaches conditions and needs the tax authority's clearance.</p></div>
   <div class="tw"><table>
     <thead><tr><th>s.189 NTA</th><th>Merger</th><th>Sale of trade causing cessation</th><th>Sale of assets, no cessation (≤ residue + unused CA)</th></tr></thead>
     <tbody>
@@ -1155,22 +1235,58 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
       <p class="small">Basis periods: a merger is neither commencement nor cessation, so preceding year basis continues; a brand-new surviving company starts its first period from commencement. Upstream petroleum: the acquirer's period starts on the transfer date.</p>
     </div>
   </div>
-  <p class="read small muted">Also asked: the regulatory landscape (FCCPC, SEC, CAC, sector regulators), filings with CAC and SEC, implications when a new company takes over an existing one (cessation of the old trade, allowances and losses, stamp duties, VAT and WHT on advisers' fees), and examples of successful mergers.</p>
+  <div class="grid2">
+  <div class="box rule"><span class="tag"><i class="shape sq"></i>Concepts and types</span><ul>
+    <li><strong>Merger:</strong> the assets, liabilities and businesses of two or more companies are vested in one company, which may or may not be one of them.</li>
+    <li><strong>Acquisition:</strong> one company buys all or most of another's equity; above 50%, the target becomes its subsidiary.</li>
+    <li><strong>Horizontal merger:</strong> companies in the same line of business (Chartered Bank and IBTC became Stanbic IBTC).</li>
+    <li><strong>Vertical merger:</strong> a supplier and its customer in the same industry (a soft-drink maker and a bottle maker).</li>
+  </ul></div>
+  <div class="box rule"><span class="tag"><i class="shape sq"></i>Regulators and filings</span><ul>
+    <li><strong>FCCPC:</strong> the main M&A regulator under the Federal Competition and Consumer Protection Act; reviews competition effects.</li>
+    <li><strong>SEC:</strong> deals involving public companies: fairness, transparency, investor protection; annual, quarterly and material-event filings.</li>
+    <li><strong>CAC:</strong> annual returns and notices of changes in directors and shareholding.</li>
+    <li><strong>CBN and NAICOM:</strong> approve deals in banking and insurance.</li>
+    <li><strong>Tax authorities (NRS, State IRS, FCT-IRS):</strong> notify any change in particulars within <strong>30 days</strong> (s.9 NTAA) and obtain clearance.</li>
+  </ul></div>
+</div>
+<p class="read small muted">Examples the Study Text cites: Access Bank and Diamond Bank; Oando's acquisition of ConocoPhillips' Nigerian assets (2012, over $1.5bn); MTN's acquisition of VGC Communications (2008); Stripe's acquisition of Paystack ($200m); Exxon–Mobil (1999); Glaxo Wellcome–SmithKline Beecham (2000); Microsoft–Activision Blizzard (2023). On a takeover by a new company, also mention cessation of the old trade, treatment of allowances and losses, stamp duties on transfers, and VAT and WHT on advisers' fees.</p>
 </section>
 
 <section class="topic" id="planning">
   <div class="sec-head read"><p class="sec-head ref">Chapter 24 · NTA s.191; NTAA s.46</p><h3>Planning, avoidance and evasion</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Tax planning, avoidance and evasion sit on a scale. Planning is arranging your affairs lawfully to pay less tax, in the way the law intends. Avoidance is legal on its face but uses gaps against the law's purpose, and the tax authority may set it aside. Evasion is illegal: hiding income, inflating costs or failing to file. Questions ask you to define each, give examples and state the consequences.</p></div>
   <div class="grid3">
     <div class="box new"><span class="tag"><i class="shape dia"></i>Tax planning</span><p>Lawfully arranging affairs to reduce tax within the letter and spirit of the law: timing asset purchases and disposals, using incentives (EDI, free zones), roll-over or reinvestment exemptions, meeting deadlines to avoid penalties, choosing structure and location.</p></div>
     <div class="box radar"><span class="tag"><i class="shape dot"></i>Tax avoidance</span><p>Legal but against the intent of the law, exploiting gaps (artificial transactions, thin capitalisation, treaty shopping). Countered by specific anti-avoidance rules (certain, but narrow) and a general rule (fewer laws, wider reach). Mandatory disclosure of arrangements that give a relief, a repayment or avoid a charge.</p></div>
     <div class="box trap"><span class="tag"><i class="shape tri"></i>Tax evasion</span><p>Illegal: understating income, overstating expenses, fictitious transactions, failure to file, diverting WHT or VAT collected. Leads to back duty assessments with no time limit, penalties, interest and prosecution.</p></div>
   </div>
   <div class="box trap"><span class="tag"><i class="shape tri"></i>Pitfall: Nov 2021 Q3</span><p>Candidates defined the concepts but not their <strong>tax implications</strong>. Planning: lower legitimate tax, no penalty. Avoidance: transactions disregarded under s.191, TP adjustments, interest disallowed, additional assessments. Evasion: penalties, interest, prosecution, unlimited look-back.</p></div>
-  <p class="read small muted">Non-tax factors in choosing a location (May 2023, six marks): political and economic stability; physical, legal and financial infrastructure; limited exchange controls; access to markets and raw materials; skilled labour; banking and communications; language and legal system; investment protection.</p>
+  <div class="grid2">
+  <div class="box rule"><span class="tag"><i class="shape sq"></i>Tax planning checklist (Study Text 24.2)</span><ul>
+    <li><strong>Timing</strong> of asset purchases, disposals and capital allowance claims.</li>
+    <li><strong>Hiring instead of buying</strong> assets: the full hire charge is deductible.</li>
+    <li><strong>Specific rather than general provisions,</strong> so they are deductible.</li>
+    <li><strong>PAYE and WHT deducted correctly,</strong> to avoid penalties.</li>
+    <li><strong>Critical dates:</strong> returns, objections, PAYE, WHT, VAT, NSITF.</li>
+    <li><strong>Gains:</strong> use reinvestment reliefs and exemption thresholds.</li>
+    <li><strong>Incentives and exemptions:</strong> economic development credit, free zones, agricultural exemption, NTA Chapter 8 exemptions, government bonds.</li>
+    <li><strong>Remuneration structure</strong> and benefits in kind.</li>
+  </ul></div>
+  <div class="box rule"><span class="tag"><i class="shape sq"></i>Anti-avoidance in the NTAA 2025</span><ul>
+    <li><strong>Mandatory disclosure (s.30):</strong> anyone entering a transaction whose main purpose is a tax advantage must disclose it. A tax advantage includes a relief, a repayment, avoiding or reducing a charge or assessment, deferring payment, or avoiding a duty to deduct tax.</li>
+    <li><strong>Artificial transactions (s.46):</strong> the authority may disregard artificial or fictitious transactions; deals between connected persons not on arm's-length terms are deemed artificial.</li>
+    <li><strong>Prohibited avoidance arrangements (s.47):</strong> a general rule. Where the main purpose is a tax benefit contrary to the law's object, the authority may adjust, disregard or recharacterise the arrangement.</li>
+    <li><strong>Specific vs general rules:</strong> specific rules are certain and easy to amend but make the law complex and invite new loopholes; general rules are fewer and catch future schemes but are vague and depend on officials' discretion.</li>
+    <li><strong>Case law:</strong> Lord Clyde in <em>Ayrshire Pullman v CIR</em> (no one must arrange affairs to give the Revenue "the largest possible shovel"); Belgore CJ in <em>FBIR v American International Insurance Co</em> ("Tax is an obligation, not a duty").</li>
+  </ul></div>
+</div>
+<p class="read small muted">Non-tax factors in choosing a location (May 2023, six marks): political and economic stability; physical, legal and financial infrastructure; limited exchange controls; access to markets and raw materials; skilled labour; banking and communications; language and legal system; investment protection. Direct taxes (income tax, CIT, HT) are borne by the person who pays them; indirect taxes (VAT, customs and excise, stamp duties) are passed on in the price.</p>
 </section>
 
 <section class="topic" id="practice">
   <div class="sec-head read"><p class="sec-head ref">Chapters 23, 25, 26, 27</p><h3>Practice management, audit and investigation, ethics, tax accounting</h3></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>This section covers the professional side of tax work: the legal and ethical duties of an accountant in tax practice, how to take on and manage clients, and how tax authorities audit and investigate taxpayers. It also covers how tax appears in financial statements, including deferred tax. These are discussion questions, marked one point per mark.</p></div>
   <div class="grid2">
     <div class="box rule"><span class="tag"><i class="shape sq"></i>Running a tax practice (pitfall May 2026: legal requirements)</span>
       <p><strong>Legal requirement:</strong> under ICAN's code, a chartered accountant in public practice must not engage in any business or activity that impairs, or might impair, integrity, objectivity or the profession's reputation. A practitioner acting for reward must be accredited as a tax practitioner (NTP; JRB guidance on accreditation).</p>
@@ -1210,6 +1326,43 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
       <p class="small">Compute depreciation correctly before anything else: the 2022 report says that is exactly where candidates failed. Disclose current and deferred tax separately; misleading disclosure risks penalties, qualified opinions and reputational damage.</p>
     </div>
   </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>The five threats, defined</span><ul>
+      <li><strong>Self-interest:</strong> a financial or other interest improperly influences judgement, such as undue dependence on one client's fees.</li>
+      <li><strong>Self-review:</strong> the accountant will not properly evaluate their own, or their firm's, earlier work.</li>
+      <li><strong>Advocacy:</strong> promoting a client's position so far that objectivity is lost.</li>
+      <li><strong>Familiarity:</strong> a long or close relationship makes the accountant too sympathetic or too accepting.</li>
+      <li><strong>Intimidation:</strong> actual or perceived pressure deters objective action.</li>
+    </ul><p class="small">Conflicts of interest arise when two clients' interests conflict on a matter, or the practitioner's own interest conflicts with a client's. Identify, disclose, get consent or decline, and document.</p></div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>NOCLAR: suspected breach of tax law</span><ol>
+      <li><strong>Become aware</strong> (see it, but do not go looking for it).</li>
+      <li><strong>Understand the matter</strong> and the law involved.</li>
+      <li><strong>Raise it with management</strong> or those charged with governance.</li>
+      <li><strong>Assess their response.</strong></li>
+      <li><strong>Decide further action:</strong> report to an appropriate authority or withdraw from the engagement.</li>
+      <li><strong>Document</strong> the matter, discussions and decisions.</li>
+    </ol><p class="small">Employed accountants first follow internal protocols, escalating above a superior who is involved; senior accountants carry wider duties. Sanctions for breaches include fines, reprimand, suspension, expulsion and withdrawal of the practising licence.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Data privacy (Nigeria Data Protection Act 2023)</span><ul>
+      <li><strong>Lawful, fair and transparent</strong> processing with informed consent.</li>
+      <li><strong>Purpose limitation</strong> and <strong>data minimisation.</strong></li>
+      <li><strong>Accuracy</strong> and <strong>storage limitation.</strong></li>
+      <li><strong>Confidentiality and integrity:</strong> protection by design, impact assessments for high-risk processing, breach notification.</li>
+      <li><strong>Data subjects' rights</strong> to information, access and rectification.</li>
+      <li><strong>Oversight:</strong> the Nigeria Data Protection Commission registers major controllers and imposes penalties.</li>
+    </ul></div>
+    <div class="box rule"><span class="tag"><i class="shape sq"></i>Technology in practice and its limits</span><ul>
+      <li><strong>Cloud tax platforms:</strong> no servers to buy or maintain; access anywhere.</li>
+      <li><strong>AI and robotic process automation:</strong> collate and analyse data faster with fewer errors.</li>
+      <li><strong>Blockchain:</strong> tamper-proof transaction records.</li>
+      <li><strong>Benefits to taxpayers:</strong> easier compliance, lower cost, efficiency, compliance without physical contact.</li>
+      <li><strong>Challenges:</strong> poor connectivity and power, cybersecurity fears, digital-skills gaps, cost, systems not flexible enough for changing laws.</li>
+      <li><strong>Objections</strong> may now be served by courier or electronically (FA 2019 and 2020; NTAA 2025).</li>
+    </ul></div>
+  </div>
+  <div class="box rule"><span class="tag"><i class="shape sq"></i>The tax account in the books (Study Text 27.2–27.3)</span><p>The tax account opens with unpaid tax brought forward and is credited with this year's provisions for income tax (Dr profit or loss) and development levy, plus any prior-year under-provision; it is debited with over-provisions, cash paid and WHT credit notes set off (Dr tax account, Cr WHT receivable). The closing balance is the tax payable in the statement of financial position. Deferred tax is posted to its own account. Wrong or misleading tax disclosure risks penalties, qualified audit opinions and loss of credibility.</p></div>
+
 </section>
 
 <!-- ============ PART F ============ -->
@@ -1218,6 +1371,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 <section class="topic" id="oil">
   <div class="sec-head read"><p class="sec-head ref">Chapter 28 · PIA 2021; NTA ss.68–122</p><h3>Oil and gas: hydrocarbon tax and upstream CIT</h3>
   <p>Converted leases pay <strong>hydrocarbon tax</strong> and <strong>CIT</strong>; unconverted OPLs and OMLs stay under petroleum profits tax until they expire or convert. The NTA now houses all three charges; the PIA keeps licensing, royalty, host communities and conversion.</p></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Oil and gas profits are taxed under special rules because they are large and come from a national resource. Under the Petroleum Industry Act 2021, an upstream company with a converted lease pays two taxes: hydrocarbon tax on profit from crude oil and associated liquids, and ordinary company income tax. Hydrocarbon tax has its own allowable-cost list, a cap on total costs (the 65% cost-price ratio) and a per-barrel production allowance. Leases not yet converted stay under the older petroleum profits tax.</p></div>
   <div class="grid2">
     <div class="box rule"><span class="tag"><i class="shape sq"></i>Who pays what</span>
       <ul><li><strong>HT rate (s.72):</strong> 30% for petroleum mining leases (PML), onshore and shallow water; 15% for petroleum prospecting licences (PPL) and marginal fields.</li><li><strong>CIT:</strong> 30% on all upstream operations, plus development levy 4% of assessable profit.</li><li><strong>PPT</strong> (unconverted): 85% of chargeable profit; 65.75% for up to 5 years before pre-production costs are amortised.</li><li><strong>Deep offshore</strong> (water deeper than 200m): no HT, CIT only. Frontier acreage: no HT until reclassified.</li><li>HT is charged only on crude oil, field condensates and NGLs from associated gas upstream of the measurement point, plus balancing charges. Not on associated gas itself or non-associated gas and its liquids.</li></ul>
@@ -1285,6 +1439,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--green)}
 <section class="topic" id="mining">
   <div class="sec-head read"><p class="sec-head ref">Chapter 29 · NMMA 2007; NTA s.64, Eighth Schedule; NEITI Act 2007</p><h3>Mining</h3>
   <p>Mining companies pay CIT at 30% on preceding year basis and the development levy. Royalty is now imposed under the NTA at Eighth Schedule ad valorem rates (mostly 7.5%–15%) on the official or international price, is <strong>deductible</strong>, and is administered by the NRS. Contributions to environmental, rehabilitation, reclamation and closure funds are deductible if cash-backed in a dedicated account or trust managed by independent trustees.</p></div>
+  <div class="box plain"><span class="tag"><i class="shape ring"></i>In plain words</span><p>Solid minerals belong to the Federal Government, and companies mine them under titles issued by the Mining Cadastre Office under the Minerals and Mining Act 2007. Mining companies pay ordinary company income tax and the development levy, plus a deductible royalty on the value of minerals produced. Questions mix a computation with law points on titles, land, possession of minerals and incentives.</p></div>
   <div class="grid2">
     <div class="box rule"><span class="tag"><i class="shape sq"></i>Incentives under the Minerals and Mining Act</span>
       <ol><li>Tax holiday of 3 years, renewable for 2; dividends in the holiday free of WHT</li><li>Retention of part of export earnings in a domiciliary account</li><li>Customs and import duty exemption on mining plant (duty due if sold locally)</li><li>Free transfer of foreign currency for certified loans and capital repatriation</li><li>Expatriate remittance quota free of tax</li><li>Accelerated allowance on mining expenditure: 95%, 5% retained (old CITA)</li><li>Investment allowance 10% on plant (ended 31 Aug 2023)</li><li>Approved infrastructure capitalised at 95% in year one, plus possible rural investment allowance</li><li>5% annual indexation of unused allowances (for early mines; later case by case)</li><li>Royalty deferral with FEC approval</li><li>Environmental and closure reserves deductible when spent and certified</li></ol>
